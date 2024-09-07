@@ -1,0 +1,6 @@
+# Carpetas
+node_modules
+vscode
+
+# Archivos
+*.txt
