@@ -27,16 +27,29 @@
     flex-direction: column;
 }
 
-.Form input {
+.FormInput {
     border-radius: 20px;
     padding: 20px;
     font-size: 20px;
     box-shadow: -2px 3px black;
-    background-color: #a6cdde;
     color: black;
     border: none;
+    border: 2px solid transparent;
+    outline: none;
+    overflow: hidden;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    transition: all 0.5s;
 
 }
+
+.FormInput:hover,
+.FormInput:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: #d9d9d9;
+}
+
 
 .btnSubmit {
     font-family: "fuente", sans-serif;
