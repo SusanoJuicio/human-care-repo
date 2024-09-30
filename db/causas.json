@@ -1,0 +1,12 @@
+[
+    {
+        "nombre":"Salud Comunitaria",
+        "img":"../images/causaB1.jpg",
+        "descripcion":"La salud comunitaria es un enfoque de la atención médica que todo mundo necesita, y nosotros priorizamos"
+    },
+    {
+        "nombre":"Salud Ambiental",
+        "img":"../images/causaB2.jpg",
+        "descripcion":"La salud ambiental es crucial para la salud de las personas y el planeta tierra, y nosotros priorizamos"
+    }
+]
