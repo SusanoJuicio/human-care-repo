@@ -1,5 +1,6 @@
 # Carpetas
 node_modules
+.vscode
 vscode
 
 # Archivos
