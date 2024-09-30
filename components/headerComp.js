@@ -1,5 +1,5 @@
 export const headerComp =
-        `<nav class="nav_container">
+    `<nav class="nav_container">
             <section>
                 <div>
                     <div class="nav">
@@ -19,7 +19,7 @@ export const headerComp =
                             <a href="./nosotros.html" class="nav_links"> Nosotros</a>
                         </li>
                         <li class="nav_items">
-                            <a href="./catalogo.html" class="nav_links"> Catalogo</a>
+                            <a href="./catalogo.html" class="nav_links"> Catálogo</a>
                         </li>
                         <li class="nav_items">
                             <a href="./donaciones.html" class="nav_links"> Donaciones</a>

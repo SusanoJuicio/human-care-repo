@@ -10,34 +10,47 @@
     <link rel="stylesheet" href="../styles/index.css"> <!--Estilo-->
     <script type="module" src="../js/header.js"></script>
     <script type="module" src="../js/footer.js"></script>
+    <script type="module" src="../js/card.js"></script>
 </head>
 
 <body>
     <header id="header"></header>
 
-<main>
-    <h1 class="title">Pocholita</h1>
-    <p class="text-Causes">
-        Somos una organización dedicada a promover la salud y el bienestar con un fuerte enfoque en la sostenibilidad y el activismo social. Que se compromete a proporcionar productos y servicios ecológicos, educar a la comunidad y fomentar la ayuda comunitaria.
-    </p>
-    <div class="index-Causes">
-        <img class="causes" src="/images/causa1.jpg">
-        <img class="causes" src="/images/causa2.jpg">
-        <img class="causes" src="/images/causa3.jpg">
-    </div>
-    <div class="arrow-Index">
-        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-    </div>
-    <h6 class="text-Catalogo">
-        <span class="style-Catalogo">C</span>atalogo
-    </h6>
-    <section class="index-Donations">
-        <p>Apoya nuestra causa haciendo una donación. Tu contribución ayuda a promover la salud y el bienestar en nuestra comunidad.</p>
+    <main>
+        <section class="hero-Index">
+            <h1 class="title">HumanCare</h1>
+            <p class="text-Causes">
+                Somos una organización dedicada a promover la salud y el bienestar con un fuerte enfoque en la
+                sostenibilidad y el activismo social. Que se compromete a proporcionar productos y servicios ecológicos,
+                educar a la comunidad y fomentar la ayuda comunitaria.
+            </p>
+            <div class="index-Causes">
 
-    </section>
-</main>
+                <a href="./nosotros.html"><img class="causes" src="/images/causa1.jpg"></a>
+                <a href="./nosotros.html"><img class="causes" src="/images/causa2.jpg"></a>
+                <a href="./nosotros.html"><img class="causes" src="/images/causa3.jpg"></a>
 
-    
+            </div>
+            <div class="arrow-Index">
+                <img class="arrow" src="../images/arrow.svg" alt="arrow">
+            </div>
+        </section>
+        <section>
+            <h2 class="text-Catalogo">
+                <span class="style-Catalogo">C</span>atálogo
+            </h2>
+            <section id="cards"></section>
+        </section>
+
+        <section>
+            <h2 class="text-Donaciones">
+                <span class="style-Donaciones">D</span>onaciones
+            </h2>
+
+        </section>
+    </main>
+
+
     <footer id="footer"></footer>
 
 </body>
