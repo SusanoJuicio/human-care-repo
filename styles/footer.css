@@ -1,8 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('globalFont.css');
 
+#footer {
+    font-family: "fuente", sans-serif;
+    background-color: #3E85A4;
+}
 
-/* Body */
-body {
-    font-family: 'Poppins', 'sans-serif';
-    background-color: #D9D9D9;
+.footerMain{
+    display: flex;
+    justify-content: space-around;
+}
+.footerContain{
+    display: flex;
+    flex-direction: column;
+}
+.footerContain h2{
+    color: black;
+    margin: 20px auto ;
+}
+.footerForm{
+    display: flex;
+    justify-content: space-around;
+
+    flex-direction: column;
+}
+
+.Form input{
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: -2px 3px black;
+    background-color: #a6cdde;
+    color: black;
+    border: none;
+
+}
+.btnSubmit{
+    font-family: "fuente", sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #74c6e9;
+    color: black;
+}
+.btnSubmit:hover{
+    background-color: #68bee3;
+    color: white;
+    cursor: pointer;
+}
+.break-ó{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.aFooter{
+    background-color:#a6cdde ;
+    padding: 20px;
+    border-radius: 20px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    color: black;
+    font-style: italic;
+    box-shadow: -2px 3px black;
+    margin: auto;
+    font-size: 20px;
+    text-decoration: none;
+}
+.aFooter:hover{
+    background-color: #68bee3;
+    color: white;
+    cursor: pointer;
+}
+.rrss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgRrss a {
+    margin: 30px;
+
+}
+.textFinal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #d9d9d9;
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d9d9d9;
+    margin: 0;
+    font-size: 15px;
 }

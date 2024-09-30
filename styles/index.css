@@ -1,38 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url("globalFont.css");
 
 /* Body */
 body {
-    font-family: 'Poppins', 'sans-serif';
+    font-family: "fuente", sans-serif;
     background-color: #D9D9D9;
+    scroll-behavior: smooth;
+
 }
 
 .title {
-    font-size: 4rem;
+    margin-top: 1rem;
+    font-size: 5rem;
     letter-spacing: 0.1rem;
     color: #6EB7D6;
     text-align: center;
-    text-shadow: 0px 2px #000000;
+    text-shadow: 0px 2px #1b1a1a;
 }
 
 .title:hover {
     color: #3E85A4;
 }
+.index-Causes{
+    display: flex;
+    justify-content: space-around;
 
-/* Botones */
-button {
-    background-color: #6EB7D6;
-    color: black;
-    border-radius: 10em;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 1em 2em;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
 }
+.causes{
+    object-fit: fill;
+    width: 300px;
+    height: 300px;
+    margin: 3rem;
+    max-width: 480px;
+    max-height: 480px;
+    box-shadow: -3px 3px #3E85A4;
+    border-radius: 1rem;
+
+}
+.text-Causes{
+    font-size: large;
+    text-align: center;
+    padding-inline: 10rem;
+}
+
+.text-Catalogo{
+    font-size: 30px;
+    text-align: center;
+    color: #6EB7D6;
+}
+
+.style-Catalogo{
+    color: #3E85A4;
+
+}
+
+.arrow-Index{
+    display: flex;
+    justify-content: center;
+}
+
+.index-Donations{
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+/* Botones */
+
 
 ;
 /* Footer */

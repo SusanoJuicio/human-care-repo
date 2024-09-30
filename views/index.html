@@ -5,47 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HumanCare</title>
+    <link rel="stylesheet" href="../styles/footer.css"> <!--Estilo-->
     <link rel="stylesheet" href="../styles/header.css"><!--Estilo-->
     <link rel="stylesheet" href="../styles/index.css"> <!--Estilo-->
-
+    <script type="module" src="../js/header.js"></script>
+    <script type="module" src="../js/footer.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="nav_container">
-            <section>
-                <div class="nav">
-                    <a href="index.html"><img class="nav_logo" src="/images/Logo.png"></a>
-                    <span class="nav_span">
-                        <a href="carrito.html"> <img src="../images/cart.svg" alt="carrito"></a>
-                    </span>
-                </div>
-                <div class="nav_foot">
-                    <ul class="nav_list">
-                        <li class="nav_items">
-                            <a href="./nosotros.html" class="nav_links"> Nosotros</a>
-                        </li>
-                        <li class="nav_items">
-                            <a href="#" class="nav_links"> Catalogo</a>
-                        </li>
-                        <li class="nav_items">
-                            <a href="#" class="nav_links"> Donaciones</a>
-                        </li>
-                        <li class="nav_items">
-                            <a href="#" class="nav_links"> Contáctanos</a>
-                        </li>
+    <header id="header"></header>
 
-                    </ul>
-                </div>
-            </section>
-        </nav>
-    </header>
+<main>
+    <h1 class="title">Pocholita</h1>
+    <p class="text-Causes">
+        Somos una organización dedicada a promover la salud y el bienestar con un fuerte enfoque en la sostenibilidad y el activismo social. Que se compromete a proporcionar productos y servicios ecológicos, educar a la comunidad y fomentar la ayuda comunitaria.
+    </p>
+    <div class="index-Causes">
+        <img class="causes" src="/images/causa1.jpg">
+        <img class="causes" src="/images/causa2.jpg">
+        <img class="causes" src="/images/causa3.jpg">
+    </div>
+    <div class="arrow-Index">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+    </div>
+    <h6 class="text-Catalogo">
+        <span class="style-Catalogo">C</span>atalogo
+    </h6>
+    <section class="index-Donations">
+        <p>Apoya nuestra causa haciendo una donación. Tu contribución ayuda a promover la salud y el bienestar en nuestra comunidad.</p>
 
-    <h1 class="title">Human Care</h1>
+    </section>
+</main>
+
+    
+    <footer id="footer"></footer>
+
 </body>
-
-<footer>
-
-</footer>
 
 </html>
