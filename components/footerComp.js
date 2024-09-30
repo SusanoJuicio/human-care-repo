@@ -1,4 +1,4 @@
-export const footerComp = 
+export const footerComp =
     `<section class="footerMain">
         <section class="footerContain">
             <h2>Contáctanos</h2>
@@ -13,7 +13,7 @@ export const footerComp =
             </div>
         </section>
         <section class="rrss">
-            <h2>Síguenos en nuestra redes sociales:</h2>
+            <h2>Síguenos en nuestras redes sociales:</h2>
             <div class="imgRrss">
                 <a target="_blank" href="https://lucide.dev/icons/facebook"><img src="/images/facebook.svg" alt="facebook"></a>
                 <a target="_blank" href="https://lucide.dev/icons/facebook"><img src="/images/instagram.svg" alt="instagram"></a>

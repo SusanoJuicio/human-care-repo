@@ -1,5 +1,30 @@
 @import url("globalFont.css");
 
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+
+    }
+}
+
+
+@keyframes tiltSides {
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+}
+
+
+
 /* Body */
 body {
     font-family: "fuente", sans-serif;
@@ -8,67 +33,178 @@ body {
 
 }
 
+.hero-Index {
+    height: 930px;
+}
+
 .title {
     margin-top: 1rem;
     font-size: 5rem;
     letter-spacing: 0.1rem;
     color: #6EB7D6;
     text-align: center;
-    text-shadow: 0px 2px #1b1a1a;
 }
 
-.title:hover {
-    color: #3E85A4;
-}
-.index-Causes{
+
+
+.index-Causes {
     display: flex;
     justify-content: space-around;
 
 }
-.causes{
+
+.causes {
     object-fit: fill;
-    width: 300px;
-    height: 300px;
-    margin: 3rem;
+    width: 350px;
+    height: 350px;
+    margin: 2rem;
     max-width: 480px;
     max-height: 480px;
     box-shadow: -3px 3px #3E85A4;
     border-radius: 1rem;
-
+    transition: transform 0.5s ease-in-out;
 }
-.text-Causes{
+
+.causes:hover {
+    transform: scale(1.1);
+}
+
+.text-Causes {
     font-size: large;
     text-align: center;
     padding-inline: 10rem;
 }
 
-.text-Catalogo{
+.text-Catalogo {
     font-size: 30px;
     text-align: center;
     color: #6EB7D6;
+
+    margin-top: -90px;
 }
 
-.style-Catalogo{
+.style-Catalogo {
     color: #3E85A4;
 
 }
 
-.arrow-Index{
+
+
+.arrow-Index {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
+    animation: bounce 1s infinite alternate;
 }
 
-.index-Donations{
+.index-Donations {
     font-size: large;
     justify-content: center;
     text-align: center;
     padding: 0;
 }
-/* Botones */
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 300px;
+    background-color: #3E85A4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
 
 
-;
-/* Footer */
+.div-img {
+    margin: 5px auto 10px auto;
+    width: 90%;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
 
 
-/* Utilidades */
+.card-name {
+    font-size: 25px;
+    color: white;
+    margin: 10px 0;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.main-Card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-Card img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+.main-Card img:hover {
+    animation: tiltSides 1s infinite ease-in-out;
+}
+
+.add-Cart {
+    background-color: #6EB7D6;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.add-Cart:hover {
+    background-color: #5BA9D9;
+
+}
+
+
+.card-Price {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.text-Donaciones {
+    font-size: 30px;
+    text-align: center;
+    color: #6EB7D6;
+    margin-top: 80px;
+}
+
+.style-Donaciones {
+    color: #3E85A4;
+
+}
