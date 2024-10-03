@@ -3,7 +3,7 @@ export const headerComp =
             <section>
                 <div>
                     <div class="nav">
-                    <a href="index.html"><img class="nav_logo" src="/images/Logo.png"></a>
+                    <a href="index.html"><img class="nav_logo" src="/images/Logo.webp"></a>
                     <div class="nav_search">
                         <input type="text" class="nav_search_input" placeholder="Buscar Producto">
                         <button class="nav_search_button">

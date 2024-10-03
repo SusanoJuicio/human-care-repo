@@ -41,7 +41,7 @@ body {
     margin-top: 0px;
     padding-top: 10px;
     font-size: 5rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.5rem;
     color: #6EB7D6;
     text-align: center;
     text-shadow: -2px 2px black;
@@ -74,9 +74,10 @@ body {
 }
 
 .text-Causes {
-    font-size: large;
+    font-size: 25px;
     text-align: center;
     padding-inline: 10rem;
+    color: #3697c0;
 }
 
 .text-basic {
@@ -87,7 +88,7 @@ body {
     padding: 5px;
     text-shadow: -2px 2px black;
     background-image: linear-gradient(90deg, #3E85A4, #6EB7D6, #6eb7d6af, #D9D9D9, #D9D9D9, #D9D9D9, #6eb7d6af, #6EB7D6, #3E85A4);
-
+    letter-spacing: .5rem;
 }
 
 .text-basic-donaciones {
@@ -98,6 +99,7 @@ body {
     padding: 5px;
     text-shadow: -2px 2px black;
     background-image: linear-gradient(90deg, #3E85A4, #6EB7D6, #6eb7d6af, #D9D9D9, #D9D9D9, #D9D9D9, #6eb7d6af, #6EB7D6, #3E85A4);
+    letter-spacing: .5rem;
 
 }
 
@@ -230,6 +232,9 @@ a {
 .p-donaciones {
     display: flex;
     justify-content: center;
+    color: #3697c0;
+    font-size: 25px;
+
 }
 
 #causas {
@@ -303,7 +308,7 @@ a {
 
 .causas-p {
     font-size: 25px;
-    color: black;
+    color: #d9d9d9;
     line-height: 1.5;
     margin: auto;
 }
