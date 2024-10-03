@@ -1,0 +1,82 @@
+@import url('globalFont.css');
+
+/* Body */
+body {
+    font-family: "fuente", sans-serif;
+    background-color: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+p {
+    font-size: xx-large;
+}
+/* Sección de donaciones */
+#donaciones {
+    text-align: center;
+    padding: 50px;
+    background-color:#6eb7d6;
+}
+
+/* Estilos para la sección de donantes y tipos */
+#tipos-donantes {
+    padding: 50px;
+    background-color: #abd9ee;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-donantes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+
+}
+
+/* Estilos para cada tarjeta */
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    max-width: 300px; 
+    text-align: center; 
+    transition: transform 0.3s ease; /* Aanimacion suave para hover */
+    
+}
+
+
+.tarjeta:hover {
+    transform: scale(1.05); /* Crece ligeramente cuando el mouse pasa por encima */
+}
+
+
+.tarjeta p {
+    color: #333;
+}
+
+.tarjeta a {
+    color: #6eb7d6;
+    text-decoration: none;
+}
+
+/* Sección de agradecimiento */
+#agradecimiento {
+    text-align: center;
+    padding: 50px;
+    background-color:#6eb7d6;
+}
+
+#agradecimiento img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,155 @@
+@import url("globalFont.css");
+
+@keyframes tiltSides {
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+}
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "fuente", sans-serif;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Nav */
+.nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.nav_logo {
+    max-width: 64px;
+    max-height: 64px;
+    padding-left: 15px;
+
+    
+}
+
+.nav_list {
+    height: 35px;
+    background-color: #6EB7D6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    gap: 7rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.633);
+}
+
+.nav_list_lis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.nav_list_li {
+    
+    margin-right: 40px;
+}
+
+.nav_list_li:hover {
+    animation: tiltSides 1s infinite ease-in-out;
+}
+.nav_search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 650px;
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: -2.5px 3px 0 #000;
+    outline: none;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    max-width: 700px;
+    margin-right: -6rem;
+    background-color: #d9d9d9;
+    transition: ease 0.25s;
+}
+.nav_search:hover{
+    box-shadow: -5.5px 5px 0 #000;
+}
+.nav_search_input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 89%;
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    transition: ease 0.25s;
+}
+
+.nav_search_input:hover, .nav_search_input:focus {
+    box-shadow: 0 0 1em #d9d9d9;
+}
+
+.nav_search_input:focus {
+    outline: none;
+    background-color: #D9D9D9;
+}
+
+.nav_search_input:focus + .nav_search_button {
+    background-color: #d9d9d9;
+}
+
+.nav_search_button {
+    border: none;
+    background-color: #d9d9d9;
+    margin-top: .1em;
+}
+
+.nav_search_button:hover {
+    cursor: pointer;
+}
+
+.nav_search_icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #000000;
+    border-radius: 30%;
+}
+
+
+.nav_container {
+
+    background-color: #3E85A4;
+    width: 100%;
+    height: 100%;
+}
+
+.nav_links {
+    text-decoration: none;
+    color: #3E85A4;
+}
+
+.nav_links:hover {
+    color: #fdfdfd;
+    background-color: #3E85A4;
+    padding: 2px;
+    border-radius: 5%;
+}

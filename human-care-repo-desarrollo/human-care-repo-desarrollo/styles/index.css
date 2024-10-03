@@ -1,0 +1,335 @@
+@import url("globalFont.css");
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+
+    }
+}
+
+
+@keyframes tiltSides {
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+}
+
+
+
+/* Body */
+body {
+    font-family: "fuente", sans-serif;
+    background-color: #D9D9D9;
+    scroll-behavior: smooth;
+
+}
+
+.hero-Index {
+    height: 960px;
+}
+
+.title {
+    margin-top: 0px;
+    padding-top: 10px;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+    background: #3E85A4;
+    background-image: linear-gradient(0deg, #D9D9D9, #bfcdd8, #3E85A4);
+}
+
+
+
+.index-Causes {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.causes {
+    object-fit: fill;
+    width: 350px;
+    height: 350px;
+    margin: 2rem;
+    max-width: 480px;
+    max-height: 480px;
+    box-shadow: -3px 3px #3E85A4;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.causes:hover {
+    transform: scale(1.1);
+}
+
+.text-Causes {
+    font-size: large;
+    text-align: center;
+    padding-inline: 10rem;
+}
+
+.text-basic {
+    font-size: 36px;
+    text-align: center;
+    color: #6EB7D6;
+    margin-top: -90px;
+    padding: 5px;
+    text-shadow: -2px 2px black;
+    background-image: linear-gradient(90deg, #3E85A4, #6EB7D6, #6eb7d6af, #D9D9D9, #D9D9D9, #D9D9D9, #6eb7d6af, #6EB7D6, #3E85A4);
+
+}
+
+.text-basic-donaciones {
+    font-size: 36px;
+    text-align: center;
+    color: #6EB7D6;
+    margin-top: 50px;
+    padding: 5px;
+    text-shadow: -2px 2px black;
+    background-image: linear-gradient(90deg, #3E85A4, #6EB7D6, #6eb7d6af, #D9D9D9, #D9D9D9, #D9D9D9, #6eb7d6af, #6EB7D6, #3E85A4);
+
+}
+
+
+.style-basic {
+    color: #3E85A4;
+}
+
+
+
+.arrow-Index {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    animation: bounce 1s infinite alternate;
+}
+
+.index-Donations {
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 300px;
+    background-color: #3E85A4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.div-img {
+    margin: 5px auto 10px auto;
+    width: 90%;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.card-name {
+    font-size: 25px;
+    color: #d9d9d9;
+    margin: 10px 0;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.main-Card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-Card img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+.main-Card img:hover {
+    animation: tiltSides 1s infinite ease-in-out;
+}
+
+.add-Cart {
+    background-color: #6EB7D6;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #d9d9d9;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.add-Cart:hover {
+    background-color: #5BA9D9;
+
+}
+
+
+.card-Price {
+    font-size: 16px;
+    color: #d9d9d9;
+    font-weight: bold;
+}
+
+
+.text-basic-donaciones {
+    font-size: 36px;
+    text-align: center;
+    color: #6EB7D6;
+    margin-top: 50px;
+    padding: 5px;
+    text-shadow: -2px 2px black;
+    background-image: linear-gradient(90deg, #3E85A4, #6EB7D6, #6eb7d6af, #D9D9D9, #D9D9D9, #D9D9D9, #6eb7d6af, #6EB7D6, #3E85A4);
+
+}
+
+.p-donaciones {
+    display: flex;
+    justify-content: center;
+}
+
+#causas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cardCausa:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardCausa {
+    background-color: #3E85A4;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d9d9d9;
+    width: 90%;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px;
+}
+
+.causa-link {
+    text-decoration: none;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title-container {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.title-causa {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+.causa-contain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 270px;
+}
+
+.img-causas {
+    width: 700px;
+    height: 250px;
+    margin: 0 10px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.causa-description {
+    width: 500px;
+}
+
+.causas-p {
+    font-size: 25px;
+    color: black;
+    line-height: 1.5;
+    margin: auto;
+}
+
+.btnDonar {
+    background-color: #3E85A4;
+    color: #d9d9d9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.btnDonar:hover {
+    background-color: #5BA9D9;
+}
+
+.aDonar {
+    text-decoration: none;
+}
+
+.aDonar:hover {
+    text-decoration: none;
+}
