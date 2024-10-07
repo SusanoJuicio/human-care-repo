@@ -23,26 +23,18 @@ products.then(data => {
         link.href = "./catalogo.html";
 
         const cardContent = `
-            <div class="div-img">
-
-            </div>
-            <h3 class="card-name">${producto.nombre}</h3>
+        <div class="card-image">
+            
+        
+        </div>
+                <span class="card-title">${producto.nombre}</span>
+            <span class="price">$${producto.precio}</span>
+            <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
+            
         `;
 
         link.innerHTML = cardContent;
-
-        const mainCard = document.createElement("div");
-        mainCard.classList.add("main-Card");
-        mainCard.innerHTML = `
-            <img src="../images/hearth.svg" alt="hearth">
-            <button class="add-Cart">Añadir al carrito</button>
-            <p class="card-Price">$${producto.precio}</p>
-
-        `;
-
         card.appendChild(link);
-        card.appendChild(mainCard);
-
         seccion.appendChild(card);
     });
 });
