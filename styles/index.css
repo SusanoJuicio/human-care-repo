@@ -90,6 +90,7 @@ body {
     padding-inline: 10rem;
     color: #3697c0;
     margin-top: -50px;
+    text-shadow: -1px 3px 4px #ffffff;
 }
 
 .causes {
@@ -104,7 +105,8 @@ body {
     border-radius: 1rem;
     transition: transform 0.5s ease-in-out;
     background: rgb(0, 0, 0);
-    box-shadow: #3E85A4 0px 2px 4px, #3E85A4 0px 7px 13px -3px, #3E85A4 0px -3px 0px inset;
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    filter: drop-shadow(-6px 5px 10px #000000);
 }
 
 .causes:hover {
@@ -157,14 +159,14 @@ body {
     position: relative;
     width: 17rem;
     height: 22rem;
-    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 5px 3px 0px #3E85A4;
     cursor: pointer;
     transition: all 120ms;
     background: #74c6e9;
     padding: 0.5em;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
+    filter: drop-shadow(-6px 5px 10px #000000);
 }
 
 .card::after {
@@ -278,6 +280,7 @@ body {
     transition: all .3s;
     border-radius: 20px;
     margin-bottom: 30px;
+    filter: drop-shadow(-6px 5px 10px #000000);
 }
 
 .cause2 {
@@ -288,7 +291,6 @@ body {
     border-radius: 20px;
     color: #000;
     margin-bottom: 30px;
-
 }
 
 .cause2:hover {
