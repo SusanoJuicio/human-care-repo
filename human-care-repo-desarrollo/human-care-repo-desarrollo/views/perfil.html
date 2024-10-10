@@ -5,11 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | HumanCare</title>
-    <link rel="stylesheet" href="/styles/perfil.css">
+    <link rel="stylesheet" href="../styles/header.css"> <!--Estilo-->
+    <link rel="stylesheet" href="../styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="../styles/perfil.css">
+    <script type="module" src="../js/header.js"></script>
+    <script type="module" src="../js/footer.js"></script>
 </head>
 
 <body>
-
+    <header id="header"></header>
+    <main>
+        <section class="perfil">
+            <div class="mi-perfil">
+                <div class="perfil-info">
+                    <img src="profile-placeholder.png" alt="Perfil" class="perfil-imagen">
+                    <div>
+                        <h2>Mi Perfil</h2>
+                        <p>Nombre: </p>
+                        <p>Apellido: </p>
+                        <p>DNI: </p>
+                        <p>Email: </p>
+                        <p>Teléfono: </p>
+                        <p>Fecha de Nacimiento: </p>
+                        <button class="editar-perfil">Editar Perfil</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nivel">
+                <h2>Nivel</h2>
+                <div class="estrellas">
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                </div>
+            </div>
+            <div class="puntos">
+                <h2>Puntos Acumulados</h2>
+                <div class="puntos-acumulados">
+                    <div class="puntos-caja">200</div>
+                    <button class="canjear">Canjear</button>
+                </div>
+                <div class="historial-puntos">
+                    <h3>Historial de Puntos</h3>
+                    <div class="historial-lista">
+                        <ul>
+                            <li>10/09/2024 - Compra de $3,000 | 30 Puntos</li>
+                            <li>05/09/2024 - Donación de $5,000 | 50 Puntos</li>
+                            <li>01/09/2024 - Compra de $2,000 | 20 Puntos</li>
+                        </ul>
+                        <button class="ver-transacciones">Ver todas las transacciones</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="donaciones">
+            <h2>Donaciones</h2>
+            <div class="donaciones-lista">
+                <ul>
+                    <li>
+                        <span>&#128151;</span> 05/09/2024 - Donación de $5,000 | Programa de ropa
+                    </li>
+                    <li>
+                        <span>&#128151;</span> 25/08/2024 - Donación de $3,000 | Programa de comida
+                    </li>
+                </ul>
+            </div>
+            <div class="donaciones-botones">
+                <button class="ver-donaciones">Ver todas tus donaciones</button>
+                <button class="donar">Donar Ahora</button>
+            </div>
+        </section>
+    </main>
+<footer id="footer"></footer>
 </body>
-
 </html>

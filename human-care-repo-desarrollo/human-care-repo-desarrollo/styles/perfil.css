@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #4682b4;
+    padding: 10px;
+}
+
+.menu-button {
+    background-color: #ffffff;
+    color: #4682b4;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.perfil {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mi-perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.perfil-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.editar-perfil {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.editar-perfil:hover {
+    background-color: #5a9bd5;
+}
+
+.nivel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.estrellas {
+    font-size: 2em;
+    color: #ffd700;
+}
+
+.puntos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.puntos-acumulados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.puntos-caja {
+    font-size: 3em;
+    font-weight: bold;
+    background-color: #87ceeb;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.canjear {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.canjear:hover {
+    background-color: #5a9bd5;
+}
+
+.historial-puntos {
+    margin-top: 20px;
+}
+
+.historial-lista {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.historial-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.historial-lista li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.historial-lista li:last-child {
+    border-bottom: none;
+}
+
+.ver-transacciones {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.ver-transacciones:hover {
+    background-color: #5a9bd5;
+}
+
+.donaciones {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.donaciones-lista {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donaciones-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.donaciones-lista li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.donaciones-lista li span {
+    color: #ff69b4;
+    margin-right: 10px;
+}
+
+.donaciones-lista li:last-child {
+    border-bottom: none;
+}
+
+.donaciones-botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.ver-donaciones, .donar {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ver-donaciones:hover, .donar:hover {
+    background-color: #5a9bd5;
+}
+
+footer {
+    background-color: #87ceeb;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.candidatos input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.candidatos button {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.candidatos button:hover {
+    background-color: #5a9bd5;
+}
+
+.social-media-icons {
+    margin-top: 10px;
+}
+
+.social-media-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+}

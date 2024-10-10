@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | HumanCare</title>
+    <link rel="stylesheet" href="../styles/header.css"> <!--Estilo-->
+    <link rel="stylesheet" href="../styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="../styles/perfil.css">
+    <script type="module" src="../js/header.js"></script>
+    <script type="module" src="../js/footer.js"></script>
+</head>
+<body>
+<section class="formulario">
+    <h1>Registro de usuario</h1>
+    <form>
+        <div class="username">
+            <label>Nombre de usuario</label>
+            <input 
+            id="username" 
+            type="text" 
+            name="username" 
+            placeholder="username: HumanCare1"
+            pattern="[A-Za-z0-9]{4,20}"
+            maxlength="20"
+            required>
+            <p>
+                Ingrese entre 4 y 20 caracteres utilizando solamente numeros y letras, sin espacios. 
+            </p>
+            </div>
+            <div class="password">
+                <label for="email">Escriba su Correo</label>
+        <input 
+            id="email" 
+            name="email" 
+            type="email"
+            placeholder="email: HumanCare@gmail.com "
+            minlength="8"
+            required>
+            <p>Ingrese una direccion valida, de al menos 8 caracteres, con el formato "usuario@servidor"</p>
+        </div>
+        </form>
+
+</body>
