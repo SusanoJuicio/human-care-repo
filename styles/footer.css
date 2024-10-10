@@ -1,5 +1,17 @@
 @import url('globalFont.css');
 
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 #footer {
     font-family: "fuente", sans-serif;
     background-color: #3E85A4;
@@ -81,6 +93,7 @@
     font-size: 15px;
     transition: all 0.5s ease;
 }
+
 .btnSubmit:hover {
     background-color: #74c6e9;
     color: hsl(0, 0%, 100%);
@@ -200,18 +213,68 @@
     font-size: 20px;
 }
 
-
-
 .rrss {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.imgRrss a {
-    margin: 30px;
-
+.contain-Rrss {
+    width: fit-content;
+    height: fit-content;
+    background-color: #68bee3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
 }
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: #d9d9d9;
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+
 
 .textFinal {
     display: flex;
