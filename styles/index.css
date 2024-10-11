@@ -47,7 +47,7 @@ body {
             #D9D9D9 50%,
             #D9D9D9 75%,
             #bfcdd8 75%,
-            #D9D9D9);
+            #bfcdd8);
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
 }
