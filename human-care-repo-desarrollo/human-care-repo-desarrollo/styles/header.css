@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
 }
 
 
@@ -55,6 +55,7 @@ body {
     font-size: 1.4rem;
     text-decoration: none;
     text-shadow: -1px 1px rgba(0, 0, 0, 0.633);
+    padding: 0.75rem;
 }
 
 .nav_list_lis {
