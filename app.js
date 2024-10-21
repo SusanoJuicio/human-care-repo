@@ -9,8 +9,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Ruta para el index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+// Ruta para otra página
+app.get('/nosotros', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'nosotros.html'));
+  });
+
+  // Ruta para otra página
+app.get('/perfil', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'perfil.html'));
+  });
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
