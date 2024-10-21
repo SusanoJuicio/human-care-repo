@@ -1,0 +1,29 @@
+{
+  "name": "human-care-repo",
+  "version": "1.0.0",
+  "description": "Human care development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SusanoJuicio/human-care-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SusanoJuicio/human-care-repo/issues"
+  },
+  "homepage": "https://github.com/SusanoJuicio/human-care-repo#readme",
+  "dependencies": {
+    "@types/mongoose": "^5.11.97",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3"
+  }
+}
