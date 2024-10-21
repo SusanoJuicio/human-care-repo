@@ -3,7 +3,7 @@ export const headerComp =
             <section>
                 <div>
                     <div class="nav">
-                    <a href="index.html"><img class="nav_logo" src="/images/Logo.webp"></a>
+                    <a href="./index.html"><img class="nav_logo" src="/images/Logo.webp"></a>
                     <div class="nav_search">
                         <input type="text" class="nav_search_input" placeholder="Buscar Producto">
                         <button class="nav_search_button">
@@ -36,9 +36,7 @@ export const headerComp =
                         <li class="nav_items">
                             <a href="#footer" class="nav_links"> Contáctanos</a>
                         </li>
-
                     </ul>
                 </div>
             </section>
-            </nav>
-        `
+    </nav>`;
