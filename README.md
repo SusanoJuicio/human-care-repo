@@ -1,6 +1,6 @@
 # human-care-repo
 IMPORTANTE 
-Al hacer git pull de la rama "desarrollo", tener instalado NodeJS, y una vez descargado y hecho el pull, van a sus respectivas ramas y hacer un git merge desarrollo. Y por ultimo ir a la terminal (Ctrl + ñ) y colocar poner:
+Al hacer git pull de la rama "desarrollo", tener instalado NodeJS, y una vez descargado y hecho el pull, van a sus respectivas ramas y hacer un git merge desarrollo. Y por ultimo ir a la terminal (Ctrl + ñ) y poner:
 
 npm install --> Descarga Node_modules || 
 npm run dev --> Para levantar el proyecto en internet
