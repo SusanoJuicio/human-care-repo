@@ -1,1 +1,93 @@
 @import url('globalFont.css');
+
+
+/* Body */
+body {
+    font-family: "fuente", sans-serif;
+    background-color: #D9D9D9;
+}
+
+#cards {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    justify-items: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 17rem;
+    height: 22rem;
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    cursor: pointer;
+    transition: all 120ms;
+    background: #74c6e9;
+    padding: 0.5em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: drop-shadow(-6px 5px 10px #000000);
+}
+
+
+.card-title {
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 1.875em;
+    margin-top: -25px;
+    font-weight: 400;
+    color: #000000;
+    text-align: start;
+}
+
+.price {
+    font-size: 1.2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    text-align: start;
+    bottom: 0.625em;
+    color: #000;
+}
+
+.card:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card:active::after {
+    content: "Listo!";
+    height: 5.06em;
+}
+
+.text {
+    max-width: 55px;
+}
+
+.card-image {
+    width: 100%;
+    height: 65%;
+    display: block;
+    margin-top: 25px;
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card-hearth {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

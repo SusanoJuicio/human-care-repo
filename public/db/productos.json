@@ -1,0 +1,56 @@
+[
+    {
+    "id": 1,
+    "nombre": "Botella de Agua Reutilizable",
+    "img":"../images/product/pexels-cottonbro-3737592.webp",
+    "precio":2000
+    },
+    {
+    "id": 2,
+    "nombre": "Bolsa Ecológica de Tela",
+    "img":"../images/product/pexels-greta-hoffman-7728740.webp",
+    "precio":2000
+    },
+    {
+    "id": 3,
+    "nombre": "Cepillo de Dientes de Bambú",
+    "img":"../images/product/pexels-victor-moragriega-1390556186-29071886.webp",
+    "precio":2000
+    },
+    {
+    "id": 4,
+    "nombre": "Taza de Café Reutilizable",
+    "img":"../images/product/pexels-readymade-3850558.webp",
+    "precio":2000
+    },
+    {
+    "id": 5,
+    "nombre": "Pajilla Metálica",
+    "img":"../images/product/pexels-steve-1000084 (1).webp",
+    "precio":2000
+    },
+    {
+    "id": 6,
+    "nombre": "Cubo de Compostaje",
+    "img":"../images/product/pexels-victor-moragriega-1390556186-29071886.webp",
+    "precio":2000
+    },
+    {
+    "id": 7,
+    "nombre": "Taza de Café Reutilizable",
+    "img":"../images/product/pexels-victor-moragriega-1390556186-29071886.webp",
+    "precio":2000
+    },
+    {
+    "id": 8,
+    "nombre": "Pajilla Metálica",
+    "img":"../images/product/pexels-victor-moragriega-1390556186-29071886.webp",
+    "precio":2000
+    },
+    {
+    "id": 9,
+    "nombre": "Cubo de Compostaje",
+    "img":"../images/product/pexels-victor-moragriega-1390556186-29071886.webp",
+    "precio":2000
+    }
+]
