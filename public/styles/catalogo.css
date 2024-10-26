@@ -1,10 +1,28 @@
 @import url('globalFont.css');
 
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
 
-/* Body */
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
 body {
     font-family: "fuente", sans-serif;
-    background-color: #D9D9D9;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
 }
 
 main {
