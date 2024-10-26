@@ -1,37 +1,41 @@
-
 const fetchProducts = async () => {
     try {
         const response = await fetch("../../db/user.json");
         const data = await response.json();
         return data;
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
     }
 }
 
-const seccion = document.getElementById("userInfo")
+const seccion = document.getElementById("infoUser");
 const products = fetchProducts();
-
 products.then(data => {
-    data.forEach(producto => {
+    data.forEach(element => {
         const card = document.createElement("div");
-        card.classList.add("card");
-        card.setAttribute("key", producto.id);
-
-        const link = document.createElement("a");
-        link.href = "./catalogo.html";
-
+        card.classList.add("user");
         const cardContent = `
-            <h2 class=>Mi Perfil</h2>
-            <p><strong>Nombre:</strong> ${data.nombre}</p>
-            <p><strong>Apellido:</strong> ${data.apellido}</p>
-            <p><strong>DNI:</strong> ${data.dni}</p>
-            <p><strong>Teléfono:</strong> ${data.telefono}</p>
-            `;
-
-        link.innerHTML = cardContent;
-        card.appendChild(link);
+            <div>
+                <img src="${element.img}" alt="Usuario">
+            </div>
+            <div class="user-div-2">
+                <p><strong>Nombre:</strong> ${element.nombre}</p>
+                <p><strong>Apellido:</strong> ${element.apellido}</p>
+                <p><strong>DNI:</strong> ${element.dni}</p>
+                <p><strong>Teléfono:</strong> ${element.telefono}</p>
+                <p><strong>Gmail:</strong> ${element.gmail}</p>
+            </div>
+        `;
+        card.innerHTML = cardContent;
         seccion.appendChild(card);
     });
+    // simula contenido para lo restante
+    const card1 = document.createElement("div");
+    card1.classList.add("f200")
+    seccion.appendChild(card1);
+    const card2 = document.createElement("div");
+    card2.classList.add("f200")
+    seccion.appendChild(card2)
 });
+
+
