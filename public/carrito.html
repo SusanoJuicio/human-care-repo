@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito | HumanCare</title>
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="/styles/carrito.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/carrito.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/carrito.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="header"></header>
 
-    </header>
+    <main>
+        <aside id="filtros">
+            <ul>
+                <li>Todos</li>
+                <li>Bambú</li>
+                <li>Caseros</li>
+                <li>Ecológicos</li>
+                <li>Tazas</li>
+            </ul>
+        </aside>
+        <section id="productos" class="grid-productos"></section>
+        <section id="carrito" class="resumen-carrito"></section>
+    </main>
+    <footer id="footer"></footer>
 
-
-    <h1> Buenas noches estimado </h1>
 </body>
-
 
 </html>

@@ -1,0 +1,8 @@
+
+[
+    { "id": 1, "nombre": "Botella de Agua Reutilizable", "precio": 2000, "imagen": "https://via.placeholder.com/150" },
+    { "id": 2, "nombre": "Bolsa Ecológica de Tela", "precio": 1500, "imagen": "https://via.placeholder.com/150" },
+    { "id": 3, "nombre": "Cepillo de Dientes de Bambú", "precio": 500, "imagen": "https://via.placeholder.com/150" },
+    { "id": 4, "nombre": "Taza de Café Reutilizable", "precio": 800, "imagen": "https://via.placeholder.com/150" },
+    { "id": 5, "nombre": "Cubo de Compostaje", "precio": 3000, "imagen": "https://via.placeholder.com/150" }
+]

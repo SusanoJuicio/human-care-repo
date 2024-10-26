@@ -1,7 +1,12 @@
 # Carpetas
 node_modules
 .vscode
+dist
+logs
 vscode
 
 # Archivos
 *.txt
+.env
+*.log
+*-lock.json

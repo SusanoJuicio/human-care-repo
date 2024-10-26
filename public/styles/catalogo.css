@@ -1,1 +1,163 @@
 @import url('globalFont.css');
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+body {
+    font-family: "fuente", sans-serif;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+}
+
+#filtros {
+    background-color: #b0d0da;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0px;
+}
+
+
+#filtros ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#filtros li {
+    background-color: #e7ebed;
+    padding: 15px;
+    border-bottom: 1px solid #b0d0da;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#filtros li:hover {
+    background-color: #b0d0da;
+}
+
+#cards {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    justify-items: center;
+    gap: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    width: 17rem;
+    height: 22rem;
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    cursor: pointer;
+    transition: all 120ms;
+    background: #74c6e9;
+    padding: 0.5em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: drop-shadow(-6px 5px 10px #000000);
+}
+
+
+.card-title {
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 1.875em;
+    margin-top: -25px;
+    font-weight: 400;
+    color: #000000;
+    text-align: start;
+}
+
+.price {
+    font-size: 1.2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    text-align: start;
+    bottom: 0.625em;
+    color: #000;
+}
+
+.card::after {
+    content: "Añadir al Carrito";
+    position: absolute;
+    left: 0;
+    background: #3697c0;
+    color: rgb(231, 231, 231);
+    height: 5.06em;
+    width: 100%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+    opacity: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card:active::after {
+    content: "Listo!";
+    height: 5.06em;
+}
+
+.text {
+    max-width: 55px;
+}
+
+.card-image {
+    width: 100%;
+    height: 65%;
+    display: block;
+    margin-top: 25px;
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.card-hearth {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
