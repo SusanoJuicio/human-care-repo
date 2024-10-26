@@ -5,7 +5,6 @@ const imagenes = [
     { url: "../images/us/talia-img.jpg", nombre: "Talia", link: "https://www.linkedin.com/in/taliaivonneojeda/" },
     { url: "../images/us/maxi-img.jpg", nombre: "Maxi", link: "https://www.linkedin.com/in/maximiliano-lucas-martinez-72921a297/" },
     { url: "../images/us/seba-img.jpg", nombre: "Seba", link: "https://www.linkedin.com/in/sebasti%C3%A1n-petersen-308a26240/" },
-    { url: "", nombre: "Vero", link: "#" },
     { url: "", nombre: "Brisa", link: "#" },
     { url: "", nombre: "Karen", link: "https://www.linkedin.com/in/karen-marlene-licera-948719241/" }
 ];
