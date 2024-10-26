@@ -52,17 +52,6 @@ body {
     animation: move 4.5s linear infinite;
 }
 
-@keyframes move {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 40px 40px;
-    }
-}
-
-
 .hero-Index {
     height: 960px;
 }
