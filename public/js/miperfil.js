@@ -1,4 +1,3 @@
-
 const fetchProducts = async () => {
     try {
         const response = await fetch("../../db/user.json");
@@ -16,18 +15,18 @@ const products = fetchProducts();
 products.then(data => {
     data.forEach(producto => {
         const card = document.createElement("div");
+        const link = document.createElement("a");
+        link.href = "./perfil.html";
         card.classList.add("card");
         card.setAttribute("key", producto.id);
 
-        const link = document.createElement("a");
-        link.href = "./catalogo.html";
 
         const cardContent = `
             <h2 class=>Mi Perfil</h2>
-            <p><strong>Nombre:</strong> ${data.nombre}</p>
-            <p><strong>Apellido:</strong> ${data.apellido}</p>
-            <p><strong>DNI:</strong> ${data.dni}</p>
-            <p><strong>Teléfono:</strong> ${data.telefono}</p>
+            <p><strong>Nombre:</strong> ${producto.nombre}</p>
+            <p><strong>Apellido:</strong> ${producto.apellido}</p>
+            <p><strong>DNI:</strong> ${producto.dni}</p>
+            <p><strong>Teléfono:</strong> ${producto.telefono}</p>
             `;
 
         link.innerHTML = cardContent;
