@@ -1,22 +1,21 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch("../db/cart.product.json");
+        const response = await fetch('../db/cart.product.json');
         const data = await response.json();
         return data;
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
     }
 }
 
-const contenedor = document.getElementById("productos");
-const carritoContenedor = document.getElementById("carrito");
+const contenedor = document.getElementById('productos');
+const carritoContenedor = document.getElementById('carrito');
 
 const products = fetchProducts();
 products.then(data => {
     data.forEach(producto => {
-        const productoCard = document.createElement("div");
-        productoCard.classList.add("card");
+        const productoCard = document.createElement('div');
+        productoCard.classList.add('card');
 
         productoCard.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}">

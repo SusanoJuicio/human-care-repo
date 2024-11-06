@@ -1,24 +1,22 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch("../../db/causas.json");
+        const response = await fetch('../../db/causas.json');
         const data = await response.json();
         return data;
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
     }
 }
 
-
-const seccion = document.getElementById("causas");
+const seccion = document.getElementById('causas');
 const causas = fetchProducts();
 
 causas.then(data => {
     data.forEach(element => {
-        const cardCausa = document.createElement("div");
-        const a = document.createElement("a");
-        a.href = "./donaciones.html";
-        a.classList.add("causa-link");
+        const cardCausa = document.createElement('div');
+        const a = document.createElement('a');
+        a.href = './donaciones.html';
+        a.classList.add('causa-link');
 
         const cardCausaContent = `
         <div class="cause">
@@ -36,19 +34,18 @@ causas.then(data => {
         a.innerHTML = cardCausaContent;
         cardCausa.appendChild(a);
         seccion.appendChild(cardCausa);
-
     });
     RenderBtn()
 });
 
 const RenderBtn = () => {
-    const button = document.createElement("button");
-    button.classList.add("btnDonar");
-    button.innerText = "Donar";
+    const button = document.createElement('button');
+    button.classList.add('btnDonar');
+    button.innerText = 'Donar';
 
-    const a = document.createElement("a");
-    a.classList.add("aDonar")
-    a.href = "./donaciones.html";
+    const a = document.createElement('a');
+    a.classList.add('aDonar')
+    a.href = './donaciones.html';
     a.appendChild(button);
 
     seccion.appendChild(a);

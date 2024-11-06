@@ -1,17 +1,15 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch("../../db/user.json");
+        const response = await fetch('../../db/user.json');
         const data = await response.json();
         return data;
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
     }
 }
 
-const seccion = document.getElementById("userInfo")
+const seccion = document.getElementById('infoUser');
 const products = fetchProducts();
-
 products.then(data => {
     data.forEach(producto => {
         const card = document.createElement("div");
@@ -33,4 +31,11 @@ products.then(data => {
         card.appendChild(link);
         seccion.appendChild(card);
     });
+    // simula contenido para lo restante
+    const card1 = document.createElement('div');
+    card1.classList.add('f200')
+    seccion.appendChild(card1);
+    const card2 = document.createElement('div');
+    card2.classList.add('f200')
+    seccion.appendChild(card2)
 });
