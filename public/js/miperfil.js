@@ -11,22 +11,24 @@ const fetchProducts = async () => {
 const seccion = document.getElementById('infoUser');
 const products = fetchProducts();
 products.then(data => {
-    data.forEach(element => {
-        const card = document.createElement('div');
-        card.classList.add('user');
+    data.forEach(producto => {
+        const card = document.createElement("div");
+        const link = document.createElement("a");
+        link.href = "./perfil.html";
+        card.classList.add("card");
+        card.setAttribute("key", producto.id);
+
+
         const cardContent = `
-            <div>
-                <img src="${element.img}" alt="Usuario">
-            </div>
-            <div class="user-div-2">
-                <p><strong>Nombre:</strong> ${element.nombre}</p>
-                <p><strong>Apellido:</strong> ${element.apellido}</p>
-                <p><strong>DNI:</strong> ${element.dni}</p>
-                <p><strong>Teléfono:</strong> ${element.telefono}</p>
-                <p><strong>Gmail:</strong> ${element.gmail}</p>
-            </div>
-        `;
-        card.innerHTML = cardContent;
+            <h2 class=>Mi Perfil</h2>
+            <p><strong>Nombre:</strong> ${producto.nombre}</p>
+            <p><strong>Apellido:</strong> ${producto.apellido}</p>
+            <p><strong>DNI:</strong> ${producto.dni}</p>
+            <p><strong>Teléfono:</strong> ${producto.telefono}</p>
+            `;
+
+        link.innerHTML = cardContent;
+        card.appendChild(link);
         seccion.appendChild(card);
     });
     // simula contenido para lo restante
