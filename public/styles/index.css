@@ -238,11 +238,11 @@ body {
 .text-basic-donaciones {
     font-size: 36px;
     text-align: center;
+    margin-top: 60px;
     color: #6EB7D6;
-    margin-top: 50px;
     padding: 5px;
-    padding-top: 50px;
     text-shadow: -2px 2px black;
+    letter-spacing: .5rem;
 }
 
 .p-donaciones {
@@ -322,6 +322,17 @@ body {
 }
 
 
+
+.aDonar {
+    text-decoration: none;
+    display: block;
+    margin: auto;
+}
+
+.aDonar:hover {
+    text-decoration: none;
+}
+
 .btnDonar {
     background-color: #3E85A4;
     color: #000;
@@ -348,14 +359,6 @@ body {
     background-color: #74c6e9;
     color: hsl(0, 0%, 100%);
     box-shadow: #68bee3 0px 7px 29px 0px;
-}
-
-.aDonar {
-    text-decoration: none;
-}
-
-.aDonar:hover {
-    text-decoration: none;
 }
 
 a {

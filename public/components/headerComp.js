@@ -24,7 +24,7 @@ export const headerComp =
                 </div>
                 <div class="nav_foot">
                     <ul class="nav_list">
-                        <li class="nav_items">
+                        <li class="nav_items" =>
                             <a href="nosotros.html" class="nav_links"> Nosotros</a>
                         </li>
                         <li class="nav_items">
