@@ -40,7 +40,18 @@ body {
     max-height: 64px;
     padding-left: 15px;
 
-
+.nav_list {
+    height: 35px;
+    width: screen;
+    background-color: #6EB7D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.633);
 }
 
 
