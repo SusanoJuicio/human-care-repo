@@ -1,162 +1,317 @@
 @import url('globalFont.css');
 
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
 /* Body */
 body {
     font-family: "fuente", sans-serif;
+    scroll-behavior: smooth;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
+}
+
+.donations{}
+
+.donations-container{
+
+}
+.donations-text{
+    margin-top: 0px;
+    padding-top: 30px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.donations-images{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.donations-image{
+    object-fit: cover;
+    width: 700px;
+    height: 380px;
+    margin: 2rem;
+    margin-top: 15px;
+    box-shadow: -3px 3px #3E85A4;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    background: rgb(0, 0, 0);
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    filter: drop-shadow(-6px 5px 10px #000000);
+}
+
+.btnDonar{
     background-color: #3E85A4;
-    margin: 0;
-    padding: 0;
-    font-size: large;
-}
-
-
-
-/* Sección de donaciones */
-#donaciones {
-    text-align: center;
-    margin-bottom: 5rem;
-}
-
-#donaciones div {
-    display: flex;
-    justify-content: space-around;
-}
-
-#donaciones div img {
-    width: 45%;
-    border-radius: 15px;
-}
-
-#donaciones p {
-    color: #d9d9d9;
-    width: 80%;
-    margin: 20px auto;
-    font-size: 30px;
-}
-
-
-
-
-#tipos-donantes div h2,
-#tipos-donantes div p {
-    text-align: center;
-    color: #d9d9d9;
-}
-
-#tipos-donantes div h2 {
-    background-image: linear-gradient(90deg, #D9D9D9, #6eb7d6af, #6eb7d6af, #3E85A4, #3E85A4, #3E85A4, #6eb7d6af, #6eb7d6af, #D9D9D9);
-    font-size: 30px;
-}
-
-/* Contenedor de tarjetas */
-.tarjetas-donantes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-
-}
-
-/* Estilos para cada tarjeta */
-.tarjeta {
-    background-color: #d9d9d9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.t-1 strong {
-    color: rgb(82, 56, 2);
-}
-
-.t-2 strong {
-    color: rgb(126, 125, 125);
-}
-
-.t-3 strong {
-    color: darkcyan;
-}
-
-
-.tarjeta:hover {
-    transform: scale(1.05);
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 40px;
     cursor: pointer;
-}
-
-
-.tarjeta p {
-    color: #000000;
-}
-
-.tarjeta a {
-    color: #3E85A4;
-    text-decoration: none;
-}
-
-#agradecimiento {
     text-align: center;
-    background-color: #6eb7d6;
-}
-
-#agradecimiento h2 {
-    background-image: linear-gradient(90deg, #D9D9D9, #6eb7d6af, #6eb7d6af, #3E85A4, #3E85A4, #3E85A4, #6eb7d6af, #6eb7d6af, #D9D9D9);
-    color: #d9d9d9;
-}
-
-#agradecimiento div {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-}
-
-#agradecimiento p {
-    color: #d9d9d9;
-    width: 50%;
-    height: 50%;
+    display: block;
     margin: auto;
-    font-size: 30px;
-    padding: 5px;
-
-}
-
-
-.agradecimiento-img {
-    width: 50%;
-    margin-bottom: 50px;
-}
-
-.agradecimiento-img img {
-    width: 50%;
-    border-radius: 20px;
-}
-
-
-
-
-.btnDonar {
-    font-family: "fuente", sans-serif;
-    padding: 17px 40px;
-    border-radius: 50px;
-    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 70px;
     border: 0;
-    background-color: #D9D9D9;
+    background-color: #74c6e9;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-left: 10px;
-    font-size: 15px;
     transition: all 0.5s ease;
-    margin-top: 20px;
 }
 
 .btnDonar:hover {
-    background-color: #68bee3;
-    color: #D9D9D9;
-    cursor: pointer;
+    background-color: #74c6e9;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #68bee3 0px 7px 29px 0px;
+}
+
+.tipes-text{
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 2rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.tipes-levels{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-donantes{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.card-copper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+.card-gold {
+position: relative;
+width: 250px;
+height: 250px;
+color: #2e2d31;
+background: #131313;
+overflow: hidden;
+border-radius: 20px;
+}
+
+.card-diam {
+position: relative;
+width: 250px;
+height: 250px;
+color: #2e2d31;
+background: #131313;
+overflow: hidden;
+border-radius: 20px;
+}
+
+.temporary-text-copper {
+font-weight: bold;
+font-size: 24px;
+padding: 6px 12px;
+color: #f8f8f8;
+}
+
+.temporary-text-gold {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+}
+
+.temporary-text-diam {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+}
+
+.card_title {
+font-weight: bold;
+}
+
+.card_content {
+position: absolute;
+left: 0;
+bottom: 0;
+    /* edit the width to fit card */
+width: 100%;
+padding: 20px;
+background: #f2f2f2;
+border-top-left-radius: 20px;
+    /* edit here to change the height of the content box */
+transform: translateY(150px);
+transition: transform .25s;
+}
+
+.card_content::before {
+content: '';
+position: absolute;
+top: -47px;
+right: -45px;
+width: 100px;
+height: 100px;
+transform: rotate(-175deg);
+border-radius: 50%;
+box-shadow: inset 48px 48px #f2f2f2;
+}
+
+.card_title {
+color: #131313;
+line-height: 15px;
+}
+
+.card_subtitle {
+display: block;
+font-size: 12px;
+margin-bottom: 10px;
+}
+
+.card_description {
+font-size: 14px;
+opacity: 0;
+transition: opacity .5s;
+}
+
+.card-copper:hover .card_content {
+transform: translateY(0);
+}
+.card-gold:hover .card_content {
+transform: translateY(0);
+}
+
+.card-diam:hover .card_content {
+transform: translateY(0);
+}
+
+
+.card-copper:hover .card_description {
+opacity: 1;
+transition-delay: .25s;
+}  
+
+.card-gold:hover .card_description {
+opacity: 1;
+transition-delay: .25s;
+}  
+
+.card-diam:hover .card_description {
+opacity: 1;
+transition-delay: .25s;
+}  
+/* .card-copper {
+    background-color: rgba(218, 125, 32, 0.647);
+    position: relative;
+    width: 500px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -20px 20px 60px rgba(218, 125, 32, 0.404),-1px 5px 10px 1px rgba(218, 125, 32, 0.847);
+    text-align: center;
+    outline: 2px solid rgba(218, 125, 32, 0.404);
+}
+
+.range-copper{
+    font-size: x-large;
+
+}
+
+.card-gold {
+    background-color: rgba(218, 187, 32, 0.647);
+    position: relative;
+    z-index: 0;
+    width: 500px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 20px 60px rgba(218, 187, 32, 0.404),-1px 5px 10px 1px rgba(218, 187, 32, 0.847);
+    text-align: center;
+    outline: 2px solid rgba(218, 187, 32, 0.404);
+}
+
+.range-gold{
+    font-size: x-large;
+}
+
+.card-diam {
+    background-color: rgba(32, 203, 218, 0.647);
+    position: relative;
+    width: 500px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px rgba(32, 203, 218, 0.404),-1px 5px 10px 1px rgba(32, 203, 218, 0.847);
+    text-align: center;
+    outline: 2px solid rgba(32, 203, 218, 0.404);
+}
+
+.range-diam{
+    font-size: x-large;
+} */
+
+.grats-content{
+    text-align: center;
+}
+
+.grats-title{
+    margin-top: 45px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.grats-text{
+
 }
