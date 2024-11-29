@@ -6,10 +6,16 @@ form.addEventListener('submit', async (event) => {
 
     const gmail = d.getElementById('gmail').value;
     const password = d.getElementById('password').value;
+    const confirmPassword = d.getElementById('confirmPassword').value; // Obtener la contraseña de confirmación
     const nombre = d.getElementById('nombre').value;
     const apellido = d.getElementById('apellido').value;
     const telefono = d.getElementById('telefono').value;
     const dni = d.getElementById('dni').value;
+
+    // Verificar que las contraseñas coincidan
+    if (password !== confirmPassword) {
+        window.alert('Las contraseñas no coinciden.');
+    }
 
     const userData = {
         nombre,
@@ -32,7 +38,8 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             const result = await response.json();
             console.log('Usuario registrado:', result);
-            window.location.href = 'index.html'; // Redirigir a la página principal después del registro exitoso
+            localStorage.setItem('user', JSON.stringify(result));
+            window.location.href = 'index.html';
         } else {
             const error = await response.json();
             window.alert(error.message);
