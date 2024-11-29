@@ -15,6 +15,7 @@ form.addEventListener('submit', async (event) => {
     // Verificar que las contraseñas coincidan
     if (password !== confirmPassword) {
         window.alert('Las contraseñas no coinciden.');
+        return;
     }
 
     const userData = {
