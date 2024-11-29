@@ -12,11 +12,18 @@
 
 body {
     font-family: "fuente", sans-serif;
-    scroll-behavior: smooth;
     background: #D9D9D9;
-    background: linear-gradient(135deg, #D9D9D9 25%, #bfcdd8 25%, #bfcdd8 50%, #D9D9D9 50%, #D9D9D9 75%, #bfcdd8 75%, #bfcdd8);
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
+    /* Color de fondo */
     margin: 0;
     padding: 0;
 }
@@ -29,19 +36,36 @@ main {
 }
 
 .title {
-    font-size: 2em;
+    font-size: 2.5em;
+    /* Aumentar el tamaño del título */
     margin-bottom: 20px;
+    color: #3E85A4;
+    /* Color del título */
+    text-align: center;
+    /* Centrar el texto */
 }
 
 .cardUser {
     background-color: #6eb7d6;
-
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 800px;
     margin: auto;
+    transition: transform 0.3s;
+}
+
+.infoUser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.infoUser:hover {
+    transform: scale(1.02);
+    /* Efecto de hover */
 }
 
 .user {
@@ -52,9 +76,12 @@ main {
 
 .user img {
     border-radius: 50%;
+    /* Imagen circular */
     width: 120px;
     height: 120px;
     object-fit: cover;
+    border: 4px solid #3E85A4;
+    /* Borde alrededor de la imagen */
 }
 
 .user div:last-child {
@@ -73,7 +100,8 @@ main {
 
 .user p {
     margin: 12px 0;
-    font-size: 1em;
+    font-size: 1.1em;
+    /* Aumentar el tamaño de la fuente */
     color: #333;
     line-height: 1.5;
 }
@@ -84,8 +112,20 @@ main {
     color: #000;
 }
 
+#logout {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3E85A4;
+    /* Color del botón de cerrar sesión */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-.f200 {
-    width: 200px;
-    height: 200px;
+#logout:hover {
+    background-color: #74c6e9;
+    /* Color más claro al pasar el mouse */
 }

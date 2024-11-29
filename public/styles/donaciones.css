@@ -28,10 +28,6 @@ body {
     animation: move 4.5s linear infinite;
 }
 
-.donations {}
-
-.donations-container {}
-
 .donations-text {
     margin-top: 0px;
     padding-top: 30px;

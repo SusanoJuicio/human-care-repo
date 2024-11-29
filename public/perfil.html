@@ -22,8 +22,16 @@
         <section class="cardUser"> <!-- Contenido -->
             <div id="infoUser"></div>
         </section>
+        <button id="logout">Cerrar sesión</button>
     </main>
     <footer id="footer"></footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('user');
+            window.location.href = 'logIn.html';
+        });
+    </script>
+
 </body>
 
 </html>

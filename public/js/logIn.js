@@ -24,10 +24,11 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             const result = await response.json();
             console.log('Inicio de sesión exitoso:', result);
-            window.location.href = 'index.html'; // Redirigir a la página principal
+            localStorage.setItem('user', JSON.stringify(result.user));
+            window.location.href = 'index.html';
         } else {
             const error = await response.json();
-            window.alert(error.message); // Mostrar mensaje de error
+            window.alert(error.message);
         }
     } catch (error) {
         console.error('Error al iniciar sesión:', error);

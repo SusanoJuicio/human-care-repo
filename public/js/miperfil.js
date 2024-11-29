@@ -1,41 +1,16 @@
-const fetchProducts = async () => {
-    try {
-        const response = await fetch('../../db/user.json');
-        const data = await response.json();
-        return data;
-    } catch (err) {
-        console.error(err);
+// En miperfil.js
+document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    if (!user) {
+        window.location.href = 'logIn.html';
+    } else {
+        const seccion = document.getElementById('infoUser');
+        seccion.innerHTML = `
+            <p><strong>Nombre:</strong> ${user.nombre}</p>
+            <p><strong>Apellido:</strong> ${user.apellido}</p>
+            <p><strong>DNI:</strong> ${user.dni}</p>
+            <p><strong>Teléfono:</strong> ${user.telefono}</p>
+        `;
     }
-}
-
-const seccion = document.getElementById('infoUser');
-const products = fetchProducts();
-products.then(data => {
-    data.forEach(producto => {
-        const card = document.createElement("div");
-        const link = document.createElement("a");
-        link.href = "./perfil.html";
-        card.classList.add("card");
-        card.setAttribute("key", producto.id);
-
-
-        const cardContent = `
-            <h2 class=>Mi Perfil</h2>
-            <p><strong>Nombre:</strong> ${producto.nombre}</p>
-            <p><strong>Apellido:</strong> ${producto.apellido}</p>
-            <p><strong>DNI:</strong> ${producto.dni}</p>
-            <p><strong>Teléfono:</strong> ${producto.telefono}</p>
-            `;
-
-        link.innerHTML = cardContent;
-        card.appendChild(link);
-        seccion.appendChild(card);
-    });
-    // simula contenido para lo restante
-    const card1 = document.createElement('div');
-    card1.classList.add('f200')
-    seccion.appendChild(card1);
-    const card2 = document.createElement('div');
-    card2.classList.add('f200')
-    seccion.appendChild(card2)
 });
