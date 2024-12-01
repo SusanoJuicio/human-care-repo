@@ -1,6 +1,6 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch('../../db/product.json');
+        const response = await fetch('http://localhost:7777/products');
         const data = await response.json();
         return data;
     } catch (err) {

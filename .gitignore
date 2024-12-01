@@ -10,3 +10,4 @@ vscode
 .env
 *.log
 *-lock.json
+.env*
