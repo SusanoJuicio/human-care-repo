@@ -26,18 +26,14 @@
         <button id="logout">Cerrar sesión</button>
     </main>
     <footer id="footer"></footer>
-    <script
-    src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+    <script>
         document.getElementById('logout').addEventListener('click', () => {
             localStorage.removeItem('user');
             window.location.href = 'logIn.html';
         });
-        
-    </script>
-<button class="btnDonar" onclick="window.location.href='#footer'">
-    ¡DONA AHORA!
-</button>
 
+    </script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@ causas.then(data => {
 const RenderBtn = () => {
     const button = document.createElement('button');
     button.classList.add('btnDonar');
-    button.innerText = 'Donar';
+    button.innerText = 'Donar ahora';
 
     const a = document.createElement('a');
     a.classList.add('aDonar')
