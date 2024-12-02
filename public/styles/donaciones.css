@@ -131,7 +131,7 @@ body {
     width: 250px;
     height: 250px;
     color: #2e2d31;
-    background: #131313;
+    background: #3E85A4;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -188,7 +188,7 @@ body {
 }
 
 .card_title {
-    color: #131313;
+    color: #3E85A4;
     line-height: 15px;
 }
 
@@ -269,4 +269,41 @@ body {
     border-radius: 5px; /* Bordes redondeados */
     display: inline-block; /* Ajustar el fondo al tamaño del texto */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+
+/* Estilo para la tarjeta de agradecimiento */
+.grats-content {
+    max-width: none;
+    width: 60%;
+    margin: 30px auto;
+    background-color: #ffefd5; 
+    border: 2px solid #6EB7D6;; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    padding: 20px;
+}
+
+.grats-content .grats-title {
+    color: #6EB7D6; /* Color adecuado */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.grats-text {
+    color: #3E85A4; 
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grats-img {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #6EB7D6; 
+    border-radius: 0 0 15px 15px; /* Redondeado inferior para que coincida con la tarjeta */
+    margin-top: 10px;
 }

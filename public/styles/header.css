@@ -9,54 +9,60 @@
         transform: rotate(10deg);
     }
 
-}@import url("globalFont.css");
+}
 
-/* Fondo y tipografía general */
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "fuente", sans-serif;
 }
+.titulo{
+    color: #feffff;
+    text-align:justify center;
+    text-shadow: -2px 2px black;
+    font-size: 4rem;
+    margin: 0 0;
 
-/* Header principal */
+}
 #header {
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-/* Estilo del título */
-.titulo {
-    color: #feffff;
-    text-align: center;
-    text-shadow: -2px 2px black;
-    font-size: 4rem;
-    margin: 0;
-}
-
-/* Contenedor principal del nav */
-.nav_container {
-    background-color: #3E85A4;
-    width: 100%;
-    height: 100%;
-}
-
-/* Navegación principal */
+/* Nav */
 .nav {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
-/* Iconos del nav */
+
 .nav_logo {
-    max-width: 64px;
-    max-height: 64px;
+    max-width: 100px;
+    max-height: 100px;
     padding-left: 15px;
 }
 
-/* Lista de navegación */
+.nav_list {
+    height: 35px;
+    width: screen;
+    background-color: #6EB7D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.633);
+}
+
+
 .nav_list_lis {
     display: flex;
     justify-content: space-around;
@@ -65,53 +71,18 @@ body {
 }
 
 .nav_list_li {
-    position: relative;
+
     margin-right: 40px;
 }
 
 .nav_list_li:hover {
     animation: tiltSides 1s infinite ease-in-out;
 }
+.nav_container {
 
-/* Estilo del dropdown de favoritos */
-.nav_favoritos .dropdown_favorites {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 10px;
-    z-index: 1;
-}
-
-.nav_favoritos .dropdown_favorites.visible {
-    display: block;
-}
-
-.dropdown_favorites ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown_favorites li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.dropdown_favorites li:hover {
-    background-color: #f1f1f1;
-}
-
-/* Footer del nav */
-.nav_foot {
-    margin-top: 20px;
+    background-color: #3E85A4;
+    width: 100%;
+    height: 100%;
 }
 
 .nav_list {
@@ -119,6 +90,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: auto;
     list-style: none;
     gap: 7rem;
     font-size: 1.7rem;
@@ -127,11 +99,13 @@ body {
     height: 100%;
 }
 
-/* Enlaces de navegación */
+
 .nav_links {
+
     width: 360px;
     text-decoration: solid;
     color: #fcf9f9;
+    text-shadow: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,4 +116,69 @@ body {
     transition: ease 0.25s;
     background-color: #3E85A4;
     color: white;
+}
+.nav_items {
+    width: 20%;
+    align-items: center;
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+}
+
+/* Estilos para el dropdown de favoritos */
+.nav_list_li.dropdown .dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #3E85A4;
+    border-radius: 8px;
+    margin-top: 10px;
+    min-width: 250px;
+}
+
+.nav_list_li.dropdown .dropdown-header {
+    background-color: #3E85A4;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.nav_list_li.dropdown .dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.nav_list_li.dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+/* Mantiene la animación existente */
+.nav_list_li.dropdown:hover {
+    animation: tiltSides 1s infinite ease-in-out;
+}
+/* Modificar la regla del hover para que solo aplique cuando no está desplegado */
+.nav_list_li.dropdown:hover {
+    animation: tiltSides 1s infinite ease-in-out;
+}
+
+/* Detener la animación cuando el dropdown está abierto */
+.nav_list_li.dropdown.show {
+    animation: none;
+}
+
+/* Opcional: agregar una transición suave al volver */
+.nav_list_li.dropdown {
+    transition: transform 0.3s ease;
+}
+
+.nav_list_li.dropdown:hover .dropdown-menu:hover {
+    animation: none;
+}
+/* Estilos específicos para el dropdown de insignias */
+.nav_list_li.dropdown #insigniasList {
+    min-width: 200px; /* Puedes ajustar el ancho según necesites */
+}
+
+.insignias-empty {
+    color: #666;
+    font-size: 0.9rem;
 }

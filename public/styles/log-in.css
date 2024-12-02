@@ -1,7 +1,6 @@
 body {
     font-family: "fuente", sans-serif;
-    background-color: #D9D9D9;
-    /* Color de fondo similar al utilizado en otros estilos */
+    background-color: #3E85A4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,13 +36,11 @@ input {
 button {
     padding: 10px;
     background-color: #3E85A4;
-    /* Color de fondo del botón */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    /* Aumentar el tamaño de la fuente */
     transition: background-color 0.3s ease;
     /* Añadir transición */
 }
