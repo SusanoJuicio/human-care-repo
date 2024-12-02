@@ -1,4 +1,5 @@
 {
+  
   "name": "human-care-repo",
   "version": "1.0.0",
   "description": "Human care development",
@@ -7,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "lint": "eslint ."
+    
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,13 @@
   "homepage": "https://github.com/SusanoJuicio/human-care-repo#readme",
   "dependencies": {
     "@types/mongoose": "^5.11.97",
+    "bootstrap": "^5.3.3",
     "express": "^4.21.1",
     "mongoose": "^8.7.2"
   },
   "devDependencies": {
+    "express": "^4.18.1",
+    "bootstrap": "^5.3.0",
     "nodemon": "^3.1.7",
     "standard": "17.1.2",
     "typescript": "^5.6.3"
@@ -31,8 +36,14 @@
   "eslintConfig": {
     "extends": "standard",
     "rules": {
-    "semi": "off",         
-    "indent": "off",
-    "quotes": ["error", "single"]
+      "semi": "off",
+      "indent": "off",
+      "quotes": [
+        "error",
+        "single"
+      ]
+    }
   }
-}}
+}
+
+

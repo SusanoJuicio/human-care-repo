@@ -15,10 +15,16 @@ export const headerComp = `
                             </a>
                         </li>
                         <li class="nav_list_li">
-                            <a href="#" aria-label="Lista de deseos">
-                                <img src="/images/hearth.svg" alt="Deseos">
-                            </a>
-                        </li>
+                    <div class="dropdown">
+                        <button class="nav_list_link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./images/hearth.svg" alt="Favoritos" />
+                            <span class="favoritos-count">0</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" id="favoritosList">
+                            <li class="dropdown-item-text text-center">No hay favoritos</li>
+                        </ul>
+                    </div>
+                </li>
                         <li class="nav_list_li">
                             <a href="carrito.html" aria-label="Carrito de compras">
                                 <img src="/images/cart.svg" alt="Carrito">
@@ -61,6 +67,7 @@ export const headerComp = `
             navToggle?.addEventListener('click', () => {
                 navList.classList.toggle('nav_list--visible');
                 navListLis.classList.toggle('nav_list_lis--visible');
+                <link rel="stylesheet" href="./styles/custom.css">
             });
         });
     </script>

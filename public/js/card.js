@@ -1,3 +1,4 @@
+
 const fetchProducts = async () => {
     try {
         const response = await fetch('http://localhost:7777/products');
