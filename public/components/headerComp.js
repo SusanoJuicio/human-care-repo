@@ -3,6 +3,9 @@ export const headerComp = `
         <section class="nav_section">
             <div class="nav_wrapper">
                 <div class="nav">
+                    <button class="nav_toggle" aria-label="Abrir menú">
+                        ☰
+                    </button>
                     <a href="index.html" class="nav_brand">
                         <img class="nav_logo" src="/images/Logo.webp" alt="Logo de la empresa">
                     </a>
@@ -15,16 +18,10 @@ export const headerComp = `
                             </a>
                         </li>
                         <li class="nav_list_li">
-                    <div class="dropdown">
-                        <button class="nav_list_link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./images/hearth.svg" alt="Favoritos" />
-                            <span class="favoritos-count">0</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" id="favoritosList">
-                            <li class="dropdown-item-text text-center">No hay favoritos</li>
-                        </ul>
-                    </div>
-                </li>
+                            <a href="#" aria-label="Lista de deseos">
+                                <img src="/images/hearth.svg" alt="Deseos">
+                            </a>
+                        </li>
                         <li class="nav_list_li">
                             <a href="carrito.html" aria-label="Carrito de compras">
                                 <img src="/images/cart.svg" alt="Carrito">
@@ -57,17 +54,14 @@ export const headerComp = `
             </div>
         </section>
     </nav>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navToggle = document.querySelector('.nav_toggle');
             const navList = document.querySelector('.nav_list');
-            const navListLis = document.querySelector('.nav_list_lis');
             
             navToggle?.addEventListener('click', () => {
                 navList.classList.toggle('nav_list--visible');
-                navListLis.classList.toggle('nav_list_lis--visible');
-                <link rel="stylesheet" href="./styles/custom.css">
             });
         });
     </script>

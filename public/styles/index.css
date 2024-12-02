@@ -37,6 +37,8 @@
 
 /* Body */
 body {
+    margin: 0;
+    padding: 0;
     font-family: "fuente", sans-serif;
     scroll-behavior: smooth;
     background: #D9D9D9;
@@ -51,34 +53,70 @@ body {
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
 }
+/* Buscador */
+.nav_search {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #6EB7D6;
+}
+
+.nav_search_input {
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #3E85A4;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.nav_search_button {
+    margin-left: 10px;
+    background-color: #3E85A4;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav_search_button:hover {
+    background-color: #2a5e78;
+}
 
 .hero-Index {
-    height: 960px;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .title {
+    margin-bottom: 20px;
     margin-top: 0px;
     padding-top: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 0.5rem;
     color: #6EB7D6;
     text-align: center;
     text-shadow: -2px 2px black;
 }
 
-
 .index-Causes {
     display: flex;
-    justify-content: space-around;
-
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .text-Causes {
+    font-size: 1.2rem;
+    color: #3697c0;
+    margin: 20px auto;
+    max-width: 800px;
     font-size: 25px;
     text-align: center;
     padding-inline: 10rem;
-    color: #3697c0;
-    margin-top: -20px;
     text-shadow: -1px 3px 4px #ffffff;
 }
 
@@ -99,7 +137,7 @@ body {
 }
 
 .causes:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
@@ -121,7 +159,7 @@ body {
 .arrow-Index {
     display: flex;
     justify-content: center;
-
+    margin-top: 30px;
     animation: bounce 1s infinite alternate;
 }
 
@@ -238,23 +276,25 @@ body {
     text-align: center;
     margin-top: 60px;
     color: #6EB7D6;
-    padding: 5px;
+    padding: 20px;
     text-shadow: -2px 2px black;
     letter-spacing: .5rem;
 }
 
 .p-donaciones {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     color: #3697c0;
-    font-size: 25px;
-
+    font-size: 1.2rem;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
 #causas {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -334,20 +374,14 @@ body {
 .btnDonar {
     background-color: rgb(241, 82, 82);
     color: #ffffff;
-    padding: 15px 50px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    font-size: 24px;
-    height: 40px;
+    font-size: 1.2rem;
     cursor: pointer;
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
     text-transform: uppercase;
-    transition: all 0.5s ease;
+    margin: 20px auto;
 }
 
 .btnDonar:hover {
@@ -358,4 +392,48 @@ body {
 
 a {
     text-decoration: none;
+}
+.section-Catalogo {
+    padding: 40px 20px;
+}
+
+.text-basic {
+    font-size: 2rem;
+    text-align: center;
+    color: #6EB7D6;
+    padding: 20px;
+    text-shadow: -2px 2px black;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    .nav_search_input {
+        width: 80%;
+    }
+
+    .text-Causes,
+    .p-donaciones {
+        padding-inline: 1rem;
+    }
+
+    .hero-Index,
+    .section-Catalogo {
+        padding: 20px;
+    }
+
+    .title,
+    .text-basic,
+    .text-basic-donaciones {
+        font-size: 1.8rem;
+    }
+
+    .index-Causes {
+        flex-direction: column;
+    }
 }

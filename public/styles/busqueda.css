@@ -4,6 +4,7 @@
 }
 
 .nav_search {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +23,7 @@
 }
 
 .nav_search_input {
+    border: 2px solid #6eb7d6;
     font-family: inherit;
     font-size: inherit;
     width: 89%;
