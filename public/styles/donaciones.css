@@ -81,7 +81,7 @@ body {
 }
 
 .btnDonar:hover {
-    background-color: #74c6e9;
+    background-color: #ff0000;
     color: hsl(0, 0%, 100%);
     box-shadow: #68bee3 0px 7px 29px 0px;
 }
@@ -244,4 +244,29 @@ body {
     color: #6EB7D6;
     text-align: center;
     text-shadow: -2px 2px black;
+}
+/* Estilo para las imágenes del carrusel */
+.carousel-img {
+    max-width: 90%; 
+    height: auto;
+    margin: 0 auto; /* Centrar la imagen dentro del carrusel */
+    border-radius: 10px; /* Añadir un borde redondeado para mejor estética */
+}
+/* Estilo para los textos del carrusel */
+.carousel-caption h5 {
+    color: #000000; /* Color negro para el texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados para mejorar la estética */
+    display: inline-block; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra sutil para resaltar el texto */
+}
+
+.carousel-caption p {
+    color: #333333; /* Gris oscuro para el párrafo */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 8px;
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Ajustar el fondo al tamaño del texto */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
