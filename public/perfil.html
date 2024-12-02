@@ -12,6 +12,7 @@
     <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/miperfil.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -25,11 +26,13 @@
         <button id="logout">Cerrar sesión</button>
     </main>
     <footer id="footer"></footer>
-    <script>
+    <script
+    src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
         document.getElementById('logout').addEventListener('click', () => {
             localStorage.removeItem('user');
             window.location.href = 'logIn.html';
         });
+        
     </script>
 
 </body>
