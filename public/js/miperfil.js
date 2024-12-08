@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const secretKey = 'Remolacha';
+    const secretKey = 'REMOLACHA';
     const encryptedUser = localStorage.getItem('user');
 
     if (!encryptedUser) {

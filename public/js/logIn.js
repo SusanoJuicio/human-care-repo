@@ -24,7 +24,7 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             const result = await response.json();
             console.log('Inicio de sesión exitoso:', result);
-            const secretKey = 'Remolacha';
+            const secretKey = 'REMOLACHA';
             // eslint-disable-next-line no-undef
             const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(result.user), secretKey).toString();
             localStorage.setItem('user', encryptedData);
