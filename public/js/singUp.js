@@ -1,3 +1,4 @@
+
 const d = document;
 const form = d.getElementById('signUpForm');
 
@@ -39,7 +40,12 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             const result = await response.json();
             console.log('Usuario registrado:', result);
-            localStorage.setItem('user', JSON.stringify(result));
+
+            // Cifrar los datos del usuario antes de almacenarlos
+            const secretKey = 'Remolacha';
+            const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(result), secretKey).toString();
+            localStorage.setItem('user', encryptedData);
+
             window.location.href = 'index.html';
         } else {
             const error = await response.json();

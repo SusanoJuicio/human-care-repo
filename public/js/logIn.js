@@ -24,7 +24,11 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             const result = await response.json();
             console.log('Inicio de sesión exitoso:', result);
-            localStorage.setItem('user', JSON.stringify(result.user));
+            const secretKey = 'Remolacha';
+            // eslint-disable-next-line no-undef
+            const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(result.user), secretKey).toString();
+            localStorage.setItem('user', encryptedData);
+
             window.location.href = 'index.html';
         } else {
             const error = await response.json();
