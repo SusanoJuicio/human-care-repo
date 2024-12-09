@@ -9,22 +9,11 @@ export const headerComp = `
                     <h1 class="titulo">HumanCare</h1>
 
                     <ul class="nav_list_lis">
-                        <li class="nav_list_li">
-                            <a href="insignias.html" aria-label="Insignias">
-                                <img src="/images/trophy.svg" alt="Insignias">
-                            </a>
-                        </li>
                         <li class="nav_list_li nav_favoritos">
-                            <a href="#" aria-label="Lista de deseos">
+                            <a id="heart-icon" href="#" aria-label="Lista de deseos">
                                 <img src="/images/hearth.svg" alt="Deseos">
                             </a>
-                            <div class="dropdown_favorites">
-                                <ul>
-                                    <li>Producto 1</li>
-                                    <li>Producto 2</li>
-                                    <li>Producto 3</li>
-                                </ul>
-                            </div>
+                            
                         </li>
                         <li class="nav_list_li">
                             <a href="carrito.html" aria-label="Carrito de compras">
@@ -59,25 +48,4 @@ export const headerComp = `
         </section>
     </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navToggle = document.querySelector('.nav_toggle');
-            const navList = document.querySelector('.nav_list');
-            const navListLis = document.querySelector('.nav_list_lis');
-            const favoritosButton = document.querySelector('.nav_favoritos');
-
-            navToggle?.addEventListener('click', () => {
-                navList.classList.toggle('nav_list--visible');
-                navListLis.classList.toggle('nav_list_lis--visible');
-            });
-
-            favoritosButton?.addEventListener('mouseenter', () => {
-                favoritosButton.querySelector('.dropdown_favorites').classList.add('visible');
-            });
-
-            favoritosButton?.addEventListener('mouseleave', () => {
-                favoritosButton.querySelector('.dropdown_favorites').classList.remove('visible');
-            });
-        });
-    </script>
 `;

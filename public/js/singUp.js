@@ -44,7 +44,7 @@ form.addEventListener('submit', async (event) => {
             const secretKey = 'REMOLACHA';
             const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(result), secretKey).toString();
             localStorage.setItem('user', encryptedData);
-
+            localStorage.setItem('userId', result._id);
             window.location.href = 'index.html';
         } else {
             const error = await response.json();

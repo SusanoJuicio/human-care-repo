@@ -9,7 +9,9 @@
         transform: rotate(10deg);
     }
 
-}@import url("globalFont.css");
+}
+
+@import url("globalFont.css");
 
 /* Fondo y tipografía general */
 body {
@@ -54,6 +56,11 @@ body {
 .nav_logo {
     max-height: 64px;
     padding-left: 15px;
+}
+
+.nav_list {
+    margin: 0;
+    background-color: #6EB7D6;
 }
 
 /* Lista de navegación */

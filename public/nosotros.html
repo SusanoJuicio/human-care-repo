@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/nosotros.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/sidebar.css">
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/us-card.js"></script>
@@ -21,10 +22,11 @@
     <main>
         <section id="us"></section>
         <section id="us-info">
-            <p>Somos desarrolladores web Full Stack formados en la Fundación Pescar, donde hemos adquirido habilidades
+            <p class="p">Somos desarrolladores web Full Stack formados en la Fundación Pescar, donde hemos adquirido
+                habilidades
                 tanto en el frontend como en el backend. Este es nuestro proyecto final, resultado de meses de
                 aprendizaje y trabajo en equipo. La aplicación fue construida utilizando tecnologías clave como HTML5,
-                CSS3, JavaScript, React para la gestión del frontend dinámico, y NodeJS como Backend junto a MongoDB
+                CSS3, JavaScript para la gestión del frontend dinámico, y NodeJS como Backend junto a MongoDB
                 como base de datos no relacional para manejar la información de manera eficiente.
                 <br>
                 <br>
@@ -35,22 +37,21 @@
                 con Git.
                 <br>
                 <br>
-
-                En el backend, ...
-                <br>
-                <br>
-
                 Este proyecto no solo es una muestra de nuestras capacidades técnicas, sino también de nuestra
                 dedicación, pasión por la tecnología y el trabajo colaborativo. Estamos listos para enfrentar nuevos
                 desafíos en el mundo del desarrollo web y seguir aprendiendo y creciendo profesionalmente.
             </p>
-            <div style="text-align: center;">
-                <button id="action-button" onclick="window.location.href='#footer'">¡Contáctanos!</button>
-            </div>
         </section>
+        <!-- Barra lateral para mostrar productos favoritos -->
+        <aside id="sidebar" class="sidebar">
+            <h2>Productos Favoritos</h2>
+            <ul id="wishlist-items"></ul>
+            <button id="close-sidebar">Cerrar</button>
+        </aside>
     </main>
 
     <footer id="footer"></footer>
+    <script src="js/favorites.js"></script>
 </body>
 
 </html>

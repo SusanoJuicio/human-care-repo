@@ -11,26 +11,21 @@
     <link rel="stylesheet" href="./styles/footer.css">
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script type="module" src="./js/carrito.js"></script>
 </head>
 
 <body>
     <header id="header"></header>
-
-    <main>
-        <aside id="filtros">
-            <ul>
-                <li>Todos</li>
-                <li>Bambú</li>
-                <li>Caseros</li>
-                <li>Ecológicos</li>
-                <li>Tazas</li>
-            </ul>
-        </aside>
+    <main class="main">
         <section id="productos" class="grid-productos"></section>
-        <section id="carrito" class="resumen-carrito"></section>
+        <section id="carrito" class="resumen-carrito">
+            <h2 id="h2">Carrito de Compras</h2>
+            <ul id="carrito-items"></ul>
+            <p class="total" id="total">Total: $<span id="total-price">0</span></p>
+            <button id="pagar-button">Ir a Pagar</button>
+        </section>
     </main>
-
     <footer id="footer"></footer>
 </body>
 
