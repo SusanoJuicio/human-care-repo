@@ -248,3 +248,23 @@ main {
     transform: scale(1.1);
     /* Aumenta el tamaño al hacer hover */
 }
+
+.btn-confirm {
+    background-color: #3E85A4;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    transition: background-color 0.3s;
+    /* Transición suave */
+}
+
+.btn-confirm:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+}

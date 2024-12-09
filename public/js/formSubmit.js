@@ -17,14 +17,47 @@ document.addEventListener('DOMContentLoaded', () => {
             })
                 .then(response => {
                     if (response.ok) {
-                        alert('Formulario enviado con éxito!');
+                        Swal.fire({
+                            title: '¡Éxito!',
+                            text: 'Formulario enviado con éxito',
+                            icon: 'success',
+                            confirmButtonText: 'Aceptar',
+                            background: '#D9D9D9', // Color de fondo
+                            color: '#3E85A4', // Color del texto
+                            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+                            customClass: {
+                                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                            }
+                        });
                         this.reset(); // Reinicia el formulario
                     } else {
-                        alert('Hubo un problema al enviar el formulario.');
+                        Swal.fire({
+                            title: '¡Atención!',
+                            text: 'Hubo un error al enviar el formulario',
+                            icon: 'warning',
+                            confirmButtonText: 'Aceptar',
+                            background: '#D9D9D9', // Color de fondo
+                            color: '#3E85A4', // Color del texto
+                            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                            customClass: {
+                                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                            }
+                        });
                     }
                 })
                 .catch(error => {
-                    alert('Error: ' + error.message);
+                    Swal.fire({
+                        title: '¡Atención!',
+                        text: 'Error:' + error.message,
+                        icon: 'warning',
+                        confirmButtonText: 'Aceptar',
+                        background: '#D9D9D9', // Color de fondo
+                        color: '#3E85A4', // Color del texto
+                        iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                        customClass: {
+                            confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                        }
+                    });
                 });
         });
     }
