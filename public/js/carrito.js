@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const carritoContenedor = document.getElementById('carrito-items');
+    const total2 = document.getElementById('total');
     const totalPriceElement = document.getElementById('total-price'); // Elemento para mostrar el total
     const pagarButton = document.getElementById('pagar-button');
+    const h2 = document.getElementById("h2")
     const fetchProducts = async () => {
         try {
             const response = await fetch('http://localhost:7777/products'); // Cambia a tu endpoint real
@@ -22,9 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let total = 0; // Inicializar el total
 
+        // Referencias a los elementos del total y el botón de pagar
+        const totalPriceElement = document.getElementById('total-price');
+        const pagarButton = document.getElementById('pagar-button');
+
         if (cartItems.length === 0) {
-            carritoContenedor.innerHTML = '<li>No hay productos en el carrito.</li>';
+            carritoContenedor.innerHTML = '<li>No hay productos en el carrito.</li>'; // Mensaje cuando el carrito está vacío
+            carritoContenedor.className = 'li';
             totalPriceElement.textContent = total; // Actualizar el total a 0
+            totalPriceElement.style.display = 'none'; // Ocultar el total
+            pagarButton.style.display = 'none'; // Ocultar el botón de pagar
+            total2.style.display = 'none';
+            h2.style.display = "none";
         } else {
             cartItems.forEach(cartItem => {
                 const product = products.find(p => p.customId === parseInt(cartItem.productId)); // Buscar el producto por customId
@@ -53,9 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     carritoContenedor.appendChild(listItem);
                 }
             });
+
+            totalPriceElement.textContent = total.toFixed(2); // Actualizar el total en el DOM
+            totalPriceElement.style.display = 'block'; // Mostrar el total
+            pagarButton.style.display = 'block'; // Mostrar el botón de pagar
+            total2.style.display = 'block'
+            h2.style.display = "block";
         }
 
-        totalPriceElement.textContent = total.toFixed(2); // Actualizar el total en el DOM
         addCartEventListeners();
     };
 
@@ -63,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const removeButtons = document.querySelectorAll('.remove-from-cart');
         removeButtons.forEach(button => {
             button.addEventListener('click', (event) => {
+                event.preventDefault()
                 const productId = event.target.getAttribute('data-id');
                 removeFromCart(productId);
             });
@@ -71,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const increaseButtons = document.querySelectorAll('.increase-quantity');
         increaseButtons.forEach(button => {
             button.addEventListener('click', (event) => {
+                event.preventDefault()
                 const productId = event.target.getAttribute('data-id');
                 updateQuantity(productId, 'increase');
             });
@@ -79,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const decreaseButtons = document.querySelectorAll('.decrease-quantity');
         decreaseButtons.forEach(button => {
             button.addEventListener('click', (event) => {
+                event.preventDefault()
                 const productId = event.target.getAttribute('data-id');
                 updateQuantity(productId, 'decrease');
             });

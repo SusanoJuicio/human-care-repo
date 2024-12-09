@@ -29,9 +29,8 @@ body {
     animation: move 4.5s linear infinite;
 }
 
-h2 {
-    text-align: center;
-
+.main {
+    height: auto;
 }
 
 /* Estilo general del carrito */
@@ -126,6 +125,20 @@ h2 {
     /* Altura fija para todos los botones */
 }
 
+.li {
+    text-align: center;
+    font-size: 40px;
+    background-color: #2a5e78;
+    color: #d9d9d9;
+    padding: 40px;
+    margin: 40px 150px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 /* Efecto hover para los botones */
 .button:hover {
     background-color: #2a5e78;
@@ -183,6 +196,8 @@ h2 {
     transition: background-color 0.3s;
     /* Transición suave */
     margin-top: 20px;
+    margin-bottom: 200px;
+
     /* Espacio superior */
 }
 
@@ -190,6 +205,7 @@ h2 {
 #pagar-button:hover {
     background-color: #2a5e78;
     /* Color más oscuro al pasar el mouse */
+
 }
 
 /* Espaciado adicional para el precio y botones de cantidad */
