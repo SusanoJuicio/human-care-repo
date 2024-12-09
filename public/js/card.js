@@ -24,7 +24,7 @@ products.then(data => {
             <div class="card-content">
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
-            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="productoId">
+            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
@@ -35,6 +35,7 @@ products.then(data => {
     const addToCartButtons = document.querySelectorAll('.cart-icon');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', (event) => {
+            event.stopPropagation()
             const productId = event.target.getAttribute('data-id');
             addToCart(productId);
         });
@@ -51,7 +52,8 @@ products.then(data => {
 const addToCart = (productId) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     if (!cart.includes(productId)) {
-        cart.push(productId);
+        const obj = { productId, quantity: 1 };
+        cart.push(obj);
         localStorage.setItem('cart', JSON.stringify(cart));
         alert('Producto añadido al carrito');
     } else {

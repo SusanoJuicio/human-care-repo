@@ -22,7 +22,7 @@ products.then(data => {
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
             <span class="stock">${producto.stock < 0 ? 'No Hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
-            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="productoId">
+            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
@@ -32,6 +32,7 @@ products.then(data => {
     const addToCartButtons = document.querySelectorAll('.cart-icon');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', (event) => {
+            event.stopPropagation();
             const productId = event.target.getAttribute('data-id');
             addToCart(productId);
         });
@@ -64,7 +65,7 @@ const displayProducts = (data) => {
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
             <span class="stock">Stock: ${producto.stock}</span> <!-- Mostrar el stock -->
-            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="productoId">
+            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
@@ -75,6 +76,7 @@ const displayProducts = (data) => {
     const addToCartButtons = document.querySelectorAll('.cart-icon');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', (event) => {
+            event.stopPropagation();
             const productId = event.target.getAttribute('data-id');
             addToCart(productId);
         });
@@ -100,8 +102,9 @@ const filterProducts = async (category) => {
 };
 const addToCart = (productId) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (!cart.includes(productId)) {
-        cart.push(productId);
+    if (!cart.some(item => item.productId === productId)) {
+        const obj = { productId, quantity: 1 };
+        cart.push(obj);
         localStorage.setItem('cart', JSON.stringify(cart));
         alert('Producto añadido al carrito');
     } else {
