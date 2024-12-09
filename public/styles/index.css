@@ -247,7 +247,9 @@ body {
     opacity: 1;
 }
 
-
+.card:active {
+    transform: scale(0.98);
+}
 
 .card-content {
     display: flex;
@@ -271,6 +273,35 @@ body {
     /* Transición suave para la imagen */
 }
 
+.cart-icon {
+    position: absolute;
+    /* Posiciona el ícono de manera absoluta */
+    bottom: 10px;
+    /* Ajusta la posición vertical */
+    left: -40px;
+    /* Coloca el ícono fuera de la vista inicialmente */
+    width: 24px;
+    /* Ajusta el tamaño del ícono */
+    height: 24px;
+    /* Ajusta el tamaño del ícono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s ease, left 0.3s ease;
+    /* Transición suave */
+    opacity: 0;
+    /* Oculto por defecto */
+    visibility: hidden;
+    /* Oculto por defecto */
+}
+
+.card:hover .cart-icon {
+    left: 10px;
+    /* Mueve el ícono hacia la vista al hacer hover */
+    opacity: 1;
+    /* Muestra el ícono al hacer hover */
+    visibility: visible;
+    /* Asegúrate de que sea visible */
+}
 
 .card-hearth {
     position: absolute;
@@ -300,28 +331,6 @@ body {
 
 .text {
     max-width: 55px;
-}
-
-.card-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin-top: 25px;
-
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    padding-top: 15px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.card-hearth {
-    position: absolute;
-    right: 5px;
-    top: 5px;
 }
 
 
@@ -460,12 +469,6 @@ a {
     text-shadow: -2px 2px black;
 }
 
-#cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
 
 /* Responsividad */
 @media (max-width: 768px) {

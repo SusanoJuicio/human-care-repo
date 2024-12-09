@@ -103,6 +103,23 @@
 }
 
 .remove-from-wishlist {
-    color: red;
-    background-color: #6EB7D6;
+    background-color: #ff4d4d;
+    /* Color de fondo rojo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 2px 5px;
+    /* Espaciado interno */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+}
+
+.remove-from-wishlist:hover {
+    background-color: #ff1a1a;
+    /* Color más oscuro al pasar el mouse */
 }

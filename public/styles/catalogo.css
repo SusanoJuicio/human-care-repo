@@ -194,6 +194,35 @@ main {
     /* Transición suave para la imagen */
 }
 
+.cart-icon {
+    position: absolute;
+    /* Posiciona el ícono de manera absoluta */
+    bottom: 10px;
+    /* Ajusta la posición vertical */
+    left: -40px;
+    /* Coloca el ícono fuera de la vista inicialmente */
+    width: 24px;
+    /* Ajusta el tamaño del ícono */
+    height: 24px;
+    /* Ajusta el tamaño del ícono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s ease, left 0.3s ease;
+    /* Transición suave */
+    opacity: 0;
+    /* Oculto por defecto */
+    visibility: hidden;
+    /* Oculto por defecto */
+}
+
+.card:hover .cart-icon {
+    left: 10px;
+    /* Mueve el ícono hacia la vista al hacer hover */
+    opacity: 1;
+    /* Muestra el ícono al hacer hover */
+    visibility: visible;
+    /* Asegúrate de que sea visible */
+}
 
 .card-hearth {
     position: absolute;
