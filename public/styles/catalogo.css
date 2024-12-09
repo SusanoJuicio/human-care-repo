@@ -1,5 +1,4 @@
 @import url('globalFont.css');
-
 @keyframes move {
     0% {
         background-position: 0 0;
@@ -140,14 +139,14 @@ main {
 }
 
 .price {
-    font-size: 1.3em;
+    font-size: 1.6em;
     /* Reducir el tamaño del precio */
-    font-family: 'Courier New', Courier, monospace;
+    font-family:  "price", sans-serif;
     text-align: center;
     /* Centrar el texto */
-    color: #d9d9d9;
+    color: #000000;
     /* Color del precio */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     /* Aumentar el espaciado alrededor del precio */
 }
 

@@ -61,7 +61,7 @@ body {
 .cover-1 {
     top: 0;
     position: absolute;
-    background-color: rgb(120, 196, 219);
+    background-color: rgba(197, 207, 209, 0.87);
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -72,13 +72,13 @@ body {
     -ms-transform-origin: 0;
     transform-origin: 0;
     -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px rgb(225, 236, 238);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: top;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -95,7 +95,7 @@ transform: rotatey(-80deg);
 .cover-2 {
     top: 0;
     position: absolute;
-    background-color: rgb(120, 196, 219);
+    background-color: #b8a500e0;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -106,13 +106,13 @@ transform: rotatey(-80deg);
     -ms-transform-origin: 0;
     transform-origin: 0;
     -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #f1da02;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: top;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -121,6 +121,7 @@ transform: rotatey(-80deg);
 .book:hover .cover-2 {
 -webkit-transition: all 0.5s;
 transition: all 0.5s;
+box-shadow: 1px 1px 12px #f1da02;
 -webkit-transform: rotatey(-80deg);
 -ms-transform: rotatey(-80deg);
 transform: rotatey(-80deg);
@@ -129,7 +130,7 @@ transform: rotatey(-80deg);
 .cover-3 {
     top: 0;
     position: absolute;
-    background-color: rgb(120, 196, 219);
+    background-color: #00a3afde;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -140,13 +141,13 @@ transform: rotatey(-80deg);
     -ms-transform-origin: 0;
     transform-origin: 0;
     -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #00eeff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: top;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -155,6 +156,7 @@ transform: rotatey(-80deg);
 .book:hover .cover-3 {
 -webkit-transition: all 0.5s;
 transition: all 0.5s;
+box-shadow: 1px 1px 12px #00eeff;
 -webkit-transform: rotatey(-80deg);
 -ms-transform: rotatey(-80deg);
 transform: rotatey(-80deg);
@@ -381,6 +383,18 @@ font-weight: bolder;
     transition-delay: .25s;
 }
 
+.grats-img { 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 15px; /* Bordes redondeados */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */ 
+    max-width: 100%; /* Asegura que la imagen sea responsiva */ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} 
+    
+.grats-img:hover { transform: scale(1.05); /* Efecto de zoom */ 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra aumentada */ 
+}
 
 .grats-content {
     text-align: center;

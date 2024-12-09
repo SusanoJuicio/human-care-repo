@@ -64,7 +64,7 @@ const displayProducts = (data) => {
             <div class="card-content">
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
-            <span class="stock">${producto.stock < 1 ? 'No hay Stock' : `Stock: ${producto.stock}}`}</span> <!-- Mostrar el stock -->
+            <span class="stock">${producto.stock < 1 ? 'No hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
             <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">

@@ -11,14 +11,26 @@
 
 }
 
-@import url("globalFont.css");
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
 
 /* Fondo y tipografía general */
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "fuente", sans-serif;
+    font-family: "price", sans-serif;
 }
 
 /* Header principal */
@@ -35,6 +47,15 @@ body {
     text-shadow: -2px 2px black;
     font-size: 3rem;
     margin: 0;
+}
+
+.titulo:hover {
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+    font-size: 3rem;
+    margin: 0;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 /* Contenedor principal del nav */

@@ -24,7 +24,8 @@ form.addEventListener('submit', async (event) => {
         telefono,
         dni,
         gmail,
-        password
+        password,
+        nivel: 1
     };
 
     try {
