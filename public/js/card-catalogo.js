@@ -19,9 +19,11 @@ products.then(data => {
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" />
             </div>
+            <div class="card-content">
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
-            <span class="stock">Stock: ${producto.stock}</span> <!-- Mostrar el stock -->
+            <span class="stock">${producto.stock < 0 ? 'No Hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
+            </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
         `;
         card.innerHTML = cardContent;
@@ -43,9 +45,11 @@ const displayProducts = (data) => {
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" />
             </div>
+            <div class="card-content">
             <span class="card-title">${producto.name}</span>
             <span class="price">$${producto.price}</span>
             <span class="stock">Stock: ${producto.stock}</span> <!-- Mostrar el stock -->
+            </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
         `;
 
