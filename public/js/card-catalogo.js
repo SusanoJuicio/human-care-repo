@@ -13,7 +13,7 @@ products.then(data => {
     data.forEach(producto => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.setAttribute('key', producto.id);
+        card.setAttribute('key', producto.customId);
 
         const cardContent = `
             <div class="card-image">
@@ -24,10 +24,18 @@ products.then(data => {
             <span class="price">$${producto.price}</span>
             <span class="stock">${producto.stock < 0 ? 'No Hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
             </div>
-            <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
+            <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
         card.innerHTML = cardContent;
         seccion.appendChild(card);
+    });
+    const hearts = document.querySelectorAll('.card-hearth');
+    hearts.forEach(heart => {
+        heart.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const productId = event.target.getAttribute('data-id');
+            toggleWishlist(productId);
+        });
     });
 });
 
@@ -39,7 +47,7 @@ const displayProducts = (data) => {
     data.forEach(producto => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.setAttribute('key', producto.id);
+        card.setAttribute('key', producto.customId);
 
         const cardContent = `
             <div class="card-image">
@@ -50,11 +58,19 @@ const displayProducts = (data) => {
             <span class="price">$${producto.price}</span>
             <span class="stock">Stock: ${producto.stock}</span> <!-- Mostrar el stock -->
             </div>
-            <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
+            <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
 
         card.innerHTML = cardContent;
         seccion.appendChild(card);
+    });
+    const hearts = document.querySelectorAll('.card-hearth');
+    hearts.forEach(heart => {
+        heart.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const productId = event.target.getAttribute('data-id');
+            toggleWishlist(productId);
+        });
     });
 };
 
@@ -75,3 +91,38 @@ filtros.forEach(filtro => {
         filterProducts(category); // Filtrar productos según la categoría seleccionada
     });
 });
+// Función para agregar o quitar de la lista de deseos
+const toggleWishlist = (productId) => {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (wishlist.includes(productId)) {
+        // Si ya está en la lista de deseos, lo eliminamos
+        wishlist = wishlist.filter(id => id !== productId);
+        alert('Producto eliminado de la lista de deseos');
+    } else {
+        // Si no está, lo agregamos
+        wishlist.push(productId);
+        alert('Producto agregado a la lista de deseos');
+    }
+
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    updateHeartIcons();
+};
+
+// Función para actualizar los íconos de corazón
+const updateHeartIcons = () => {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const hearts = document.querySelectorAll('.card-hearth');
+
+    hearts.forEach(heart => {
+        const productId = heart.getAttribute('data-id');
+        if (wishlist.includes(productId)) {
+            heart.style.display = 'none'; // Ocultar el corazón si está en la lista de deseos
+        } else {
+            heart.style.display = 'block'; // Mostrar el corazón si no está en la lista de deseos
+        }
+    });
+};
+
+// Llamar a la función para actualizar los íconos al cargar la página
+updateHeartIcons();

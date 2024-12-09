@@ -1,0 +1,108 @@
+/* Estilo general para la barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    /* Oculta la barra lateral fuera de la vista */
+    width: 300px;
+    height: 100%;
+    background-color: #6EB7D6;
+    /* Color de fondo */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    /* Transición suave */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otros elementos */
+    padding: 20px;
+    /* Espaciado interno */
+    color: #fff;
+    /* Color del texto */
+}
+
+/* Clase activa para mostrar la barra lateral */
+.sidebar.active {
+    right: 0;
+    /* Muestra la barra lateral */
+}
+
+/* Estilo para el botón de cerrar */
+#close-sidebar {
+    cursor: pointer;
+    background-color: #3E85A4;
+    /* Color del botón de cerrar */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+}
+
+#close-sidebar:hover {
+    background-color: #74c6e9;
+    /* Color más claro al pasar el mouse */
+}
+
+/* Estilo para los elementos de la wishlist */
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo semi-transparente */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    transition: background-color 0.3s ease;
+    list-style-type: none;
+    /* Transición suave */
+}
+
+.wishlist-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo más claro al pasar el mouse */
+}
+
+
+/* Estilo para la imagen del producto en la wishlist */
+.wishlist-item-image {
+    width: 60px;
+    /* Ancho de la imagen */
+    height: 60px;
+    /* Alto de la imagen */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin-right: 10px;
+    /* Espaciado a la derecha */
+}
+
+/* Estilo para la información del producto */
+.wishlist-item-info {
+    flex-grow: 1;
+    /* Permite que el contenedor crezca */
+}
+
+/* Estilo para el nombre del producto */
+.wishlist-item-info h3 {
+    margin: 0;
+    /* Elimina el margen */
+    font-size: 1.2em;
+    /* Tamaño de fuente */
+    color: #fff;
+    /* Color del texto */
+}
+
+/* Estilo para el precio del producto */
+.wishlist-item-info p {
+    margin: 5px 0 0;
+    /* Margen superior */
+    color: #d9d9d9;
+    /* Color del texto */
+}
+
+.remove-from-wishlist {
+    color: red;
+    background-color: #6EB7D6;
+}

@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/index.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/busqueda.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
     <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/formSubmit.js"></script>
     <script type="module" src="./js/card.js"></script>
     <script type="module" src="./js/causa.js"></script>
-    <link rel="stylesheet" href="./styles/busqueda.css">
 
 </head>
 
@@ -69,10 +71,16 @@
                 comunidad.</p>
             <section id="causas"></section>
         </section>
+        <!-- Barra lateral para mostrar productos favoritos -->
+        <aside id="sidebar" class="sidebar">
+            <h2>Productos Favoritos</h2>
+            <ul id="wishlist-items"></ul>
+            <button id="close-sidebar">Cerrar</button>
+        </aside>
     </main>
 
     <footer id="footer"></footer>
-
+    <script src="js/favorites.js"></script>
 </body>
 
 </html>

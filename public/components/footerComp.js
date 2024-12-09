@@ -3,9 +3,10 @@ export const footerComp =
         <section class="footerContain">
             <h2>Contáctanos</h2>
             <div class="footerForm">
-                <form class="Form">
-                    <input class="FormInput" type="text" placeholder="Nombre">
-                    <input class="FormInput" type="email"placeholder="Email">
+                <form id="contactForm" class="Form">
+                    <input class="FormInput" name="Nombre" type="text" placeholder="Nombre"  required >
+                    <input class="FormInput" name="Email" type="email"placeholder="Email" required >
+                    <input class="FormInput" name="Mensaje" type="text" placeholder="Mensaje"  required>
                     <button class="btnSubmit" type="submit">Enviar</button>
                 </form>
                 <h3 class="break-ó">ó</h3>

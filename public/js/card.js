@@ -15,22 +15,63 @@ products.then(data => {
     data.forEach(producto => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.setAttribute('key', producto.id); // Cambia 'id' a '_id' si estás usando MongoDB
-
-        const link = document.createElement('a');
-        link.href = './catalogo.html'; // Cambia esto si necesitas un enlace diferente para cada producto
+        card.setAttribute('key', producto.customId); // Cambia 'id' a '_id' si estás usando MongoDB
 
         const cardContent = `
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" /> 
             </div>
-            <span class="card-title">${producto.name}</span> <!-- Asegúrate de usar 'name' -->
-            <span class="price">$${producto.price}</span> <!-- Asegúrate de usar 'price' -->
-            <img class="card-hearth" src="../images/hearth.svg" alt="hearth">
+            <div class="card-content">
+            <span class="card-title">${producto.name}</span>
+            <span class="price">$${producto.price}</span>
+            </div>
+            <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
 
-        link.innerHTML = cardContent;
-        card.appendChild(link);
+        card.innerHTML = cardContent;
         seccion.appendChild(card);
     });
+    const hearts = document.querySelectorAll('.card-hearth');
+    hearts.forEach(heart => {
+        heart.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const productId = event.target.getAttribute('data-id');
+            toggleWishlist(productId);
+        });
+    });
 });
+
+const toggleWishlist = (productId) => {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (wishlist.includes(productId)) {
+        // Si ya está en la lista de deseos, lo eliminamos
+        wishlist = wishlist.filter(id => id !== productId);
+        alert('Producto eliminado de la lista de deseos');
+    } else {
+        // Si no está, lo agregamos
+        wishlist.push(productId);
+        alert('Producto agregado a la lista de deseos');
+    }
+
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    updateHeartIcons();
+};
+
+// Función para actualizar los íconos de corazón
+const updateHeartIcons = () => {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const hearts = document.querySelectorAll('.card-hearth');
+
+    hearts.forEach(heart => {
+        const productId = heart.getAttribute('data-id');
+        if (wishlist.includes(productId)) {
+            heart.style.display = 'none'; // Ocultar el corazón si está en la lista de deseos
+        } else {
+            heart.style.display = 'block'; // Mostrar el corazón si no está en la lista de deseos
+        }
+    });
+};
+
+// Llamar a la función para actualizar los íconos al cargar la página
+updateHeartIcons();

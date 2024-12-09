@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
     <link rel="stylesheet" href="./styles/donaciones.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/header.js"></script>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -18,7 +19,7 @@
 
 <body>
     <header id="header"></header>
-    <main class="donations" >
+    <main class="donations">
         <section class="donations-container">
             <h1 class="donations-text">Activismo HumanCare: ¡Conoce nuestras metas!</h1>
             <div class="donations-images">
@@ -27,15 +28,18 @@
             </div>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./images/causas/Volundariado1.png" class="d-block carousel-img" alt="Causa 1">
                         <div class="carousel-caption d-none d-md-block">
-                            
+
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -49,15 +53,17 @@
                         <img src="./images/causas/voluntariado3.jpeg" class="d-block carousel-img" alt="Causa 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Voluntariados en Hospitales y salitas</h5>
-                            
+
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -65,11 +71,11 @@
         </section>
 
 
-            <button class="btnDonar" onclick="window.location.href='#footer'">
-                ¡DONA AHORA!
-            </button>
-            
-    
+        <button class="btnDonar" onclick="window.location.href='#footer'">
+            ¡DONA AHORA!
+        </button>
+
+
         </section>
         <section class="tipes-donantes">
             <!--seccion de donantes y tipos -->
@@ -79,62 +85,70 @@
 
                 <!-- Card Copper -->
                 <div class="card" style="width: 18rem;">
-                <img src="./images/insignias/plata.jpeg" class="card-img-top" alt="Imagen de la tarjeta Copper">
-                <div class="card-body">
-                    <h5 class="card-title">¡Insignia de PLATA!</h5>
-                    <h6 class="card-subtitle mb-2 text-muted" >¡Con la Insignia de Plata obtendrás un 10% de descuento en tus compras!</h6>
-                    <p class="card-text">¡Alcanza esta insignia acumulando 1,000 puntos!
-                        con todas tus compras (20p) y donaciones de alimentos no perecederos (100p).
-                    </p>
-                    <a class="btn btn-primary" onclick="window.location.href='#footer'">¡Contáctanos!</a>
-                </div>
+                    <img src="./images/insignias/plata.jpeg" class="card-img-top" alt="Imagen de la tarjeta Copper">
+                    <div class="card-body">
+                        <h5 class="card-title">¡Insignia de PLATA!</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">¡Con la Insignia de Plata obtendrás un 10% de
+                            descuento en tus compras!</h6>
+                        <p class="card-text">¡Alcanza esta insignia acumulando 1,000 puntos!
+                            con todas tus compras (20p) y donaciones de alimentos no perecederos (100p).
+                        </p>
+                        <a class="btn btn-primary" onclick="window.location.href='#footer'">¡Contáctanos!</a>
+                    </div>
                 </div>
                 <!-- Card Gold -->
                 <div class="card" style="width: 18rem;">
-                <img src="./images/insignias/oro.jpeg"
-                class="card-img-top" 
-                alt="Imagen de la tarjeta Gold">
-                <div class="card-body">
-                    <h5 class="card-title">¡Insignia de ORO!</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">¡Con la Insignia de ORO obtendrás un 15% de descuento en tus compras!</h6>
-                    <p class="card-text">¡Alcanza esta insignia acumulando 5,000 puntos!
-                        con todas tus compras (20p) y donaciones de alimentos no perecederos (100p).</p>
-                    <a class="btn btn-primary" onclick="window.location.href='#footer'">¡Contáctanos!</a>
-                </div>
-                </div>
-                <!-- Card diamond  -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./images/insignias/diamante.jpeg"
-                    class="card-img-top" 
-                    alt="Imagen de la tarjeta Gold">
+                    <img src="./images/insignias/oro.jpeg" class="card-img-top" alt="Imagen de la tarjeta Gold">
                     <div class="card-body">
-                        <h5 class="card-title">¡Insignia de DIAMANTE!</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">¡Con la Insignia de DIAMANTE obtendrás un 20% de descuento en tus compras!</h6>
+                        <h5 class="card-title">¡Insignia de ORO!</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">¡Con la Insignia de ORO obtendrás un 15% de descuento
+                            en tus compras!</h6>
                         <p class="card-text">¡Alcanza esta insignia acumulando 5,000 puntos!
                             con todas tus compras (20p) y donaciones de alimentos no perecederos (100p).</p>
                         <a class="btn btn-primary" onclick="window.location.href='#footer'">¡Contáctanos!</a>
                     </div>
+                </div>
+                <!-- Card diamond  -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/insignias/diamante.jpeg" class="card-img-top" alt="Imagen de la tarjeta Gold">
+                    <div class="card-body">
+                        <h5 class="card-title">¡Insignia de DIAMANTE!</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">¡Con la Insignia de DIAMANTE obtendrás un 20% de
+                            descuento en tus compras!</h6>
+                        <p class="card-text">¡Alcanza esta insignia acumulando 5,000 puntos!
+                            con todas tus compras (20p) y donaciones de alimentos no perecederos (100p).</p>
+                        <a class="btn btn-primary" onclick="window.location.href='#footer'">¡Contáctanos!</a>
                     </div>
-            
+                </div>
+
             </section>
-        
-    
-        <section class="grats-content">
-            <h2 class="grats-title"><strong>¡Gracias por tu Apoyo!</strong></h2>
-            <div class="grats-textimgcont">
-                <p class="grats-text">En HumanCare, cada donación cuenta y marca la diferencia. Gracias a ti, podemos continuar nuestra misión
-                    de
-                    ayudar a quienes más lo necesitan. Tus contribuciones nos permiten cambiar vidas todos los días.</p>
-                <img class="grats-img" src="/images/persona feliz.jpg" alt="imagen de alguien feliz">
-            </div>
-            <button class="btnDonar" onclick="window.location.href='#footer'">
-                ¡DONA AHORA!
-            </button>
-            
-        </section>    
+
+
+            <section class="grats-content">
+                <h2 class="grats-title"><strong>¡Gracias por tu Apoyo!</strong></h2>
+                <div class="grats-textimgcont">
+                    <p class="grats-text">En HumanCare, cada donación cuenta y marca la diferencia. Gracias a ti,
+                        podemos continuar nuestra misión
+                        de
+                        ayudar a quienes más lo necesitan. Tus contribuciones nos permiten cambiar vidas todos los días.
+                    </p>
+                    <img class="grats-img" src="/images/persona feliz.jpg" alt="imagen de alguien feliz">
+                </div>
+                <button class="btnDonar" onclick="window.location.href='#footer'">
+                    ¡DONA AHORA!
+                </button>
+
+            </section>
+            <!-- Barra lateral para mostrar productos favoritos -->
+            <aside id="sidebar" class="sidebar">
+                <h2>Productos Favoritos</h2>
+                <ul id="wishlist-items"></ul>
+                <button id="close-sidebar">Cerrar</button>
+            </aside>
     </main>
 
     <footer id="footer"></footer>
+    <script src="js/favorites.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
