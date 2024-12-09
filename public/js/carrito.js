@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const carritoContenedor = document.getElementById('carrito-items');
     const total2 = document.getElementById('total');
@@ -104,22 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const addToCart = (productId) => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existingProduct = cart.find(item => item.productId === productId);
-
-        if (existingProduct) {
-            existingProduct.quantity += 1; // Aumentar la cantidad
-        } else {
-            const obj = { productId, quantity: 1 }; // Crear nuevo objeto
-            cart.push(obj);
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart)); // Guardar en localStorage
-        alert('Producto añadido al carrito');
-        updateCartDisplay(); // Actualizar la visualización del carrito
-    };
-
     const removeFromCart = (productId) => {
         let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
         cartItems = cartItems.filter(item => item.productId !== productId); // Filtrar el producto a eliminar
@@ -147,7 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const encryptedUser = localStorage.getItem('user'); // Obtener el usuario cifrado
 
         if (!encryptedUser) {
-            alert('No hay usuario autenticado.');
+            Swal.fire({
+                title: '¡Atención!',
+                text: 'No hay Usuario Autenticado',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+                background: '#D9D9D9', // Color de fondo
+                color: '#3E85A4', // Color del texto
+                iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                customClass: {
+                    confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                }
+            });
             return;
         }
         const userId = localStorage.getItem("userId") // Obtener el ID del usuario descifrado
@@ -170,13 +167,35 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Respuesta del servidor:', responseText); // Imprimir la respuesta
 
             if (!response.ok) {
-                const error = JSON.parse(responseText); // Intenta analizar la respuesta como JSON
-                alert(`Error al procesar la compra: ${error.message}`);
+                const error = JSON.parse(responseText);
+                Swal.fire({
+                    title: '¡Atención!',
+                    text: 'Error al procesar la compra',
+                    icon: 'warning',
+                    confirmButtonText: 'Aceptar',
+                    background: '#D9D9D9', // Color de fondo
+                    color: '#3E85A4', // Color del texto
+                    iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                    customClass: {
+                        confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                    }
+                });
                 return; // Salir si hay un error
             }
         }
 
-        alert('Compra procesada exitosamente.');
+        Swal.fire({
+            title: '¡Éxito!',
+            text: 'Compra realizada con éxito',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            background: '#D9D9D9', // Color de fondo
+            color: '#3E85A4', // Color del texto
+            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            customClass: {
+                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+            }
+        });
         localStorage.removeItem('cart'); // Limpiar el carrito después de la compra
         updateCartDisplay(); // Actualizar la visualización del carrito
     };

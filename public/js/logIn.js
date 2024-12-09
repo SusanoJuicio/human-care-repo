@@ -32,7 +32,18 @@ form.addEventListener('submit', async (event) => {
             window.location.href = 'index.html';
         } else {
             const error = await response.json();
-            window.alert(error.message);
+            Swal.fire({
+                title: '¡Atención!',
+                text: 'Mail o Contraseña incorrecta',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+                background: '#D9D9D9', // Color de fondo
+                color: '#3E85A4', // Color del texto
+                iconColor: '#FF9800', // Color del icono (verde para éxito)
+                customClass: {
+                    confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                }
+            });
         }
     } catch (error) {
         console.error('Error al iniciar sesión:', error);

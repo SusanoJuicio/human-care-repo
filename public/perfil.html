@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="./styles/sidebar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/formSubmit.js"></script>
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/miperfil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -39,6 +42,9 @@
     <script>
         document.getElementById('logout').addEventListener('click', () => {
             localStorage.removeItem('user');
+            localStorage.removeItem("userId")
+            localStorage.removeItem("wishlist")
+            localStorage.removeItem("cart")
             window.location.href = 'logIn.html';
         });
     </script>

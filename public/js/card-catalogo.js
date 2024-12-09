@@ -106,9 +106,31 @@ const addToCart = (productId) => {
         const obj = { productId, quantity: 1 };
         cart.push(obj);
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Producto añadido al carrito');
+        Swal.fire({
+            title: '¡Éxito!',
+            text: 'Producto añadido al carrito',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            background: '#D9D9D9', // Color de fondo
+            color: '#3E85A4', // Color del texto
+            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            customClass: {
+                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+            }
+        });
     } else {
-        alert('El producto ya está en el carrito');
+        Swal.fire({
+            title: '¡Atención!',
+            text: 'El producto ya está en el carrito',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            background: '#D9D9D9', // Color de fondo
+            color: '#3E85A4', // Color del texto
+            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+            customClass: {
+                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+            }
+        });
     }
 };
 // Agregar eventos a los filtros
@@ -125,11 +147,33 @@ const toggleWishlist = (productId) => {
     if (wishlist.includes(productId)) {
         // Si ya está en la lista de deseos, lo eliminamos
         wishlist = wishlist.filter(id => id !== productId);
-        alert('Producto eliminado de la lista de deseos');
+        Swal.fire({
+            title: '¡Atención!',
+            text: 'El producto ya está en tus deseos',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            background: '#D9D9D9', // Color de fondo
+            color: '#3E85A4', // Color del texto
+            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+            customClass: {
+                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+            }
+        });
     } else {
         // Si no está, lo agregamos
         wishlist.push(productId);
-        alert('Producto agregado a la lista de deseos');
+        Swal.fire({
+            title: '¡Éxito!',
+            text: 'Producto añadido a tus deseos',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            background: '#D9D9D9', // Color de fondo
+            color: '#3E85A4', // Color del texto
+            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            customClass: {
+                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+            }
+        });
     }
 
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
