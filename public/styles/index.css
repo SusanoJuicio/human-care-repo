@@ -55,9 +55,9 @@ body {
 }
 /* Buscador */
 .nav_search {
+    margin: 25px;
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #6EB7D6;
 }
 
@@ -87,13 +87,11 @@ body {
 
 .hero-Index {
     text-align: center;
-    padding: 60px 20px;
+    padding: 20px 10px;
 }
 
 .title {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    padding-top: 20px;
+    margin-top: 10px;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
     color: #6EB7D6;

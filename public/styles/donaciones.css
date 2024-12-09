@@ -1,4 +1,4 @@
-@import url('globalFont.css');
+@import url("globalFont.css");
 
 
 @keyframes move {
@@ -26,6 +26,155 @@ body {
             #bfcdd8);
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
+}
+
+.carousel{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+  
+.cover-1 {
+    top: 0;
+    position: absolute;
+    background-color: rgb(120, 196, 219);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-1 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cover-2 {
+    top: 0;
+    position: absolute;
+    background-color: rgb(120, 196, 219);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-2 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cover-3 {
+    top: 0;
+    position: absolute;
+    background-color: rgb(120, 196, 219);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-3 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cause-1{
+    text-align: center;
+}
+
+.cause-2{
+    text-align: center;
+}
+
+.cause-3{
+    text-align: center;
+}
+
+p {
+font-size: 20px;
+font-weight: bolder;
 }
 
 .donations-text {
@@ -81,7 +230,7 @@ body {
 }
 
 .btnDonar:hover {
-    background-color: #ff0000;
+    background-color: #318db4;
     color: hsl(0, 0%, 100%);
     box-shadow: #68bee3 0px 7px 29px 0px;
 }
