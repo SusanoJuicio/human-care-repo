@@ -1,4 +1,4 @@
-@import url('globalFont.css');
+@import url("globalFont.css");
 
 
 @keyframes move {
@@ -26,6 +26,157 @@ body {
             #bfcdd8);
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
+}
+
+.carousel{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+  
+.cover-1 {
+    top: 0;
+    position: absolute;
+    background-color: rgba(197, 207, 209, 0.87);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px rgb(225, 236, 238);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-1 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cover-2 {
+    top: 0;
+    position: absolute;
+    background-color: #b8a500e0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #f1da02;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-2 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+box-shadow: 1px 1px 12px #f1da02;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cover-3 {
+    top: 0;
+    position: absolute;
+    background-color: #00a3afde;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #00eeff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-3 {
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+box-shadow: 1px 1px 12px #00eeff;
+-webkit-transform: rotatey(-80deg);
+-ms-transform: rotatey(-80deg);
+transform: rotatey(-80deg);
+}
+
+.cause-1{
+    text-align: center;
+}
+
+.cause-2{
+    text-align: center;
+}
+
+.cause-3{
+    text-align: center;
+}
+
+p {
+font-size: 20px;
+font-weight: bolder;
 }
 
 .donations-text {
@@ -81,7 +232,7 @@ body {
 }
 
 .btnDonar:hover {
-    background-color: #ff0000;
+    background-color: #318db4;
     color: hsl(0, 0%, 100%);
     box-shadow: #68bee3 0px 7px 29px 0px;
 }
@@ -232,6 +383,18 @@ body {
     transition-delay: .25s;
 }
 
+.grats-img { 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 15px; /* Bordes redondeados */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */ 
+    max-width: 100%; /* Asegura que la imagen sea responsiva */ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} 
+    
+.grats-img:hover { transform: scale(1.05); /* Efecto de zoom */ 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra aumentada */ 
+}
 
 .grats-content {
     text-align: center;
