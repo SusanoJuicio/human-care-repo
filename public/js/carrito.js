@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const carritoContenedor = document.getElementById('carrito-items');
     const totalPriceElement = document.getElementById('total-price'); // Elemento para mostrar el total
-
+    const pagarButton = document.getElementById('pagar-button');
     const fetchProducts = async () => {
         try {
             const response = await fetch('http://localhost:7777/products'); // Cambia a tu endpoint real
@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return [];
         }
     };
-
+    const getCartItems = () => {
+        return JSON.parse(localStorage.getItem('cart')) || [];
+    };
     const updateCartDisplay = async () => {
         carritoContenedor.innerHTML = ''; // Limpiar la lista antes de mostrar los elementos
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -121,6 +123,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Inicializar la visualización del carrito al cargar la página
+    const processPayment = async () => {
+        const cartItems = getCartItems();
+        const encryptedUser = localStorage.getItem('user'); // Obtener el usuario cifrado
+
+        if (!encryptedUser) {
+            alert('No hay usuario autenticado.');
+            return;
+        }
+        const userId = localStorage.getItem("userId") // Obtener el ID del usuario descifrado
+
+        for (const item of cartItems) {
+            console.log('Enviando productId:', item.productId);
+            const response = await fetch('http://localhost:7777/products/purchase', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    productId: item.productId,
+                    quantity: item.quantity,
+                }),
+            });
+
+            const responseText = await response.text(); // Obtener la respuesta como texto
+            console.log('Respuesta del servidor:', responseText); // Imprimir la respuesta
+
+            if (!response.ok) {
+                const error = JSON.parse(responseText); // Intenta analizar la respuesta como JSON
+                alert(`Error al procesar la compra: ${error.message}`);
+                return; // Salir si hay un error
+            }
+        }
+
+        alert('Compra procesada exitosamente.');
+        localStorage.removeItem('cart'); // Limpiar el carrito después de la compra
+        updateCartDisplay(); // Actualizar la visualización del carrito
+    };
+
+    pagarButton.addEventListener('click', processPayment);
     updateCartDisplay();
 }); 
