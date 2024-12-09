@@ -28,92 +28,93 @@ body {
     padding: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #D9D9D9;
+    margin: 0;
+    padding: 20px;
 }
 
-.title {
-    font-size: 2.5em;
-    /* Aumentar el tamaño del título */
-    margin-bottom: 20px;
+/* Estilo para la sección de información del usuario */
+.user-info {
+    background-color: #6EB7D6;
+    /* Color de fondo */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    max-width: 600px;
+    /* Ancho máximo */
+    margin: auto;
+    /* Centrar */
+}
+
+/* Estilo para cada elemento de información del usuario */
+.user-info-item {
+    font-size: 1.2em;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+    margin: 10px 0;
+    /* Espaciado vertical */
+}
+
+/* Estilo para los valores de la información del usuario */
+.user-info-value {
+    font-weight: bold;
+    /* Negrita */
     color: #3E85A4;
+    /* Color del valor */
+}
+
+/* Estilo para el título de la sección */
+h2.title {
+    text-align: center;
+    /* Centrar el texto */
+    color: #3E85A4;
+    /* Color del título */
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
+}
+
+.button-container {
+    display: flex;
+    /* Usar flexbox para centrar */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    margin-top: 20px;
+    /* Espacio superior */
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* centrar en la caja */
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.user-level-title {
+    font-size: 30px;
+
+    /* Tamaño de fuente para el título */
+    color: #333;
     /* Color del título */
     text-align: center;
     /* Centrar el texto */
-}
-
-.cardUser {
-    background-color: #6eb7d6;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-    transition: transform 0.3s;
-}
-
-.infoUser {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-}
-
-.infoUser:hover {
-    transform: scale(1.02);
-    /* Efecto de hover */
-}
-
-.user {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.user img {
-    border-radius: 50%;
-    /* Imagen circular */
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border: 4px solid #3E85A4;
-    /* Borde alrededor de la imagen */
-}
-
-.user div:last-child {
-    flex: 1;
-}
-
-.user-div-2 {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.user-div-2 p {
-    width: 40%;
-}
-
-.user p {
-    margin: 12px 0;
-    font-size: 1.1em;
-    /* Aumentar el tamaño de la fuente */
-    color: #333;
-    line-height: 1.5;
-}
-
-.user p strong {
-    font-weight: 600;
-    margin-right: 8px;
-    color: #000;
+    margin-bottom: 15px;
+    /* Espacio debajo del título */
+    border-bottom: 2px solid #4aaad3;
+    /* Línea debajo del título */
+    padding-bottom: 10px;
+    /* Espacio interno debajo de la línea */
 }
 
 #logout {
-    margin-top: 20px;
     padding: 10px 20px;
     background-color: #3E85A4;
     /* Color del botón de cerrar sesión */
@@ -123,6 +124,7 @@ main {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-bottom: 50px;
 }
 
 #logout:hover {

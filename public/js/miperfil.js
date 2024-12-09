@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const secretKey = 'REMOLACHA';
     const encryptedUser = localStorage.getItem('user');
@@ -12,10 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const seccion = document.getElementById('infoUser');
         seccion.innerHTML = `
-            <p><strong>Nombre:</strong> ${user.nombre}</p>
-            <p><strong>Apellido:</strong> ${user.apellido}</p>
-            <p><strong>DNI:</strong> ${user.dni}</p>
-            <p><strong>Teléfono:</strong> ${user.telefono}</p>
+            <div class="user-info">
+            <h3 class="user-level-title"><strong>Nivel Actual:</strong> <span class="user-info-value">${user.nivel}</span></h3>
+                <div class="info-container">
+            <p class="user-info-item"><strong>Nombre:</strong> <span class="user-info-value">${user.nombre}</span></p>
+                <p class="user-info-item"><strong>Apellido:</strong> <span class="user-info-value">${user.apellido}</span></p>
+                <p class="user-info-item"><strong>DNI:</strong> <span class="user-info-value">${user.dni}</span></p>
+                <p class="user-info-item"><strong>Teléfono:</strong> <span class="user-info-value">${user.telefono}</span></p>
+            <div/>
+        </div>
         `;
     }
 });
