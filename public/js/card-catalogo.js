@@ -13,19 +13,21 @@ products.then(data => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.setAttribute('key', producto.customId);
+        const isOutOfStock = producto.stock <= 0;
 
         const cardContent = `
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" />
             </div>
             <div class="card-content">
-            <span class="card-title">${producto.name}</span>
-            <span class="price">$${producto.price}</span>
-            <span class="stock">${producto.stock < 0 ? 'No Hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
-            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
+                <span class="card-title">${producto.name}</span>
+                <span class="price">$${producto.price}</span>
+                <span class="stock">${isOutOfStock ? 'No hay Stock' : `Stock: ${producto.stock}`}</span>
+                ${!isOutOfStock ? `<img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">` : ''}
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
+
         card.innerHTML = cardContent;
         seccion.appendChild(card);
     });
@@ -57,15 +59,17 @@ const displayProducts = (data) => {
         card.classList.add('card');
         card.setAttribute('key', producto.customId);
 
+        const isOutOfStock = producto.stock <= 0;
+
         const cardContent = `
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" />
             </div>
             <div class="card-content">
-            <span class="card-title">${producto.name}</span>
-            <span class="price">$${producto.price}</span>
-            <span class="stock">${producto.stock < 1 ? 'No hay Stock' : `Stock: ${producto.stock}`}</span> <!-- Mostrar el stock -->
-            <img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">
+                <span class="card-title">${producto.name}</span>
+                <span class="price">$${producto.price}</span>
+                <span class="stock">${isOutOfStock ? 'No hay Stock' : `Stock: ${producto.stock}`}</span>
+                ${!isOutOfStock ? `<img class="cart-icon" src="../images/cart.svg" alt="Añadir al carrito" data-id="${producto.customId}">` : ''}
             </div>
             <img class="card-hearth" src="../images/hearth.svg" alt="hearth" data-id="${producto.customId}">
         `;
@@ -197,3 +201,5 @@ const updateHeartIcons = () => {
 
 // Llamar a la función para actualizar los íconos al cargar la página
 updateHeartIcons();
+
+

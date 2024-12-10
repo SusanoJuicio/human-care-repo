@@ -115,3 +115,82 @@ body {
     margin: auto;
     text-shadow: -1px 2px 4px #ffffff;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        /* Reducir el padding del cuerpo */
+    }
+
+    #us {
+        padding: 20px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 180px;
+        /* Reducir el ancho de la tarjeta */
+        height: 220px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .hover-text {
+        font-size: 18px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 15px;
+        /* Reducir el padding interno */
+    }
+
+    .p {
+        font-size: 1rem;
+        /* Reducir el tamaño de fuente */
+    }
+}
+
+/* Media Query para pant allas de 480px o menos */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        /* Reducir aún más el padding del cuerpo */
+    }
+
+    #us {
+        padding: 10px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 150px;
+        /* Reducir el ancho de la tarjeta */
+        height: 200px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 14px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .hover-text {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 10px;
+        /* Reducir el padding interno */
+    }
+
+    .p {
+        font-size: 0.9rem;
+        /* Reducir el tamaño de fuente */
+    }
+}

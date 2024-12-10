@@ -41,7 +41,7 @@
 
 .FormInput {
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     box-shadow: -2px 3px black;
     color: black;
@@ -291,4 +291,159 @@
     color: #d9d9d9;
     margin: 0;
     font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        font-size: 14px;
+        /* Ajustar el tamaño de fuente del footer */
+    }
+
+    .footerMain {
+        flex-direction: column;
+        /* Cambiar a columna para mejor visualización */
+        align-items: center;
+        /* Centrar los elementos */
+    }
+
+    .footerContain h2 {
+        font-size: 18px;
+        /* Ajustar el tamaño del título */
+        margin: 10px 0;
+        /* Reducir el margen */
+    }
+
+    .footerForm {
+        width: 100%;
+        /* Hacer que el formulario ocupe el 100% del ancho */
+
+        /* Añadir padding */
+    }
+
+    .FormInput {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente */
+        margin-bottom: 5px;
+        padding: 15px;
+        /* Reducir el padding */
+    }
+
+    .footerContain h2 {
+        color: black;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .btnSubmit {
+        font-size: 16px;
+        /* Ajustar el tamaño del botón */
+        padding: 15px;
+        /* Ajustar el padding del botón */
+    }
+
+    .btnFooter {
+        width: 100%;
+        /* Hacer que el botón ocupe el 100% del ancho */
+        padding: 12px;
+        /* Ajustar el padding */
+        font-size: 10px;
+        /* Ajustar el tamaño de fuente */
+    }
+
+    .btnFooter .text {
+        font-size: 20px;
+    }
+
+    .socialContainer {
+        width: 40px;
+        /* Reducir el tamaño de los contenedores sociales */
+        height: 40px;
+        /* Reducir el tamaño de los contenedores sociales */
+    }
+
+    .textFinal,
+    .copy {
+        font-size: 16px;
+        /* Ajustar el tamaño de fuente */
+    }
+
+    .break-ó {
+        font-size: 18px;
+        /* Ajustar el tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        font-size: 12px;
+        /* Ajustar el tamaño de fuente del footer */
+    }
+
+    .footerMain {
+        flex-direction: column;
+        /* Cambiar a columna para mejor visualización */
+        align-items: center;
+        /* Centrar los elementos */
+    }
+
+    .footerContain h2 {
+        font-size: 16px;
+        /* Ajustar el tamaño del título */
+        margin: 5px 0;
+        /* Reducir el margen */
+    }
+
+    .footerForm {
+        width: 80%;
+        margin: auto;
+        /* Hacer que el formulario ocupe el 100% del ancho */
+        /* Añadir padding */
+    }
+
+    .FormInput {
+        font-size: 14px;
+        /* Reducir el tamaño de fuente */
+        padding: 10px;
+        margin-bottom: 5px;
+        /* Reducir el padding */
+    }
+
+    .btnSubmit {
+        font-size: 14px;
+        /* Ajustar el tamaño del botón */
+        padding: 10px;
+        /* Ajustar el padding del botón */
+    }
+
+    .btnFooter {
+        width: 100%;
+        /* Hacer que el botón ocupe el 100% del ancho */
+        padding: 10px;
+        /* Ajustar el padding */
+        font-size: 12px;
+        /* Ajustar el tamaño de fuente */
+    }
+
+    .btnFooter .text {
+        font-size: 15px;
+    }
+
+    .socialContainer {
+        width: 30px;
+        /* Reducir el tamaño de los contenedores sociales */
+        height: 30px;
+        /* Reducir el tamaño de los contenedores sociales */
+    }
+
+    .textFinal,
+    .copy {
+        font-size: 14px;
+        /* Ajustar el tamaño de fuente */
+        text-align: center;
+    }
+
+    .break-ó {
+        font-size: 16px;
+        /* Ajustar el tamaño de fuente */
+    }
 }

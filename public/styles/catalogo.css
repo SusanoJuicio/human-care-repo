@@ -1,4 +1,5 @@
 @import url('globalFont.css');
+
 @keyframes move {
     0% {
         background-position: 0 0;
@@ -141,7 +142,7 @@ main {
 .price {
     font-size: 1.6em;
     /* Reducir el tamaño del precio */
-    font-family:  "price", sans-serif;
+    font-family: "price", sans-serif;
     text-align: center;
     /* Centrar el texto */
     color: #000000;
@@ -267,4 +268,139 @@ main {
 .btn-confirm:hover {
     background-color: #2a5e78;
     /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        /* Cambiar a una sola columna */
+    }
+
+    #filtros {
+        width: 100%;
+        /* Hacer que los filtros ocupen el 100% del ancho */
+        border-right: none;
+        /* Eliminar el borde derecho */
+        margin-bottom: 20px;
+        position: relative;
+        /* Espacio entre filtros y productos */
+    }
+
+    #filtros ul {
+        margin-bottom: 100px;
+    }
+
+    #filtros li {
+        font-size: medium;
+        /* Reducir el tamaño de fuente */
+        padding: 10px;
+        /* Ajustar el padding */
+    }
+
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambiar a dos columnas */
+        gap: 20px;
+        margin-top: 20px;
+        /* Reducir el espacio entre tarjetas */
+    }
+
+    .card {
+        height: auto;
+        /* Permitir que la altura de la tarjeta se ajuste automáticamente */
+    }
+
+    .card-title {
+        font-size: 1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1.4em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.7em;
+        /* Reducir el tamaño del stock */
+    }
+
+    .cart-icon {
+        position: absolute;
+        bottom: 10px;
+        /* Ajusta la posición vertical */
+        left: 10px;
+        /* Coloca el ícono visible */
+        width: 24px;
+        /* Ajusta el tamaño del ícono */
+        height: 24px;
+        /* Ajusta el tamaño del ícono */
+        cursor: pointer;
+        /* Cambia el cursor al pasar el mouse */
+        opacity: 1;
+        /* Asegúrate de que sea visible */
+        visibility: visible;
+        /* Asegúrate de que sea visible */
+    }
+
+    .card-hearth {
+        position: absolute;
+        bottom: 10px;
+        /* Ajusta la posición vertical */
+        right: 10px;
+        /* Coloca el corazón fuera de la vista inicialmente */
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        /* Añadir transición para el movimiento */
+        z-index: 10;
+        opacity: 1;
+        /* Inicialmente oculto */
+    }
+
+    .card-image {
+        height: 40%;
+        /* Ajustar la altura de la imagen para que sea más pequeña en pantallas pequeñas */
+    }
+
+    .card-image img {
+        object-fit: contain;
+        /* Cambiar a contain si deseas que la imagen se ajuste sin recortes */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    #filtros li {
+        font-size: small;
+        /* Reducir aún más el tamaño de fuente */
+        padding: 10px;
+        /* Reducir el padding */
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+        /* Cambiar a una sola columna */
+    }
+
+    .card {
+        margin-bottom: 20px;
+        /* Aumentar el margen inferior */
+    }
+
+    .card-title {
+        font-size: 1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1.4em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.7em;
+        /* Reducir el tamaño del stock */
+    }
 }

@@ -131,3 +131,101 @@ h2.title {
     background-color: #74c6e9;
     /* Color más claro al pasar el mouse */
 }
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        /* Reducir el padding del cuerpo */
+    }
+
+    .user-info {
+        padding: 15px;
+        /* Reducir el padding interno */
+        max-width: 100%;
+        width: 80%;
+        margin: 0 auto;
+        /* Hacer que el ancho máximo sea 100% */
+    }
+
+    .user-info-item {
+        font-size: 1.1em;
+        /* Reducir el tamaño de fuente */
+    }
+
+    h2.title {
+        font-size: 1.8em;
+        /* Reducir el tamaño del título */
+    }
+
+    .button-container {
+        flex-direction: column;
+        /* Cambiar a columna para mejor visualización */
+        align-items: center;
+        /* Centrar los botones */
+    }
+
+    .info-container {
+        grid-template-columns: 1fr;
+        /* Cambiar a una sola columna */
+        font-size: 18px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .user-level-title {
+        font-size: 24px;
+        /* Reducir el tamaño del título */
+    }
+
+    #logout {
+        padding: 8px 16px;
+        /* Reducir el padding del botón */
+        font-size: 14px;
+        /* Reducir el tamaño de fuente del botón */
+    }
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        /* Reducir aún más el padding del cuerpo */
+    }
+
+    .user-info {
+        padding: 10px;
+        /* Reducir el padding interno */
+    }
+
+    .user-info-item {
+        font-size: 1em;
+        /* Reducir el tamaño de fuente */
+    }
+
+    h2.title {
+        font-size: 1.5em;
+        /* Reducir el tamaño del título */
+    }
+
+    .button-container {
+        margin-top: 10px;
+        /* Reducir el margen superior */
+    }
+
+    .info-container {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .user-level-title {
+        font-size: 20px;
+        /* Reducir el tamaño del título */
+    }
+
+    #logout {
+        padding: 6px 12px;
+        /* Reducir el padding del botón */
+        font-size: 12px;
+        /* Reducir el tamaño de fuente del botón */
+    }
+}

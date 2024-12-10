@@ -37,7 +37,7 @@ body {
 #header {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 11;
 }
 
 /* Estilo del título */
@@ -97,6 +97,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    padding: 0;
 }
 
 .nav_list_li {
@@ -163,7 +164,7 @@ body {
 
 /* Enlaces de navegación */
 .nav_links {
-    width: 360px;
+    width: 160px;
     text-decoration: solid;
     color: #fcf9f9;
     display: flex;
@@ -176,4 +177,87 @@ body {
     transition: ease 0.25s;
     background-color: #3E85A4;
     color: white;
+}
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+        /* Reducir el tamaño del título */
+        margin-left: 20px;
+        /* Reducir el margen izquierdo */
+    }
+
+
+    .nav_list_li {
+        /* Eliminar margen derecho */
+        margin-bottom: 10px;
+        /* Añadir margen inferior */
+    }
+
+    .nav_links {
+        width: 100px;
+        /* Hacer que los enlaces ocupen el 100% del ancho */
+        justify-content: center;
+        font-size: medium;
+        /* Centrar los enlaces */
+    }
+
+    .nav_logo {
+        max-height: 50px;
+        /* Reducir el tamaño del logo */
+    }
+
+    .nav_favoritos .dropdown_favorites {
+        width: 150px;
+        /* Reducir el ancho del dropdown */
+    }
+
+    .titulo:hover {
+        font-size: 2.6rem;
+    }
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2rem;
+        /* Reducir aún más el tamaño del título */
+        margin-left: 10px;
+        /* Reducir el margen izquierdo */
+    }
+
+    .titulo:hover {
+        font-size: 1.2rem;
+    }
+
+    .nav_list {
+        font-size: 1.2rem;
+        /* Ajustar el tamaño de fuente */
+        padding: 0;
+    }
+
+    .nav_list_li {
+        margin-bottom: 5px;
+        /* Reducir el margen inferior */
+    }
+
+
+
+    .nav_links {
+        width: 80px;
+        /* Mantener el ancho completo */
+        font-size: small;
+    }
+
+    .nav_logo {
+        max-height: 40px;
+        /* Reducir el tamaño del logo */
+    }
+
+    .nav_favoritos .dropdown_favorites {
+        width: 100px;
+        /* Reducir aún más el ancho del dropdown */
+    }
+
 }

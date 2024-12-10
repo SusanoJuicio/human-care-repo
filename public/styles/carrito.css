@@ -264,3 +264,66 @@ body {
     background-color: #2a5e78;
     /* Color más oscuro al pasar el mouse */
 }
+
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        /* Cambiar a columna en pantallas pequeñas */
+
+        /* Alinear elementos al inicio */
+        width: 90%;
+        /* Aumentar el ancho */
+    }
+
+
+
+    .li {
+        margin: 20px 10px;
+        /* Reducir márgenes */
+        font-size: 30px;
+        /* Reducir tamaño de fuente */
+        padding: 20px;
+        /* Reducir padding */
+    }
+
+    #pagar-button {
+        width: 80%;
+        /* Aumentar el ancho del botón de pagar */
+    }
+
+    #carrito h2 {
+        font-size: 1.5rem;
+        /* Reducir tamaño de fuente del título */
+    }
+
+    .total {
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente del total */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .cart-item {
+        padding: 5px;
+        /* Reducir padding en elementos del carrito */
+    }
+
+    .button {
+        padding: 8px 10px;
+        /* Reducir padding de los botones */
+        font-size: 0.9rem;
+        /* Reducir tamaño de fuente de los botones */
+    }
+
+    .cart-item-info h3 {
+        font-size: 1rem;
+        /* Reducir tamaño de fuente del nombre del producto */
+    }
+
+    .cart-item-info p {
+        font-size: 0.8rem;
+        /* Reducir tamaño de fuente del precio */
+    }
+}

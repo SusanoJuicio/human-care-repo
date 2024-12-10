@@ -123,3 +123,85 @@
     background-color: #ff1a1a;
     /* Color más oscuro al pasar el mouse */
 }
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        /* Reducir el ancho de la barra lateral */
+        padding: 15px;
+        /* Reducir el padding interno */
+    }
+
+    .wishlist-item {
+        flex-direction: column;
+        /* Cambiar a columna para mejor visualización */
+        align-items: flex-start;
+        /* Alinear elementos al inicio */
+    }
+
+    .wishlist-item-image {
+        width: 50px;
+        /* Reducir el tamaño de la imagen */
+        height: 50px;
+        /* Reducir el tamaño de la imagen */
+        margin-bottom: 10px;
+        /* Añadir margen inferior */
+    }
+
+    .wishlist-item-info h3 {
+        font-size: 1.1em;
+        /* Reducir el tamaño de fuente del nombre del producto */
+    }
+
+    .wishlist-item-info p {
+        font-size: 0.9em;
+        /* Reducir el tamaño de fuente del precio */
+    }
+
+    .remove-from-wishlist {
+        padding: 2px 4px;
+        /* Reducir el padding del botón */
+        font-size: 0.9em;
+        /* Reducir el tamaño de fuente del botón */
+    }
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 200px;
+        /* Reducir aún más el ancho de la barra lateral */
+        padding: 10px;
+        /* Reducir el padding interno */
+    }
+
+    .wishlist-item {
+        margin-bottom: 10px;
+        /* Reducir el margen inferior */
+    }
+
+    .wishlist-item-image {
+        width: 40px;
+        /* Reducir el tamaño de la imagen */
+        height: 40px;
+        /* Reducir el tamaño de la imagen */
+    }
+
+    .wishlist-item-info h3 {
+        font-size: 1em;
+        /* Reducir el tamaño de fuente del nombre del producto */
+    }
+
+    .wishlist-item-info p {
+        font-size: 0.8em;
+        /* Reducir el tamaño de fuente del precio */
+    }
+
+    .remove-from-wishlist {
+        padding: 2px 3px;
+        /* Reducir el padding del botón */
+        font-size: 0.8em;
+        /* Reducir el tamaño de fuente del botón */
+    }
+}
