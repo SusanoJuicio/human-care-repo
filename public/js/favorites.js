@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wishlistItems = document.getElementById('wishlist-items');
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:7777/products'); // Cambia a tu endpoint real
+            const response = await fetch('https://humancare-backend.onrender.com/products'); // Cambia a tu endpoint real
             const data = await response.json();
             return data;
         } catch (err) {
