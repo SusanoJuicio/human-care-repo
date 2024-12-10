@@ -2,11 +2,11 @@
     {
         "nombre":"Salud Comunitaria",
         "img":"../images/causaB1.jpg",
-        "descripcion":"La salud comunitaria es un enfoque de la atención médica que todo mundo necesita, y nosotros priorizamos"
+        "descripcion":"La salud comunitaria es un enfoque esencial de la atención médica que busca mejorar la calidad de vida de las personas a través de la prevención, el acceso equitativo y la participación activa de la comunidad. En HumanCare, priorizamos este enfoque, promoviendo iniciativas que impacten positivamente en el bienestar colectivo, ya sea mediante recursos educativos, donaciones o programas diseñados para construir un futuro más saludable y sostenible. "
     },
     {
         "nombre":"Salud Ambiental",
         "img":"../images/causaB2.jpg",
-        "descripcion":"La salud ambiental es crucial para la salud de las personas y el planeta tierra, y nosotros priorizamos"
+        "descripcion":"La salud ambiental es crucial para garantizar el bienestar tanto de las personas como del planeta. En HumanCare, priorizamos iniciativas que fomenten prácticas sostenibles, reduzcan el impacto ambiental y promuevan un entorno limpio y seguro para todos. Creemos que cuidar del medio ambiente es cuidar de nuestra propia salud y la de las futuras generaciones."
     }
 ]

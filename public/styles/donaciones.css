@@ -11,6 +11,7 @@
     }
 }
 
+
 /* Body */
 body {
     font-family: "fuente", sans-serif;
@@ -28,7 +29,7 @@ body {
     animation: move 4.5s linear infinite;
 }
 
-.carousel{
+.carousel {
     display: flex;
     justify-content: space-evenly;
 }
@@ -57,7 +58,7 @@ body {
     justify-content: center;
     color: #000;
 }
-  
+
 .cover-1 {
     top: 0;
     position: absolute;
@@ -85,11 +86,11 @@ body {
 }
 
 .book:hover .cover-1 {
--webkit-transition: all 0.5s;
-transition: all 0.5s;
--webkit-transform: rotatey(-80deg);
--ms-transform: rotatey(-80deg);
-transform: rotatey(-80deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
 }
 
 .cover-2 {
@@ -119,12 +120,12 @@ transform: rotatey(-80deg);
 }
 
 .book:hover .cover-2 {
--webkit-transition: all 0.5s;
-transition: all 0.5s;
-box-shadow: 1px 1px 12px #f1da02;
--webkit-transform: rotatey(-80deg);
--ms-transform: rotatey(-80deg);
-transform: rotatey(-80deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 12px #f1da02;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
 }
 
 .cover-3 {
@@ -154,29 +155,29 @@ transform: rotatey(-80deg);
 }
 
 .book:hover .cover-3 {
--webkit-transition: all 0.5s;
-transition: all 0.5s;
-box-shadow: 1px 1px 12px #00eeff;
--webkit-transform: rotatey(-80deg);
--ms-transform: rotatey(-80deg);
-transform: rotatey(-80deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 12px #00eeff;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
 }
 
-.cause-1{
+.cause-1 {
     text-align: center;
 }
 
-.cause-2{
+.cause-2 {
     text-align: center;
 }
 
-.cause-3{
+.cause-3 {
     text-align: center;
 }
 
 p {
-font-size: 20px;
-font-weight: bolder;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .donations-text {
@@ -383,17 +384,23 @@ font-weight: bolder;
     transition-delay: .25s;
 }
 
-.grats-img { 
-    display: block; 
-    margin: 0 auto; 
-    border-radius: 15px; /* Bordes redondeados */ 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */ 
-    max-width: 100%; /* Asegura que la imagen sea responsiva */ 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-} 
-    
-.grats-img:hover { transform: scale(1.05); /* Efecto de zoom */ 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra aumentada */ 
+.grats-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    max-width: 100%;
+    /* Asegura que la imagen sea responsiva */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grats-img:hover {
+    transform: scale(1.05);
+    /* Efecto de zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra aumentada */
 }
 
 .grats-content {
@@ -408,28 +415,41 @@ font-weight: bolder;
     text-align: center;
     text-shadow: -2px 2px black;
 }
+
 /* Estilo para las imágenes del carrusel */
 .carousel-img {
-    max-width: 90%; 
+    max-width: 90%;
     height: auto;
-    margin: 0 auto; /* Centrar la imagen dentro del carrusel */
-    border-radius: 10px; /* Añadir un borde redondeado para mejor estética */
+    margin: 0 auto;
+    /* Centrar la imagen dentro del carrusel */
+    border-radius: 10px;
+    /* Añadir un borde redondeado para mejor estética */
 }
+
 /* Estilo para los textos del carrusel */
 .carousel-caption h5 {
-    color: #000000; /* Color negro para el texto */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    color: #000000;
+    /* Color negro para el texto */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco con opacidad */
     padding: 10px;
-    border-radius: 5px; /* Bordes redondeados para mejorar la estética */
-    display: inline-block; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra sutil para resaltar el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para mejorar la estética */
+    display: inline-block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    /* Sombra sutil para resaltar el texto */
 }
 
 .carousel-caption p {
-    color: #333333; /* Gris oscuro para el párrafo */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    color: #333333;
+    /* Gris oscuro para el párrafo */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco con opacidad */
     padding: 8px;
-    border-radius: 5px; /* Bordes redondeados */
-    display: inline-block; /* Ajustar el fondo al tamaño del texto */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    display: inline-block;
+    /* Ajustar el fondo al tamaño del texto */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil */
 }

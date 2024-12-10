@@ -12,6 +12,7 @@
 }
 
 
+
 @keyframes tiltSides {
     25% {
         transform: rotate(-10deg);
@@ -299,6 +300,7 @@ body {
 }
 
 
+/* Estilos para el título de donaciones */
 .text-basic-donaciones {
     font-size: 36px;
     text-align: center;
@@ -306,18 +308,10 @@ body {
     color: #6EB7D6;
     padding: 20px;
     text-shadow: -2px 2px black;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
 }
 
-.p-donaciones {
-    text-align: center;
-    color: #3697c0;
-    font-size: 1.2rem;
-    margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.6;
-}
-
+/* Contenedor de causas */
 #causas {
     display: flex;
     flex-wrap: wrap;
@@ -326,55 +320,63 @@ body {
     padding: 20px;
 }
 
-
-
+/* Estilos para las causas */
 .cause {
     width: 90%;
     margin: auto;
     background-image: linear-gradient(163deg, #3E85A4 0%, #59b9e2 100%);
-    transition: all .3s;
+    transition: all 0.3s;
     border-radius: 20px;
     margin-bottom: 30px;
-    filter: drop-shadow(-6px 5px 10px #000000);
+    filter: drop-shadow(-6px 5px 10px #000);
 }
 
 .cause2 {
     width: 100%;
     margin: auto;
-    transition: all .2s;
+    transition: all 0.2s;
     background-color: #74c6e9;
     border-radius: 20px;
     color: #000;
     margin-bottom: 30px;
 }
 
+/* Efectos al pasar el mouse */
+.cause:hover {
+    box-shadow: 0 0 30px 1px #3E85A4;
+}
+
 .cause2:hover {
     transform: scale(0.997);
-    border-radius: 20px;
 }
 
-.cause:hover {
-    box-shadow: 0px 0px 30px 1px #3E85A4;
-
-}
-
+/* Estilos para el título de cada causa */
 .title-cause {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 15px;
     text-align: center;
+    color: #2a5e78;
+    margin-bottom: 0;
 }
 
+/* Estilos para las imágenes de las causas */
 .img-causes {
-    width: 700px;
+    width: 70%;
+    /* Cambiado a 100% para ser más responsivo */
+    max-width: 700px;
+    /* Limitar el ancho máximo */
     height: 250px;
     margin: 0 10px;
     object-fit: contain;
-    border-radius: 30px;
-
 }
 
+.img-causes img {
+    border-radius: 40px;
+}
+
+/* Contenedor de la causa */
 .causa-contain {
     display: flex;
     justify-content: space-between;
@@ -382,38 +384,40 @@ body {
     height: 270px;
 }
 
+/* Descripción de las causas */
 .desc-causes {
-    font-size: 28px;
+    font-size: 24px;
+    color: #2a5e78;
     width: 50%;
+    margin-right: 40px;
 }
 
 
-
-.aDonar {
-    text-decoration: none;
-    display: block;
-    margin: auto;
-}
-
-.aDonar:hover {
-    text-decoration: none;
-}
 
 .btnDonar {
-    background-color: rgb(241, 82, 82);
-    color: #ffffff;
-    padding: 15px 30px;
+    background-color: #3E85A4;
+    color: #000;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 18px;
+    height: 40px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    border: 0;
+    background-color: #74c6e9;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin: 20px auto;
+    transition: all 0.5s ease;
 }
 
 .btnDonar:hover {
-    background-color: #74c6e9;
+    background-color: #318db4;
     color: hsl(0, 0%, 100%);
     box-shadow: #68bee3 0px 7px 29px 0px;
 }
