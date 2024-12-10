@@ -295,6 +295,9 @@ body {
     /* Aumenta el tamaño al hacer hover */
 }
 
+/* !!-! kasfkaln */
+
+
 .text {
     max-width: 55px;
 }
@@ -364,8 +367,6 @@ body {
 /* Estilos para las imágenes de las causas */
 .img-causes {
     width: 70%;
-    /* Cambiado a 100% para ser más responsivo */
-    max-width: 700px;
     /* Limitar el ancho máximo */
     height: 250px;
     margin: 0 10px;
@@ -386,7 +387,7 @@ body {
 
 /* Descripción de las causas */
 .desc-causes {
-    font-size: 24px;
+    font-size: 20px;
     color: #2a5e78;
     width: 50%;
     margin-right: 40px;
@@ -438,6 +439,54 @@ a {
     text-shadow: -2px 2px black;
 }
 
+/* Estilo para el botón de confirmación de SweetAlert2 */
+.btn-confirm {
+    background-color: #3E85A4;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    transition: background-color 0.3s;
+    /* Transición suave */
+}
+
+.btn-confirm:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+}
+
+@media(max-width:1300px) {
+    .title-cause {
+        font-size: 2.5rem;
+    }
+
+    .img-causes {
+        height: 200px;
+        width: 50%;
+    }
+}
+
+@media (max-width:900px) {
+    .causa-contain {
+        flex-direction: column;
+    }
+
+    .desc-causes {
+        display: none;
+    }
+
+
+    .img-causes {
+        width: 70%;
+        /* Limitar el ancho máximo */
+        height: 200px;
+    }
+}
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -464,25 +513,206 @@ a {
     .index-Causes {
         flex-direction: column;
     }
+
+    .desc-causes {
+        font-size: 13px;
+        width: 40%;
+    }
+
+    .title-cause {
+        font-size: 25px;
+    }
+
+    .img-causes {
+        height: 300px;
+    }
+
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambiar a 2 columnas */
+        grid-template-rows: repeat(3);
+        /* Aumentar el número de filas si es necesario */
+    }
+
+    .card {
+        height: 220px;
+        /* Ajustar la altura de la tarjeta */
+    }
+
+    .card-title {
+        font-size: 1.1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1.2em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.7em;
+        /* Reducir el tamaño del stock */
+    }
+
+    .card-image {
+        height: 50%;
+        /* Ajustar la altura de la imagen */
+    }
+
+    .hero-Index {
+        padding: 15px 5px;
+        /* Reducir el padding */
+    }
+
+    .title {
+        font-size: 2rem;
+        /* Reducir el tamaño del título */
+    }
+
+    .index-Causes {
+        flex-direction: column;
+        /* Cambiar a columna en lugar de fila */
+        align-items: center;
+        /* Centrar los elementos */
+    }
+
+    .text-Causes {
+        font-size: 1.5rem;
+        /* Reducir el tamaño de la fuente */
+        padding-inline: 2rem;
+        /* Reducir el padding horizontal */
+    }
+
+    .causes {
+        width: 90%;
+        /* Hacer que las causas ocupen el 90% del ancho */
+        height: auto;
+        /* Ajustar la altura automáticamente */
+        max-width: 350px;
+        /* Limitar el ancho máximo */
+        margin: 1rem;
+        /* Reducir el margen */
+    }
+
+    .text-basic {
+        font-size: 28px;
+        /* Reducir el tamaño de la fuente */
+    }
+
+    .arrow-Index {
+        margin-top: 20px;
+        /* Reducir el margen superior */
+    }
 }
 
-/* Estilo para el botón de confirmación de SweetAlert2 */
-.btn-confirm {
-    background-color: #3E85A4;
-    /* Color de fondo del botón */
-    color: white;
-    /* Color del texto del botón */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    padding: 10px 20px;
-    /* Espaciado interno */
-    border: none;
-    /* Sin borde */
-    transition: background-color 0.3s;
-    /* Transición suave */
+@media (max-width: 600px) {
+    .desc-causes {
+        font-size: 11px;
+        width: 50%;
+    }
+
+    .title-cause {
+        font-size: 20px;
+    }
+
+    .img-causes {
+        height: 350px;
+    }
 }
 
-.btn-confirm:hover {
-    background-color: #2a5e78;
-    /* Color más oscuro al pasar el mouse */
+@media (max-width: 485px) {
+    .desc-causes {
+        font-size: 11px;
+        width: 50%;
+    }
+
+    .title-cause {
+        font-size: 20px;
+    }
+
+    .img-causes {
+        height: 450px;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+        /* Cambiar a 1 columna */
+        grid-template-rows: repeat(3);
+        /* Aumentar el número de filas si es necesario */
+    }
+
+    .card {
+        height: auto;
+        /* Permitir que la altura de la tarjeta se ajuste automáticamente */
+    }
+
+    .card-title {
+        font-size: 1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.6em;
+        /* Reducir el tamaño del stock */
+    }
+
+    .card-image {
+        height: 40%;
+        /* Ajustar la altura de la imagen */
+    }
+
+    .hero-Index {
+        padding: 10px 2px;
+        /* Reducir aún más el padding */
+    }
+
+    .title {
+        font-size: 1.5rem;
+        /* Reducir el tamaño del título */
+    }
+
+    .index-Causes {
+        flex-direction: column;
+        /* Mantener en columna */
+    }
+
+    .text-Causes {
+        font-size: 1.2rem;
+        /* Reducir el tamaño de la fuente */
+        padding-inline: 1rem;
+        /* Reducir el padding horizontal */
+    }
+
+    .causes {
+        width: 100%;
+        /* Hacer que las causas ocupen el 100% del ancho */
+        height: auto;
+        /* Ajustar la altura automáticamente */
+        max-width: 300px;
+        /* Limitar el ancho máximo */
+        margin: 0.5rem;
+        /* Reducir el margen */
+    }
+
+    .text-basic {
+        font-size: 24px;
+        /* Reducir el tamaño de la fuente */
+    }
+
+    .arrow-Index {
+        margin-top: 15px;
+        /* Reducir el margen superior */
+    }
+}
+
+@media (max-width: 440px) {
+    .desc-causes {
+        font-size: 10px;
+        width: 50%;
+    }
 }

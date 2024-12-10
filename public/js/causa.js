@@ -35,18 +35,4 @@ causas.then(data => {
         cardCausa.appendChild(a);
         seccion.appendChild(cardCausa);
     });
-    RenderBtn()
 });
-
-const RenderBtn = () => {
-    const button = document.createElement('button');
-    button.classList.add('btnDonar');
-    button.innerText = 'Donar ahora';
-
-    const a = document.createElement('a');
-    a.classList.add('aDonar')
-    a.href = './donaciones.html';
-    a.appendChild(button);
-
-    seccion.appendChild(a);
-}

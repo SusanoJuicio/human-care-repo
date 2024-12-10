@@ -397,7 +397,7 @@ p {
 }
 
 .grats-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     /* Efecto de zoom */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Sombra aumentada */
@@ -426,6 +426,17 @@ p {
     /* Añadir un borde redondeado para mejor estética */
 }
 
+.grats-text {
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #3697c0;
+    margin: 20px auto;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: -1px 3px 4px #ffffff;
+}
+
 /* Estilo para los textos del carrusel */
 .carousel-caption h5 {
     color: #000000;
@@ -452,4 +463,118 @@ p {
     /* Ajustar el fondo al tamaño del texto */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     /* Sombra sutil */
+}
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+
+    #us {
+        padding: 20px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 180px;
+        /* Reducir el ancho de la tarjeta */
+        height: 220px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    strong {
+        letter-spacing: 0.2rem;
+        font-size: 26px;
+    }
+
+    .donations-text {
+        font-size: 25px;
+        letter-spacing: 0.2rem;
+    }
+
+    .grats-text {
+        font-size: 17px;
+    }
+
+    .grats-title {
+        margin-bottom: 5px;
+    }
+
+    .grats-img {
+        width: 60%;
+        margin: auto;
+    }
+
+    .book {
+        width: 140px;
+        height: 250px;
+
+    }
+
+    .cause-1,
+    .cause-2,
+    .cause-3 {
+        font-size: 15px;
+    }
+
+    .hover-text {
+        font-size: 18px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 15px;
+        /* Reducir el padding interno */
+    }
+
+    .p {
+        font-size: 1rem;
+        /* Reducir el tamaño de fuente */
+    }
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+
+
+    #us {
+        padding: 10px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 150px;
+        /* Reducir el ancho de la tarjeta */
+        height: 200px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 14px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .hover-text {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 10px;
+        /* Reducir el padding interno */
+    }
+
+    .book {
+        width: 120px;
+        height: 200px;
+
+    }
+
+    .p {
+        font-size: 0.9rem;
+        /* Reducir el tamaño de fuente */
+    }
 }
