@@ -1,0 +1,329 @@
+/* Estilo general del carrito */
+@import url('globalFont.css');
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "fuente", sans-serif;
+    scroll-behavior: smooth;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
+}
+
+.main {
+    height: auto;
+}
+
+/* Estilo general del carrito */
+#carrito-items {
+    list-style: none;
+    /* Eliminar los puntos de la lista */
+    padding: 0;
+    /* Eliminar el padding */
+    margin: 0;
+    /* Eliminar el margen */
+}
+
+/* Estilo de cada elemento del carrito */
+.cart-item {
+    display: flex;
+    /* Usar flexbox para alinear los elementos */
+    align-items: center;
+    /* Centrar verticalmente */
+    background-color: #d9d9d9;
+    /* Color de fondo */
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    /* Espaciado interno */
+    margin-bottom: 10px;
+    /* Espacio entre los elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Estilo de la imagen del producto */
+.cart-item-image {
+    width: 80px;
+    /* Ancho de la imagen */
+    height: 80px;
+    /* Alto de la imagen */
+    object-fit: cover;
+    /* Ajustar la imagen */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin-right: 15px;
+    /* Espacio a la derecha de la imagen */
+}
+
+/* Estilo de la información del producto */
+.cart-item-info {
+    flex-grow: 1;
+    /* Permitir que este contenedor crezca */
+}
+
+/* Estilo del nombre del producto */
+.cart-item-info h3 {
+    margin: 0;
+    /* Eliminar margen */
+    font-size: 1.2rem;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+}
+
+/* Estilo del precio */
+.cart-item-info p {
+    margin: 5px 0;
+    /* Espaciado vertical */
+    color: #666;
+    /* Color gris */
+}
+
+/* Estilo de los botones */
+.button {
+    background-color: #3E85A4;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px 15px;
+    /* Espaciado interno */
+    cursor: pointer;
+    /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s;
+    /* Transición suave */
+    margin: 0 10px;
+    /* Espaciado horizontal entre botones */
+    height: 40px;
+    /* Altura fija para todos los botones */
+}
+
+.li {
+    text-align: center;
+    font-size: 40px;
+    background-color: #2a5e78;
+    color: #d9d9d9;
+    padding: 40px;
+    margin: 40px 150px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Efecto hover para los botones */
+.button:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo del botón de eliminar */
+.remove-from-cart {
+    background-color: #ff4d4d;
+    /* Color de fondo rojo */
+}
+
+/* Efecto hover para el botón de eliminar */
+.remove-from-cart:hover {
+    background-color: #ff1a1a;
+    /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo de los botones de aumentar y disminuir cantidad */
+.increase-quantity,
+.decrease-quantity {
+    background-color: #74c6e9;
+    /* Color de fondo azul claro */
+}
+
+/* Efecto hover para los botones de cantidad */
+.increase-quantity:hover,
+.decrease-quantity:hover {
+    background-color: #68bee3;
+    /* Color más claro al pasar el mouse */
+}
+
+/* Estilo del botón de pagar */
+#pagar-button {
+    display: block;
+    /* Hacer que el botón de pagar sea un bloque */
+    width: 50%;
+    margin: auto;
+    /* Ancho completo */
+    margin-bottom: 50px;
+    background-color: #3E85A4;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 15px;
+    /* Espaciado interno */
+    font-size: 1.2rem;
+    /* Tamaño de fuente más grande */
+    cursor: pointer;
+    /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s;
+    /* Transición suave */
+    margin-top: 20px;
+    margin-bottom: 200px;
+
+    /* Espacio superior */
+}
+
+/* Efecto hover para el botón de pagar */
+#pagar-button:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+
+}
+
+/* Espaciado adicional para el precio y botones de cantidad */
+
+
+/* Estilo para el título del carrito */
+#carrito h2 {
+    text-align: center;
+    /* Centrar el texto */
+    font-size: 2rem;
+    /* Tamaño de fuente */
+    color: #3E85A4;
+    /* Color del texto */
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil para el texto */
+}
+
+/* Estilo para el total a pagar */
+.total {
+    text-align: center;
+    /* Centrar el texto */
+    font-size: 1.5rem;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+    margin-top: 20px;
+    /* Espacio encima del total */
+    font-weight: bold;
+    /* Hacer el texto más destacado */
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-confirm {
+    background-color: #3E85A4;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    transition: background-color 0.3s;
+    /* Transición suave */
+}
+
+.btn-confirm:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        /* Cambiar a columna en pantallas pequeñas */
+
+        /* Alinear elementos al inicio */
+        width: 90%;
+        /* Aumentar el ancho */
+    }
+
+
+
+    .li {
+        margin: 20px 10px;
+        /* Reducir márgenes */
+        font-size: 30px;
+        /* Reducir tamaño de fuente */
+        padding: 20px;
+        /* Reducir padding */
+    }
+
+    #pagar-button {
+        width: 80%;
+        /* Aumentar el ancho del botón de pagar */
+    }
+
+    #carrito h2 {
+        font-size: 1.5rem;
+        /* Reducir tamaño de fuente del título */
+    }
+
+    .total {
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente del total */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .cart-item {
+        padding: 5px;
+        /* Reducir padding en elementos del carrito */
+    }
+
+    .button {
+        padding: 8px 10px;
+        /* Reducir padding de los botones */
+        font-size: 0.9rem;
+        /* Reducir tamaño de fuente de los botones */
+    }
+
+    .cart-item-info h3 {
+        font-size: 1rem;
+        /* Reducir tamaño de fuente del nombre del producto */
+    }
+
+    .cart-item-info p {
+        font-size: 0.8rem;
+        /* Reducir tamaño de fuente del precio */
+    }
+}

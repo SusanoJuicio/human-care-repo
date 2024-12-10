@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | HumanCare</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/catalogo.css">
+    <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <script type="module" src="./js/formSubmit.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/card-catalogo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <section id="filtros">
+            <p class="filter_text">Categorías</p>
+            <ul class="filter_list">
+                <li class="filter_tipe" data-category="Todos">Todos</li>
+                <li class="filter_tipe" data-category="Suplementos">Suplementos</li>
+                <li class="filter_tipe" data-category="Ecológicos">Ecológicos</li>
+            </ul>
+        </section>
+        <section id="cards"></section>
+        <!-- Barra lateral para mostrar productos favoritos -->
+        <aside id="sidebar" class="sidebar">
+            <h2>Productos Favoritos</h2>
+            <ul id="wishlist-items"></ul>
+            <button id="close-sidebar">Cerrar</button>
+        </aside>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="js/favorites.js"></script>
+</body>
+
+</html>

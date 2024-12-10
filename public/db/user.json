@@ -1,0 +1,11 @@
+[
+    {
+    "userid": 1,
+    "nombre": "Ivan",
+    "img":"../images/us/ivan-img.jpg",
+    "apellido": "Acuña",
+    "telefono": "555555555",
+    "gmail": "lapocholita2001@gmail.com",
+    "dni": "14058656"
+    }
+]

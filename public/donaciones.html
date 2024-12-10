@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones | HumanCare</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/donaciones.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <script type="module" src="./js/formSubmit.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main class="donations">
+        <section class="donations-container">
+            <h1 class="donations-text">Activismo HumanCare: ¡Conoce nuestras metas!</h1>
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="book">
+                    <p class="cause-1">¡Con el Nivel 1 obtendrás un 5% de descuento en tus compras!</p>
+                    <div class="cover-1">
+                        <p>Nivel 1</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <p class="cause-2">¡Con el Nivel 2 obtendrás un 10% de descuento en tus compras!</p>
+                    <div class="cover-2">
+                        <p>Nivel 2</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <p class="cause-3">¡Con el Nivel 3 obtendrás un 15% de descuento en tus compras!</p>
+                    <div class="cover-3">
+                        <p>Nivel 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <section class="tipes-donantes">
+            <section class="grats-content">
+                <h2 class="grats-title"><strong>¡Gracias por tu Apoyo!</strong></h2>
+                <div class="grats-textimgcont">
+                    <p class="grats-text">En HumanCare, cada donación cuenta y marca la diferencia. Gracias a ti,
+                        podemos continuar nuestra misión
+                        de
+                        ayudar a quienes más lo necesitan. Tus contribuciones nos permiten cambiar vidas todos los días.
+                    </p>
+                    <img class="grats-img" src="/images/persona feliz.jpg" alt="imagen de alguien feliz">
+                </div>
+                <button class="btnDonar" onclick="window.location.href='#footer'">
+                    ¡DONA AHORA!
+                </button>
+
+            </section>
+            <aside id="sidebar" class="sidebar">
+                <h2>Productos Favoritos</h2>
+                <ul id="wishlist-items"></ul>
+                <button id="close-sidebar">Cerrar</button>
+            </aside>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="js/favorites.js"></script>
+</body>
+
+</html>

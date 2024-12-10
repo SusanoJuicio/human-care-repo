@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanCare</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./styles/header.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/index.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/footer.css"> <!--Estilo-->
+    <link rel="stylesheet" href="./styles/busqueda.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/formSubmit.js"></script>
+    <script type="module" src="./js/card.js"></script>
+    <script type="module" src="./js/causa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="hero-Index">
+
+            <p class="text-Causes" class="lead">
+                Somos una organización dedicada a promover la salud y el bienestar con un fuerte enfoque en la
+                sostenibilidad y el activismo social. Que se compromete a proporcionar productos y servicios ecológicos,
+                educar a la comunidad y fomentar la ayuda comunitaria.
+            </p>
+            <div class="index-Causes">
+
+                <a href="./nosotros.html"><img class="causes" src="/images/causa1.webp"></a>
+                <a href="./nosotros.html"><img class="causes" src="/images/causa2.webp"></a>
+                <a href="./nosotros.html"><img class="causes" src="/images/causa3.webp"></a>
+
+            </div>
+            <div class="arrow-Index">
+                <img class="arrow" src="../images/arrow.svg" alt="arrow">
+            </div>
+        </section>
+        <section class="section-Catalogo">
+            <h2 class="text-basic">
+                <span class="style-basic">C</span>atálogo
+            </h2>
+            <section id="cards"></section>
+        </section>
+
+        <section>
+            <h2 class="text-basic-donaciones">
+                <span class="style-basic">D</span>onaciones
+            </h2>
+            <section id="causas"></section>
+            <a href="./donaciones.html"><button class="btnDonar">Donar ahora</button></a>
+        </section>
+        <!-- Barra lateral para mostrar productos favoritos -->
+        <aside id="sidebar" class="sidebar">
+            <h2>Productos Favoritos</h2>
+            <ul id="wishlist-items"></ul>
+            <button id="close-sidebar">Cerrar</button>
+        </aside>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="js/favorites.js"></script>
+</body>
+
+</html>

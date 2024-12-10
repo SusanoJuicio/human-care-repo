@@ -1,0 +1,580 @@
+@import url("globalFont.css");
+
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+
+/* Body */
+body {
+    font-family: "fuente", sans-serif;
+    scroll-behavior: smooth;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+.cover-1 {
+    top: 0;
+    position: absolute;
+    background-color: rgba(197, 207, 209, 0.87);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px rgb(225, 236, 238);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-1 {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+.cover-2 {
+    top: 0;
+    position: absolute;
+    background-color: #b8a500e0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #f1da02;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-2 {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 12px #f1da02;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+.cover-3 {
+    top: 0;
+    position: absolute;
+    background-color: #00a3afde;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #00eeff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: top;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover-3 {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 12px #00eeff;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+.cause-1 {
+    text-align: center;
+}
+
+.cause-2 {
+    text-align: center;
+}
+
+.cause-3 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.donations-text {
+    margin-top: 0px;
+    padding-top: 30px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.donations-images {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.donations-image {
+    object-fit: cover;
+    width: 700px;
+    height: 380px;
+    margin: 2rem;
+    margin-top: 15px;
+    box-shadow: -3px 3px #3E85A4;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    background: rgb(0, 0, 0);
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    filter: drop-shadow(-6px 5px 10px #000000);
+}
+
+.btnDonar {
+    background-color: #3E85A4;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    border: 0;
+    background-color: #74c6e9;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.btnDonar:hover {
+    background-color: #318db4;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #68bee3 0px 7px 29px 0px;
+}
+
+.tipes-text {
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 2rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.tipes-levels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-donantes {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.card-copper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-gold {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-diam {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.temporary-text-copper {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+}
+
+.temporary-text-gold {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+}
+
+.temporary-text-diam {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+}
+
+.card_title {
+    font-weight: bold;
+}
+
+.card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* edit the width to fit card */
+    width: 100%;
+    padding: 20px;
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    /* edit here to change the height of the content box */
+    transform: translateY(150px);
+    transition: transform .25s;
+}
+
+.card_content::before {
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+}
+
+.card_title {
+    color: #131313;
+    line-height: 15px;
+}
+
+.card_subtitle {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.card_description {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.card-copper:hover .card_content {
+    transform: translateY(0);
+}
+
+.card-gold:hover .card_content {
+    transform: translateY(0);
+}
+
+.card-diam:hover .card_content {
+    transform: translateY(0);
+}
+
+
+.card-copper:hover .card_description {
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+.card-gold:hover .card_description {
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+.card-diam:hover .card_description {
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+.grats-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    max-width: 100%;
+    /* Asegura que la imagen sea responsiva */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grats-img:hover {
+    transform: scale(1.01);
+    /* Efecto de zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra aumentada */
+}
+
+.grats-content {
+    text-align: center;
+}
+
+.grats-title {
+    margin-top: 45px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+/* Estilo para las imágenes del carrusel */
+.carousel-img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    /* Centrar la imagen dentro del carrusel */
+    border-radius: 10px;
+    /* Añadir un borde redondeado para mejor estética */
+}
+
+.grats-text {
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #3697c0;
+    margin: 20px auto;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: -1px 3px 4px #ffffff;
+}
+
+/* Estilo para los textos del carrusel */
+.carousel-caption h5 {
+    color: #000000;
+    /* Color negro para el texto */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco con opacidad */
+    padding: 10px;
+    border-radius: 5px;
+    /* Bordes redondeados para mejorar la estética */
+    display: inline-block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    /* Sombra sutil para resaltar el texto */
+}
+
+.carousel-caption p {
+    color: #333333;
+    /* Gris oscuro para el párrafo */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco con opacidad */
+    padding: 8px;
+    border-radius: 5px;
+    /* Bordes redondeados */
+    display: inline-block;
+    /* Ajustar el fondo al tamaño del texto */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil */
+}
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+
+    #us {
+        padding: 20px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 180px;
+        /* Reducir el ancho de la tarjeta */
+        height: 220px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    strong {
+        letter-spacing: 0.2rem;
+        font-size: 26px;
+    }
+
+    .donations-text {
+        font-size: 25px;
+        letter-spacing: 0.2rem;
+    }
+
+    .grats-text {
+        font-size: 17px;
+    }
+
+    .grats-title {
+        margin-bottom: 5px;
+    }
+
+    .grats-img {
+        width: 60%;
+        margin: auto;
+    }
+
+    .book {
+        width: 140px;
+        height: 250px;
+
+    }
+
+    .cause-1,
+    .cause-2,
+    .cause-3 {
+        font-size: 15px;
+    }
+
+    .hover-text {
+        font-size: 18px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 15px;
+        /* Reducir el padding interno */
+    }
+
+    .p {
+        font-size: 1rem;
+        /* Reducir el tamaño de fuente */
+    }
+}
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+
+
+    #us {
+        padding: 10px;
+        /* Reducir el padding del contenedor */
+    }
+
+    .card {
+        width: 150px;
+        /* Reducir el ancho de la tarjeta */
+        height: 200px;
+        /* Reducir la altura de la tarjeta */
+    }
+
+    .card[style] {
+        font-size: 14px;
+        /* Reducir el tamaño de fuente */
+    }
+
+    .hover-text {
+        font-size: 16px;
+        /* Reducir el tamaño de fuente del texto en hover */
+    }
+
+    #us-info {
+        padding: 10px;
+        /* Reducir el padding interno */
+    }
+
+    .book {
+        width: 120px;
+        height: 200px;
+
+    }
+
+    .p {
+        font-size: 0.9rem;
+        /* Reducir el tamaño de fuente */
+    }
+}

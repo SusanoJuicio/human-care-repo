@@ -1,0 +1,718 @@
+@import url("globalFont.css");
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+
+    }
+}
+
+
+
+@keyframes tiltSides {
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "fuente", sans-serif;
+    scroll-behavior: smooth;
+    background: #D9D9D9;
+    background: linear-gradient(135deg,
+            #D9D9D9 25%,
+            #bfcdd8 25%,
+            #bfcdd8 50%,
+            #D9D9D9 50%,
+            #D9D9D9 75%,
+            #bfcdd8 75%,
+            #bfcdd8);
+    background-size: 40px 40px;
+    animation: move 4.5s linear infinite;
+}
+
+.hero-Index {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+}
+
+.index-Causes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.text-Causes {
+    font-size: 1.2rem;
+    color: #3697c0;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 25px;
+    text-align: center;
+    padding-inline: 10rem;
+    text-shadow: -1px 3px 4px #ffffff;
+}
+
+.causes {
+    object-fit: cover;
+    width: 380px;
+    height: 380px;
+    margin: 2rem;
+    margin-top: 40px;
+    max-width: 480px;
+    max-height: 480px;
+    box-shadow: -3px 3px #3E85A4;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    background: rgb(0, 0, 0);
+    box-shadow: -1px 5px 3px 0px #3E85A4;
+    filter: drop-shadow(-6px 5px 10px #000000);
+}
+
+.causes:hover {
+    transform: scale(1.05);
+}
+
+
+.text-basic {
+    font-size: 36px;
+    text-align: center;
+    color: #6EB7D6;
+    padding: 5px;
+    text-shadow: -2px 2px black;
+    letter-spacing: .5rem;
+}
+
+
+.style-basic {
+    color: #3E85A4;
+}
+
+.arrow-Index {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    animation: bounce 1s infinite alternate;
+}
+
+.index-Donations {
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+#cards {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    justify-items: center;
+    gap: 35px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #3E85A4;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.2em;
+    /* Reducir el tamaño del título */
+    /* Aumentar el espaciado alrededor del título */
+    text-align: center;
+    /* Centrar el texto */
+    color: #d9d9d9;
+    /* Color del título */
+    font-weight: bold;
+    /* Hacer el texto más destacado */
+    margin-bottom: 20px;
+}
+
+.card-title,
+.price,
+.stock {
+    text-align: center;
+    color: #d9d9d9;
+}
+
+.price {
+    font-size: 1.3em;
+    /* Reducir el tamaño del precio */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    /* Centrar el texto */
+    color: #d9d9d9;
+    /* Color del precio */
+    margin-bottom: 20px;
+    /* Aumentar el espaciado alrededor del precio */
+}
+
+.stock {
+    font-size: 0.8em;
+    /* Reducir el tamaño del texto del stock */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    /* Centrar el texto */
+    color: #c7b9b9;
+    /* Color gris para el stock */
+    /* Aumentar el espaciado inferior */
+}
+
+
+.card:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%;
+    /* Ajustar la altura de la imagen para que sea más pequeña */
+    display: block;
+    margin-top: 0;
+    /* Eliminar margen superior para que la imagen esté más arriba */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Transición suave para la imagen */
+}
+
+.cart-icon {
+    position: absolute;
+    /* Posiciona el ícono de manera absoluta */
+    bottom: 10px;
+    /* Ajusta la posición vertical */
+    left: -40px;
+    /* Coloca el ícono fuera de la vista inicialmente */
+    width: 24px;
+    /* Ajusta el tamaño del ícono */
+    height: 24px;
+    /* Ajusta el tamaño del ícono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s ease, left 0.3s ease;
+    /* Transición suave */
+    opacity: 0;
+    /* Oculto por defecto */
+    visibility: hidden;
+    /* Oculto por defecto */
+}
+
+.card:hover .cart-icon {
+    left: 10px;
+    /* Mueve el ícono hacia la vista al hacer hover */
+    opacity: 1;
+    /* Muestra el ícono al hacer hover */
+    visibility: visible;
+    /* Asegúrate de que sea visible */
+}
+
+.card-hearth {
+    position: absolute;
+    bottom: 10px;
+    /* Ajusta la posición vertical */
+    right: -30px;
+    /* Coloca el corazón fuera de la vista inicialmente */
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, right 0.3s ease;
+    /* Añadir transición para el movimiento */
+    z-index: 10;
+    opacity: 0;
+    /* Inicialmente oculto */
+}
+
+
+.card:hover .card-hearth {
+    right: 10px;
+    /* Mueve el corazón hacia la vista al hacer hover */
+    opacity: 1;
+    /* Muestra el corazón al hacer hover */
+    transform: scale(1.1);
+    /* Aumenta el tamaño al hacer hover */
+}
+
+/* !!-! kasfkaln */
+
+
+.text {
+    max-width: 55px;
+}
+
+
+/* Estilos para el título de donaciones */
+.text-basic-donaciones {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 60px;
+    color: #6EB7D6;
+    padding: 20px;
+    text-shadow: -2px 2px black;
+    letter-spacing: 0.5rem;
+}
+
+/* Contenedor de causas */
+#causas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para las causas */
+.cause {
+    width: 90%;
+    margin: auto;
+    background-image: linear-gradient(163deg, #3E85A4 0%, #59b9e2 100%);
+    transition: all 0.3s;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    filter: drop-shadow(-6px 5px 10px #000);
+}
+
+.cause2 {
+    width: 100%;
+    margin: auto;
+    transition: all 0.2s;
+    background-color: #74c6e9;
+    border-radius: 20px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Efectos al pasar el mouse */
+.cause:hover {
+    box-shadow: 0 0 30px 1px #3E85A4;
+}
+
+.cause2:hover {
+    transform: scale(0.997);
+}
+
+/* Estilos para el título de cada causa */
+.title-cause {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 15px;
+    text-align: center;
+    color: #2a5e78;
+    margin-bottom: 0;
+}
+
+/* Estilos para las imágenes de las causas */
+.img-causes {
+    width: 70%;
+    /* Limitar el ancho máximo */
+    height: 250px;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+.img-causes img {
+    border-radius: 40px;
+}
+
+/* Contenedor de la causa */
+.causa-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 270px;
+}
+
+/* Descripción de las causas */
+.desc-causes {
+    font-size: 20px;
+    color: #2a5e78;
+    width: 50%;
+    margin-right: 40px;
+}
+
+
+
+.btnDonar {
+    background-color: #3E85A4;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    border: 0;
+    background-color: #74c6e9;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.btnDonar:hover {
+    background-color: #318db4;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #68bee3 0px 7px 29px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section-Catalogo {
+    padding: 40px 20px;
+}
+
+.text-basic {
+    font-size: 2rem;
+    text-align: center;
+    color: #6EB7D6;
+    padding: 20px;
+    text-shadow: -2px 2px black;
+}
+
+/* Estilo para el botón de confirmación de SweetAlert2 */
+.btn-confirm {
+    background-color: #3E85A4;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    transition: background-color 0.3s;
+    /* Transición suave */
+}
+
+.btn-confirm:hover {
+    background-color: #2a5e78;
+    /* Color más oscuro al pasar el mouse */
+}
+
+@media(max-width:1300px) {
+    .title-cause {
+        font-size: 2.5rem;
+    }
+
+    .img-causes {
+        height: 200px;
+        width: 50%;
+    }
+}
+
+@media (max-width:900px) {
+    .causa-contain {
+        flex-direction: column;
+    }
+
+    .desc-causes {
+        display: none;
+    }
+
+
+    .img-causes {
+        width: 70%;
+        /* Limitar el ancho máximo */
+        height: 200px;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .nav_search_input {
+        width: 80%;
+    }
+
+    .text-Causes,
+    .p-donaciones {
+        padding-inline: 1rem;
+    }
+
+    .hero-Index,
+    .section-Catalogo {
+        padding: 20px;
+    }
+
+    .title,
+    .text-basic,
+    .text-basic-donaciones {
+        font-size: 1.8rem;
+    }
+
+    .index-Causes {
+        flex-direction: column;
+    }
+
+    .desc-causes {
+        font-size: 13px;
+        width: 40%;
+    }
+
+    .title-cause {
+        font-size: 25px;
+    }
+
+    .img-causes {
+        height: 300px;
+    }
+
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambiar a 2 columnas */
+        grid-template-rows: repeat(3);
+        /* Aumentar el número de filas si es necesario */
+    }
+
+    .card {
+        height: 220px;
+        /* Ajustar la altura de la tarjeta */
+    }
+
+    .card-title {
+        font-size: 1.1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1.2em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.7em;
+        /* Reducir el tamaño del stock */
+    }
+
+    .card-image {
+        height: 50%;
+        /* Ajustar la altura de la imagen */
+    }
+
+    .hero-Index {
+        padding: 15px 5px;
+        /* Reducir el padding */
+    }
+
+    .title {
+        font-size: 2rem;
+        /* Reducir el tamaño del título */
+    }
+
+    .index-Causes {
+        flex-direction: column;
+        /* Cambiar a columna en lugar de fila */
+        align-items: center;
+        /* Centrar los elementos */
+    }
+
+    .text-Causes {
+        font-size: 1.5rem;
+        /* Reducir el tamaño de la fuente */
+        padding-inline: 2rem;
+        /* Reducir el padding horizontal */
+    }
+
+    .causes {
+        width: 90%;
+        /* Hacer que las causas ocupen el 90% del ancho */
+        height: auto;
+        /* Ajustar la altura automáticamente */
+        max-width: 350px;
+        /* Limitar el ancho máximo */
+        margin: 1rem;
+        /* Reducir el margen */
+    }
+
+    .text-basic {
+        font-size: 28px;
+        /* Reducir el tamaño de la fuente */
+    }
+
+    .arrow-Index {
+        margin-top: 20px;
+        /* Reducir el margen superior */
+    }
+}
+
+@media (max-width: 600px) {
+    .desc-causes {
+        font-size: 11px;
+        width: 50%;
+    }
+
+    .title-cause {
+        font-size: 20px;
+    }
+
+    .img-causes {
+        height: 350px;
+    }
+}
+
+@media (max-width: 485px) {
+    .desc-causes {
+        font-size: 11px;
+        width: 50%;
+    }
+
+    .title-cause {
+        font-size: 20px;
+    }
+
+    .img-causes {
+        height: 450px;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+        /* Cambiar a 1 columna */
+        grid-template-rows: repeat(3);
+        /* Aumentar el número de filas si es necesario */
+    }
+
+    .card {
+        height: auto;
+        /* Permitir que la altura de la tarjeta se ajuste automáticamente */
+    }
+
+    .card-title {
+        font-size: 1em;
+        /* Reducir el tamaño del título */
+    }
+
+    .price {
+        font-size: 1em;
+        /* Reducir el tamaño del precio */
+    }
+
+    .stock {
+        font-size: 0.6em;
+        /* Reducir el tamaño del stock */
+    }
+
+    .card-image {
+        height: 40%;
+        /* Ajustar la altura de la imagen */
+    }
+
+    .hero-Index {
+        padding: 10px 2px;
+        /* Reducir aún más el padding */
+    }
+
+    .title {
+        font-size: 1.5rem;
+        /* Reducir el tamaño del título */
+    }
+
+    .index-Causes {
+        flex-direction: column;
+        /* Mantener en columna */
+    }
+
+    .text-Causes {
+        font-size: 1.2rem;
+        /* Reducir el tamaño de la fuente */
+        padding-inline: 1rem;
+        /* Reducir el padding horizontal */
+    }
+
+    .causes {
+        width: 100%;
+        /* Hacer que las causas ocupen el 100% del ancho */
+        height: auto;
+        /* Ajustar la altura automáticamente */
+        max-width: 300px;
+        /* Limitar el ancho máximo */
+        margin: 0.5rem;
+        /* Reducir el margen */
+    }
+
+    .text-basic {
+        font-size: 24px;
+        /* Reducir el tamaño de la fuente */
+    }
+
+    .arrow-Index {
+        margin-top: 15px;
+        /* Reducir el margen superior */
+    }
+}
+
+@media (max-width: 440px) {
+    .desc-causes {
+        font-size: 10px;
+        width: 50%;
+    }
+}
