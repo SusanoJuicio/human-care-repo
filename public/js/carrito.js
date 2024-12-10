@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const h2 = document.getElementById("h2")
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:7777/products'); // Cambia a tu endpoint real
+            const response = await fetch('https://humancare-backend.onrender.com/products'); // Cambia a tu endpoint real
             const data = await response.json();
             return data;
         } catch (err) {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (const item of cartItems) {
             console.log('Enviando productId:', item.productId);
-            const response = await fetch('http://localhost:7777/products/purchase', {
+            const response = await fetch('https://humancare-backend.onrender.com/products/purchase', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

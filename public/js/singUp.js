@@ -40,7 +40,7 @@ form.addEventListener('submit', async (event) => {
     };
 
     try {
-        const response = await fetch('http://localhost:7777/users', {
+        const response = await fetch('https://humancare-backend.onrender.com/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

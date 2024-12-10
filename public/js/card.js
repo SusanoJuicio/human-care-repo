@@ -1,6 +1,6 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch('http://localhost:7777/products/featured'); // Cambia a /featured para obtener solo 6 productos
+        const response = await fetch('https://humancare-backend.onrender.com/products/featured'); // Cambia a /featured para obtener solo 6 productos
         const data = await response.json();
         return data;
     } catch (err) {
