@@ -11,3 +11,4 @@ vscode
 *.log
 *-lock.json
 .env*
+package-lock.json

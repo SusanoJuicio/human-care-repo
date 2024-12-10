@@ -6,7 +6,7 @@ export const headerComp = `
                     <a href="index.html" class="nav_brand">
                         <img class="nav_logo" src="/images/Logo.webp" alt="Logo de la empresa">
                     </a>
-                    <h1 class="titulo">HumanCare</h1>
+                    <h1 class="titulo">Hum♥n Care</h1>
 
                     <ul class="nav_list_lis">
                         <li class="nav_list_li nav_favoritos">

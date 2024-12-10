@@ -11,14 +11,26 @@
 
 }
 
-@import url("globalFont.css");
+@keyframes myAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 /* Fondo y tipografía general */
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "fuente", sans-serif;
+    font-family: "price", sans-serif;
 }
 
 /* Header principal */
@@ -30,11 +42,21 @@ body {
 
 /* Estilo del título */
 .titulo {
-    color: #feffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d9d9d9;
     text-align: center;
     text-shadow: -2px 2px black;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
+    margin-left: 100px;
+}
+
+.titulo:hover {
+    color: #6EB7D6;
+    text-align: center;
+    text-shadow: -2px 2px black;
+    font-size: 3rem;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 /* Contenedor principal del nav */
@@ -49,13 +71,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: fit-content;
 }
 
 /* Iconos del nav */
 .nav_logo {
-    max-width: 64px;
     max-height: 64px;
     padding-left: 15px;
+
+}
+
+.nav_logo:hover {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+
 }
 
 .nav_list {
@@ -73,16 +101,16 @@ body {
 
 .nav_list_li {
     position: relative;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .nav_list_li:hover {
     animation: tiltSides 1s infinite ease-in-out;
 }
 
-/* Estilo del dropdown de favoritos */
 .nav_favoritos .dropdown_favorites {
     display: none;
+    /* Ocultar por defecto */
     position: absolute;
     top: 100%;
     right: 0;
@@ -92,7 +120,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
     padding: 10px;
-    z-index: 1;
 }
 
 .nav_favoritos .dropdown_favorites.visible {
@@ -118,16 +145,16 @@ body {
 
 /* Footer del nav */
 .nav_foot {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .nav_list {
     background-color: #6EB7D6;
     display: flex;
+    margin: 0;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    gap: 7rem;
     font-size: 1.7rem;
     text-decoration: none;
     text-shadow: -1px 1px rgba(0, 0, 0, 0.633);
