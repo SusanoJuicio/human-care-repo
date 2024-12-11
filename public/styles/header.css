@@ -198,6 +198,7 @@ body {
 
     .nav_logo {
         max-height: 50px;
+        width: 50px;
 
     }
 
@@ -213,7 +214,7 @@ body {
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
 
         margin-left: 10px;
 
@@ -244,7 +245,7 @@ body {
 
     .nav_logo {
         max-height: 40px;
-
+        width: 40px;
     }
 
     .nav_favoritos .dropdown_favorites {
