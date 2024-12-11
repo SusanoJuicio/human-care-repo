@@ -25,7 +25,6 @@
     }
 }
 
-/* Fondo y tipografía general */
 body {
     box-sizing: border-box;
     margin: 0;
@@ -33,14 +32,12 @@ body {
     font-family: "price", sans-serif;
 }
 
-/* Header principal */
 #header {
     position: sticky;
     top: 0;
     z-index: 11;
 }
 
-/* Estilo del título */
 .titulo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #d9d9d9;
@@ -59,14 +56,12 @@ body {
     animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
-/* Contenedor principal del nav */
 .nav_container {
     background-color: #3E85A4;
     width: 100%;
     height: 100%;
 }
 
-/* Navegación principal */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -74,7 +69,6 @@ body {
     height: fit-content;
 }
 
-/* Iconos del nav */
 .nav_logo {
     max-height: 64px;
     padding-left: 15px;
@@ -91,7 +85,6 @@ body {
     background-color: #6EB7D6;
 }
 
-/* Lista de navegación */
 .nav_list_lis {
     display: flex;
     justify-content: space-around;
@@ -111,7 +104,7 @@ body {
 
 .nav_favoritos .dropdown_favorites {
     display: none;
-    /* Ocultar por defecto */
+
     position: absolute;
     top: 100%;
     right: 0;
@@ -144,7 +137,6 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Footer del nav */
 .nav_foot {
     margin-top: 10px;
 }
@@ -162,7 +154,6 @@ body {
     height: 100%;
 }
 
-/* Enlaces de navegación */
 .nav_links {
     width: 160px;
     text-decoration: solid;
@@ -179,38 +170,37 @@ body {
     color: white;
 }
 
-/* Media Query para pantallas de 768px o menos */
 @media (max-width: 768px) {
     .titulo {
         font-size: 2.5rem;
-        /* Reducir el tamaño del título */
+
         margin-left: 20px;
-        /* Reducir el margen izquierdo */
+
     }
 
 
     .nav_list_li {
-        /* Eliminar margen derecho */
+
         margin-bottom: 10px;
-        /* Añadir margen inferior */
+
     }
 
     .nav_links {
         width: 100px;
-        /* Hacer que los enlaces ocupen el 100% del ancho */
+
         justify-content: center;
         font-size: medium;
-        /* Centrar los enlaces */
+
     }
 
     .nav_logo {
         max-height: 50px;
-        /* Reducir el tamaño del logo */
+
     }
 
     .nav_favoritos .dropdown_favorites {
         width: 150px;
-        /* Reducir el ancho del dropdown */
+
     }
 
     .titulo:hover {
@@ -218,13 +208,12 @@ body {
     }
 }
 
-/* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
     .titulo {
         font-size: 1.2rem;
-        /* Reducir aún más el tamaño del título */
+
         margin-left: 10px;
-        /* Reducir el margen izquierdo */
+
     }
 
     .titulo:hover {
@@ -233,31 +222,31 @@ body {
 
     .nav_list {
         font-size: 1.2rem;
-        /* Ajustar el tamaño de fuente */
+
         padding: 0;
     }
 
     .nav_list_li {
         margin-bottom: 5px;
-        /* Reducir el margen inferior */
+
     }
 
 
 
     .nav_links {
         width: 80px;
-        /* Mantener el ancho completo */
+
         font-size: small;
     }
 
     .nav_logo {
         max-height: 40px;
-        /* Reducir el tamaño del logo */
+
     }
 
     .nav_favoritos .dropdown_favorites {
         width: 100px;
-        /* Reducir aún más el ancho del dropdown */
+
     }
 
 }

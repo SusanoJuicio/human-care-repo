@@ -6,24 +6,23 @@ form.addEventListener('submit', async (event) => {
 
     const gmail = d.getElementById('gmail').value;
     const password = d.getElementById('password').value;
-    const confirmPassword = d.getElementById('confirmPassword').value; // Obtener la contraseña de confirmación
+    const confirmPassword = d.getElementById('confirmPassword').value;
     const nombre = d.getElementById('nombre').value;
     const apellido = d.getElementById('apellido').value;
     const telefono = d.getElementById('telefono').value;
     const dni = d.getElementById('dni').value;
 
-    // Verificar que las contraseñas coincidan
     if (password !== confirmPassword) {
         Swal.fire({
             title: '¡Atención!',
             text: 'Las contraseñas tienen que ser iguales',
             icon: 'warning',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#FF9800',
             customClass: {
-                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
         return;
@@ -50,9 +49,8 @@ form.addEventListener('submit', async (event) => {
 
         if (response.ok) {
             const result = await response.json();
-            console.log('Usuario registrado:', result);
 
-            // Cifrar los datos del usuario antes de almacenarlos
+
             const secretKey = 'REMOLACHA';
             const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(result), secretKey).toString();
             localStorage.setItem('user', encryptedData);
@@ -65,11 +63,11 @@ form.addEventListener('submit', async (event) => {
                 text: 'Mail o dni ya existente',
                 icon: 'warning',
                 confirmButtonText: 'Aceptar',
-                background: '#D9D9D9', // Color de fondo
-                color: '#3E85A4', // Color del texto
-                iconColor: '#4CAF50', // Color del icono (verde para éxito)
+                background: '#D9D9D9',
+                color: '#3E85A4',
+                iconColor: '#4CAF50',
                 customClass: {
-                    confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                    confirmButton: 'btn-confirm'
                 }
             });
         }

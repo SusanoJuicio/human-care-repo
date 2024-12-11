@@ -1,6 +1,6 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch('https://humancare-backend.onrender.com/products/featured'); // Cambia a /featured para obtener solo 6 productos
+        const response = await fetch('https://humancare-backend.onrender.com/products/featured');
         const data = await response.json();
         return data;
     } catch (err) {
@@ -8,7 +8,7 @@ const fetchProducts = async () => {
     }
 }
 
-const seccion = document.getElementById('cards'); // Asegúrate de que el ID 'cards' esté en tu HTML
+const seccion = document.getElementById('cards');
 const products = fetchProducts();
 
 products.then(data => {
@@ -16,8 +16,8 @@ products.then(data => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.setAttribute('key', producto.customId);
-        const link = document.createElement("a");
-        link.href = "./catalogo.html";
+        const link = document.createElement('a');
+        link.href = './catalogo.html';
         const cardContent = `
             <div class="card-image">
                 <img src="${producto.imageUrl}" alt="${producto.name}" /> 

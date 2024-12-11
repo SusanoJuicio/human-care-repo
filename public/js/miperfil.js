@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!encryptedUser) {
         window.location.href = 'logIn.html';
     } else {
-        // Descifrar los datos del usuario
         const bytes = CryptoJS.AES.decrypt(encryptedUser, secretKey);
         const user = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
