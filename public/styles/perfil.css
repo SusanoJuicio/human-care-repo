@@ -23,12 +23,11 @@ body {
             #bfcdd8);
     background-size: 40px 40px;
     animation: move 4.5s linear infinite;
-    /* Color de fondo */
+
     margin: 0;
     padding: 0;
 }
 
-/* Estilo general para el cuerpo */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #D9D9D9;
@@ -36,63 +35,59 @@ body {
     padding: 20px;
 }
 
-/* Estilo para la sección de información del usuario */
 .user-info {
     background-color: #6EB7D6;
-    /* Color de fondo */
+
     padding: 20px;
-    /* Espaciado interno */
+
     border-radius: 10px;
-    /* Bordes redondeados */
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    /* Sombra */
+
     max-width: 600px;
-    /* Ancho máximo */
+
     margin: auto;
-    /* Centrar */
+
 }
 
-/* Estilo para cada elemento de información del usuario */
 .user-info-item {
     font-size: 1.2em;
-    /* Tamaño de fuente */
+
     color: #333;
-    /* Color del texto */
+
     margin: 10px 0;
-    /* Espaciado vertical */
+
 }
 
-/* Estilo para los valores de la información del usuario */
 .user-info-value {
     font-weight: bold;
-    /* Negrita */
+
     color: #3E85A4;
-    /* Color del valor */
+
 }
 
-/* Estilo para el título de la sección */
 h2.title {
     text-align: center;
-    /* Centrar el texto */
+
     color: #3E85A4;
-    /* Color del título */
+
     margin-bottom: 20px;
-    /* Espacio debajo del título */
+
 }
 
 .button-container {
     display: flex;
-    /* Usar flexbox para centrar */
+
     justify-content: center;
-    /* Centrar horizontalmente */
+
     margin-top: 20px;
-    /* Espacio superior */
+
 }
 
 .info-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* centrar en la caja */
+
     place-items: center;
     font-size: 20px;
     margin-bottom: 50px;
@@ -101,131 +96,129 @@ h2.title {
 .user-level-title {
     font-size: 30px;
 
-    /* Tamaño de fuente para el título */
+
     color: #333;
-    /* Color del título */
+
     text-align: center;
-    /* Centrar el texto */
+
     margin-bottom: 15px;
-    /* Espacio debajo del título */
+
     border-bottom: 2px solid #4aaad3;
-    /* Línea debajo del título */
+
     padding-bottom: 10px;
-    /* Espacio interno debajo de la línea */
+
 }
 
 #logout {
     padding: 10px 20px;
     background-color: #3E85A4;
-    /* Color del botón de cerrar sesión */
+
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
 }
 
 #logout:hover {
     background-color: #74c6e9;
-    /* Color más claro al pasar el mouse */
+
 }
 
-/* Media Query para pantallas de 768px o menos */
 @media (max-width: 768px) {
     body {
         padding: 10px;
-        /* Reducir el padding del cuerpo */
+
     }
 
     .user-info {
         padding: 15px;
-        /* Reducir el padding interno */
+
         max-width: 100%;
         width: 80%;
         margin: 0 auto;
-        /* Hacer que el ancho máximo sea 100% */
+
     }
 
     .user-info-item {
         font-size: 1.1em;
-        /* Reducir el tamaño de fuente */
+
     }
 
     h2.title {
         font-size: 1.8em;
-        /* Reducir el tamaño del título */
+
     }
 
     .button-container {
         flex-direction: column;
-        /* Cambiar a columna para mejor visualización */
+
         align-items: center;
-        /* Centrar los botones */
+
     }
 
     .info-container {
         grid-template-columns: 1fr;
-        /* Cambiar a una sola columna */
+
         font-size: 18px;
-        /* Reducir el tamaño de fuente */
+
     }
 
     .user-level-title {
         font-size: 24px;
-        /* Reducir el tamaño del título */
+
     }
 
     #logout {
         padding: 8px 16px;
-        /* Reducir el padding del botón */
+
         font-size: 14px;
-        /* Reducir el tamaño de fuente del botón */
+
     }
 }
 
-/* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
     body {
         padding: 5px;
-        /* Reducir aún más el padding del cuerpo */
+
     }
 
     .user-info {
         padding: 10px;
-        /* Reducir el padding interno */
+
     }
 
     .user-info-item {
         font-size: 1em;
-        /* Reducir el tamaño de fuente */
+
     }
 
     h2.title {
         font-size: 1.5em;
-        /* Reducir el tamaño del título */
+
     }
 
     .button-container {
         margin-top: 10px;
-        /* Reducir el margen superior */
+
     }
 
     .info-container {
         font-size: 16px;
-        /* Reducir el tamaño de fuente */
+
     }
 
     .user-level-title {
         font-size: 20px;
-        /* Reducir el tamaño del título */
+
     }
 
     #logout {
         padding: 6px 12px;
-        /* Reducir el padding del botón */
+
         font-size: 12px;
-        /* Reducir el tamaño de fuente del botón */
+
     }
 }

@@ -12,7 +12,6 @@
 }
 
 
-/* Body */
 body {
     font-family: "fuente", sans-serif;
     scroll-behavior: smooth;
@@ -317,12 +316,12 @@ p {
     position: absolute;
     left: 0;
     bottom: 0;
-    /* edit the width to fit card */
+
     width: 100%;
     padding: 20px;
     background: #f2f2f2;
     border-top-left-radius: 20px;
-    /* edit here to change the height of the content box */
+
     transform: translateY(150px);
     transition: transform .25s;
 }
@@ -388,19 +387,19 @@ p {
     display: block;
     margin: 0 auto;
     border-radius: 15px;
-    /* Bordes redondeados */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
+
     max-width: 100%;
-    /* Asegura que la imagen sea responsiva */
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grats-img:hover {
     transform: scale(1.01);
-    /* Efecto de zoom */
+
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Sombra aumentada */
+
 }
 
 .grats-content {
@@ -416,14 +415,13 @@ p {
     text-shadow: -2px 2px black;
 }
 
-/* Estilo para las imágenes del carrusel */
 .carousel-img {
     max-width: 90%;
     height: auto;
     margin: 0 auto;
-    /* Centrar la imagen dentro del carrusel */
+
     border-radius: 10px;
-    /* Añadir un borde redondeado para mejor estética */
+
 }
 
 .grats-text {
@@ -437,52 +435,50 @@ p {
     text-shadow: -1px 3px 4px #ffffff;
 }
 
-/* Estilo para los textos del carrusel */
 .carousel-caption h5 {
     color: #000000;
-    /* Color negro para el texto */
+
     background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo blanco con opacidad */
+
     padding: 10px;
     border-radius: 5px;
-    /* Bordes redondeados para mejorar la estética */
+
     display: inline-block;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    /* Sombra sutil para resaltar el texto */
+
 }
 
 .carousel-caption p {
     color: #333333;
-    /* Gris oscuro para el párrafo */
+
     background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo blanco con opacidad */
+
     padding: 8px;
     border-radius: 5px;
-    /* Bordes redondeados */
+
     display: inline-block;
-    /* Ajustar el fondo al tamaño del texto */
+
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    /* Sombra sutil */
+
 }
 
-/* Media Query para pantallas de 768px o menos */
 @media (max-width: 768px) {
 
     #us {
         padding: 20px;
-        /* Reducir el padding del contenedor */
+
     }
 
     .card {
         width: 180px;
-        /* Reducir el ancho de la tarjeta */
+
         height: 220px;
-        /* Reducir la altura de la tarjeta */
+
     }
 
     .card[style] {
         font-size: 16px;
-        /* Reducir el tamaño de fuente */
+
     }
 
     strong {
@@ -522,49 +518,48 @@ p {
 
     .hover-text {
         font-size: 18px;
-        /* Reducir el tamaño de fuente del texto en hover */
+
     }
 
     #us-info {
         padding: 15px;
-        /* Reducir el padding interno */
+
     }
 
     .p {
         font-size: 1rem;
-        /* Reducir el tamaño de fuente */
+
     }
 }
 
-/* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
 
 
     #us {
         padding: 10px;
-        /* Reducir el padding del contenedor */
+
     }
 
     .card {
         width: 150px;
-        /* Reducir el ancho de la tarjeta */
+
         height: 200px;
-        /* Reducir la altura de la tarjeta */
+
     }
 
     .card[style] {
         font-size: 14px;
-        /* Reducir el tamaño de fuente */
+
     }
 
     .hover-text {
         font-size: 16px;
-        /* Reducir el tamaño de fuente del texto en hover */
+
     }
 
     #us-info {
         padding: 10px;
-        /* Reducir el padding interno */
+
     }
 
     .book {
@@ -575,6 +570,6 @@ p {
 
     .p {
         font-size: 0.9rem;
-        /* Reducir el tamaño de fuente */
+
     }
 }

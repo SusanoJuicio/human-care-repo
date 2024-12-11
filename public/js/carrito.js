@@ -1,14 +1,12 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const carritoContenedor = document.getElementById('carrito-items');
     const total2 = document.getElementById('total');
-    const totalPriceElement = document.getElementById('total-price'); // Elemento para mostrar el total
+    const totalPriceElement = document.getElementById('total-price');
     const pagarButton = document.getElementById('pagar-button');
-    const h2 = document.getElementById("h2")
+    const h2 = document.getElementById('h2')
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://humancare-backend.onrender.com/products'); // Cambia a tu endpoint real
+            const response = await fetch('https://humancare-backend.onrender.com/products');
             const data = await response.json();
             return data;
         } catch (err) {
@@ -20,32 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
         return JSON.parse(localStorage.getItem('cart')) || [];
     };
     const updateCartDisplay = async () => {
-        carritoContenedor.innerHTML = ''; // Limpiar la lista antes de mostrar los elementos
+        carritoContenedor.innerHTML = '';
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-        const products = await fetchProducts(); // Obtener todos los productos
+        const products = await fetchProducts();
 
-        let total = 0; // Inicializar el total
+        let total = 0;
 
-        // Referencias a los elementos del total y el botón de pagar
         const totalPriceElement = document.getElementById('total-price');
         const pagarButton = document.getElementById('pagar-button');
 
         if (cartItems.length === 0) {
-            carritoContenedor.innerHTML = '<li>No hay productos en el carrito.</li>'; // Mensaje cuando el carrito está vacío
+            carritoContenedor.innerHTML = '<li>No hay productos en el carrito.</li>';
             carritoContenedor.className = 'li';
-            totalPriceElement.textContent = total; // Actualizar el total a 0
-            totalPriceElement.style.display = 'none'; // Ocultar el total
-            pagarButton.style.display = 'none'; // Ocultar el botón de pagar
+            totalPriceElement.textContent = total;
+            totalPriceElement.style.display = 'none';
+            pagarButton.style.display = 'none';
             total2.style.display = 'none';
-            h2.style.display = "none";
+            h2.style.display = 'none';
         } else {
             cartItems.forEach(cartItem => {
-                const product = products.find(p => p.customId === parseInt(cartItem.productId)); // Buscar el producto por customId
+                const product = products.find(p => p.customId === parseInt(cartItem.productId));
 
                 if (product) {
-                    const quantity = cartItem.quantity; // Obtener la cantidad
-                    const itemTotal = product.price * quantity; // Calcular el total del item
-                    total += itemTotal; // Sumar al total
+                    const quantity = cartItem.quantity;
+                    const itemTotal = product.price * quantity;
+                    total += itemTotal;
 
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `
@@ -67,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            totalPriceElement.textContent = total.toFixed(2); // Actualizar el total en el DOM
-            totalPriceElement.style.display = 'block'; // Mostrar el total
-            pagarButton.style.display = 'block'; // Mostrar el botón de pagar
+            totalPriceElement.textContent = total.toFixed(2);
+            totalPriceElement.style.display = 'block';
+            pagarButton.style.display = 'block';
             total2.style.display = 'block'
-            h2.style.display = "block";
+            h2.style.display = 'block';
         }
 
         addCartEventListeners();
@@ -108,29 +105,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const removeFromCart = (productId) => {
         let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-        cartItems = cartItems.filter(item => item.productId !== productId); // Filtrar el producto a eliminar
-        localStorage.setItem('cart', JSON.stringify(cartItems)); // Actualizar el localStorage
-        updateCartDisplay(); // Actualizar la visualización del carrito
+        cartItems = cartItems.filter(item => item.productId !== productId);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        updateCartDisplay();
     };
 
     const updateQuantity = (productId, action) => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const existingProduct = cart.find(item => item.productId === productId);
 
         if (existingProduct) {
             if (action === 'increase') {
-                existingProduct.quantity += 1; // Aumentar la cantidad
+                existingProduct.quantity += 1;
             } else if (action === 'decrease' && existingProduct.quantity > 1) {
-                existingProduct.quantity -= 1; // Disminuir la cantidad
+                existingProduct.quantity -= 1;
             }
-            localStorage.setItem('cart', JSON.stringify(cart)); // Guardar en localStorage
-            updateCartDisplay(); // Actualizar la visualización del carrito
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
         }
     };
 
     const processPayment = async () => {
         const cartItems = getCartItems();
-        const encryptedUser = localStorage.getItem('user'); // Obtener el usuario cifrado
+        const encryptedUser = localStorage.getItem('user');
 
         if (!encryptedUser) {
             Swal.fire({
@@ -138,19 +135,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'No hay Usuario Autenticado',
                 icon: 'warning',
                 confirmButtonText: 'Aceptar',
-                background: '#D9D9D9', // Color de fondo
-                color: '#3E85A4', // Color del texto
-                iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                background: '#D9D9D9',
+                color: '#3E85A4',
+                iconColor: '#FF9800',
                 customClass: {
-                    confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                    confirmButton: 'btn-confirm'
                 }
             });
             return;
         }
-        const userId = localStorage.getItem("userId") // Obtener el ID del usuario descifrado
+        const userId = localStorage.getItem("userId")
 
         for (const item of cartItems) {
-            console.log('Enviando productId:', item.productId);
             const response = await fetch('https://humancare-backend.onrender.com/products/purchase', {
                 method: 'POST',
                 headers: {
@@ -163,8 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }),
             });
 
-            const responseText = await response.text(); // Obtener la respuesta como texto
-            console.log('Respuesta del servidor:', responseText); // Imprimir la respuesta
+            const responseText = await response.text();
 
             if (!response.ok) {
                 const error = JSON.parse(responseText);
@@ -173,14 +168,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Error al procesar la compra',
                     icon: 'warning',
                     confirmButtonText: 'Aceptar',
-                    background: '#D9D9D9', // Color de fondo
-                    color: '#3E85A4', // Color del texto
-                    iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                    background: '#D9D9D9',
+                    color: '#3E85A4',
+                    iconColor: '#FF9800',
                     customClass: {
-                        confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                        confirmButton: 'btn-confirm'
                     }
                 });
-                return; // Salir si hay un error
+                return;
             }
         }
 
@@ -189,15 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
             text: 'Compra realizada con éxito',
             icon: 'success',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#4CAF50',
             customClass: {
-                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
-        localStorage.removeItem('cart'); // Limpiar el carrito después de la compra
-        updateCartDisplay(); // Actualizar la visualización del carrito
+        localStorage.removeItem('cart');
+        updateCartDisplay();
     };
 
     pagarButton.addEventListener('click', processPayment);

@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (form) {
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Evita el envío del formulario por defecto
+            event.preventDefault();
 
-            const formData = new FormData(this); // Obtiene los datos del formulario
+            const formData = new FormData(this);
 
             fetch('https://formspree.io/f/xzzbqrkw', {
                 method: 'POST',
@@ -22,25 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
                             text: 'Formulario enviado con éxito',
                             icon: 'success',
                             confirmButtonText: 'Aceptar',
-                            background: '#D9D9D9', // Color de fondo
-                            color: '#3E85A4', // Color del texto
-                            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+                            background: '#D9D9D9', //
+                            color: '#3E85A4',
+                            iconColor: '#4CAF50',
                             customClass: {
-                                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                                confirmButton: 'btn-confirm'
                             }
                         });
-                        this.reset(); // Reinicia el formulario
+                        this.reset();
                     } else {
                         Swal.fire({
                             title: '¡Atención!',
                             text: 'Hubo un error al enviar el formulario',
                             icon: 'warning',
                             confirmButtonText: 'Aceptar',
-                            background: '#D9D9D9', // Color de fondo
-                            color: '#3E85A4', // Color del texto
-                            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                            background: '#D9D9D9',
+                            color: '#3E85A4',
+                            iconColor: '#FF9800',
                             customClass: {
-                                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                                confirmButton: 'btn-confirm'
                             }
                         });
                     }
@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         text: 'Error:' + error.message,
                         icon: 'warning',
                         confirmButtonText: 'Aceptar',
-                        background: '#D9D9D9', // Color de fondo
-                        color: '#3E85A4', // Color del texto
-                        iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+                        background: '#D9D9D9',
+                        color: '#3E85A4',
+                        iconColor: '#FF9800',
                         customClass: {
-                            confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                            confirmButton: 'btn-confirm'
                         }
                     });
                 });

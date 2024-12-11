@@ -1,207 +1,163 @@
-/* Estilo general para la barra lateral */
 .sidebar {
     position: fixed;
     top: 0;
     right: -400px;
-    /* Oculta la barra lateral fuera de la vista */
     width: 300px;
     height: 100%;
     background-color: #6EB7D6;
-    /* Color de fondo */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
-    /* Transición suave */
     z-index: 1000;
-    /* Asegúrate de que esté por encima de otros elementos */
     padding: 20px;
-    /* Espaciado interno */
     color: #fff;
-    /* Color del texto */
 }
 
-/* Clase activa para mostrar la barra lateral */
 .sidebar.active {
     right: 0;
-    /* Muestra la barra lateral */
 }
 
-/* Estilo para el botón de cerrar */
 #close-sidebar {
     cursor: pointer;
     background-color: #3E85A4;
-    /* Color del botón de cerrar */
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
-    /* Transición suave */
 }
 
 #close-sidebar:hover {
     background-color: #74c6e9;
-    /* Color más claro al pasar el mouse */
 }
 
-/* Estilo para los elementos de la wishlist */
 .wishlist-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo semi-transparente */
     border-radius: 10px;
-    /* Bordes redondeados */
     padding: 10px;
-    /* Espaciado interno */
     transition: background-color 0.3s ease;
     list-style-type: none;
-    /* Transición suave */
 }
 
 .wishlist-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    /* Fondo más claro al pasar el mouse */
 }
 
-
-/* Estilo para la imagen del producto en la wishlist */
 .wishlist-item-image {
     width: 60px;
-    /* Ancho de la imagen */
     height: 60px;
-    /* Alto de la imagen */
     border-radius: 5px;
-    /* Bordes redondeados */
     margin-right: 10px;
-    /* Espaciado a la derecha */
 }
 
-/* Estilo para la información del producto */
 .wishlist-item-info {
     flex-grow: 1;
-    /* Permite que el contenedor crezca */
 }
 
-/* Estilo para el nombre del producto */
 .wishlist-item-info h3 {
     margin: 0;
-    /* Elimina el margen */
     font-size: 1.2em;
-    /* Tamaño de fuente */
     color: #fff;
-    /* Color del texto */
 }
 
-/* Estilo para el precio del producto */
 .wishlist-item-info p {
     margin: 5px 0 0;
-    /* Margen superior */
     color: #d9d9d9;
-    /* Color del texto */
 }
 
 .remove-from-wishlist {
     background-color: #ff4d4d;
-    /* Color de fondo rojo */
     color: white;
-    /* Color del texto */
     border: none;
-    /* Sin borde */
     border-radius: 5px;
-    /* Bordes redondeados */
     padding: 2px 5px;
-    /* Espaciado interno */
     cursor: pointer;
-    /* Cambia el cursor al pasar el mouse */
     transition: background-color 0.3s ease;
-    /* Transición suave */
 }
 
 .remove-from-wishlist:hover {
     background-color: #ff1a1a;
-    /* Color más oscuro al pasar el mouse */
 }
 
-/* Media Query para pantallas de 768px o menos */
 @media (max-width: 768px) {
     .sidebar {
         width: 250px;
-        /* Reducir el ancho de la barra lateral */
+
         padding: 15px;
-        /* Reducir el padding interno */
+
     }
 
     .wishlist-item {
         flex-direction: column;
-        /* Cambiar a columna para mejor visualización */
+
         align-items: flex-start;
-        /* Alinear elementos al inicio */
+
     }
 
     .wishlist-item-image {
         width: 50px;
-        /* Reducir el tamaño de la imagen */
+
         height: 50px;
-        /* Reducir el tamaño de la imagen */
+
         margin-bottom: 10px;
-        /* Añadir margen inferior */
+
     }
 
     .wishlist-item-info h3 {
         font-size: 1.1em;
-        /* Reducir el tamaño de fuente del nombre del producto */
+
     }
 
     .wishlist-item-info p {
         font-size: 0.9em;
-        /* Reducir el tamaño de fuente del precio */
+
     }
 
     .remove-from-wishlist {
         padding: 2px 4px;
-        /* Reducir el padding del botón */
+
         font-size: 0.9em;
-        /* Reducir el tamaño de fuente del botón */
+
     }
 }
 
-/* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
     .sidebar {
         width: 200px;
-        /* Reducir aún más el ancho de la barra lateral */
+
         padding: 10px;
-        /* Reducir el padding interno */
+
     }
 
     .wishlist-item {
         margin-bottom: 10px;
-        /* Reducir el margen inferior */
+
     }
 
     .wishlist-item-image {
         width: 40px;
-        /* Reducir el tamaño de la imagen */
+
         height: 40px;
-        /* Reducir el tamaño de la imagen */
+
     }
 
     .wishlist-item-info h3 {
         font-size: 1em;
-        /* Reducir el tamaño de fuente del nombre del producto */
+
     }
 
     .wishlist-item-info p {
         font-size: 0.8em;
-        /* Reducir el tamaño de fuente del precio */
+
     }
 
     .remove-from-wishlist {
         padding: 2px 3px;
-        /* Reducir el padding del botón */
+
         font-size: 0.8em;
-        /* Reducir el tamaño de fuente del botón */
+
     }
 }

@@ -1,6 +1,6 @@
 const fetchProducts = async () => {
     try {
-        const response = await fetch('https://humancare-backend.onrender.com/products'); // Cambia a tu endpoint real
+        const response = await fetch('https://humancare-backend.onrender.com/products');
         const data = await response.json();
         return data;
     } catch (err) {
@@ -53,7 +53,7 @@ const seccion = document.getElementById('cards');
 const filtros = document.querySelectorAll('.filter_tipe');
 
 const displayProducts = (data) => {
-    seccion.innerHTML = ''; // Limpiar la sección antes de mostrar los productos
+    seccion.innerHTML = ''; //
     data.forEach(producto => {
         const card = document.createElement('div');
         card.classList.add('card');
@@ -98,9 +98,9 @@ const displayProducts = (data) => {
 const filterProducts = async (category) => {
     const products = await fetchProducts();
     if (category === 'Todos') {
-        displayProducts(products); // Mostrar todos los productos
+        displayProducts(products);
     } else {
-        const filteredProducts = products.filter(producto => producto.categories === category); // Filtrar por categoría
+        const filteredProducts = products.filter(producto => producto.categories === category);
         displayProducts(filteredProducts);
     }
 };
@@ -115,11 +115,11 @@ const addToCart = (productId) => {
             text: 'Producto añadido al carrito',
             icon: 'success',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#4CAF50',
             customClass: {
-                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
     } else {
@@ -128,63 +128,59 @@ const addToCart = (productId) => {
             text: 'El producto ya está en el carrito',
             icon: 'warning',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#FF9800',
             customClass: {
-                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
     }
 };
-// Agregar eventos a los filtros
+
 filtros.forEach(filtro => {
     filtro.addEventListener('click', () => {
         const category = filtro.getAttribute('data-category');
-        filterProducts(category); // Filtrar productos según la categoría seleccionada
+        filterProducts(category);
     });
 });
-// Función para agregar o quitar de la lista de deseos
+
 const toggleWishlist = (productId) => {
     let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
     if (wishlist.includes(productId)) {
-        // Si ya está en la lista de deseos, lo eliminamos
         wishlist = wishlist.filter(id => id !== productId);
         Swal.fire({
             title: '¡Atención!',
             text: 'El producto ya está en tus deseos',
             icon: 'warning',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#FF9800', // Color del icono (naranja para advertencia)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#FF9800',
             customClass: {
-                confirmButton: 'btn-confirm' // Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
     } else {
-        // Si no está, lo agregamos
         wishlist.push(productId);
         Swal.fire({
             title: '¡Éxito!',
             text: 'Producto añadido a tus deseos',
             icon: 'success',
             confirmButtonText: 'Aceptar',
-            background: '#D9D9D9', // Color de fondo
-            color: '#3E85A4', // Color del texto
-            iconColor: '#4CAF50', // Color del icono (verde para éxito)
+            background: '#D9D9D9',
+            color: '#3E85A4',
+            iconColor: '#4CAF50',
             customClass: {
-                confirmButton: 'btn-confirm'// Clase personalizada para el botón
+                confirmButton: 'btn-confirm'
             }
         });
     }
-
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     updateHeartIcons();
 };
 
-// Función para actualizar los íconos de corazón
 const updateHeartIcons = () => {
     const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     const hearts = document.querySelectorAll('.card-hearth');
@@ -192,14 +188,11 @@ const updateHeartIcons = () => {
     hearts.forEach(heart => {
         const productId = heart.getAttribute('data-id');
         if (wishlist.includes(productId)) {
-            heart.style.display = 'none'; // Ocultar el corazón si está en la lista de deseos
+            heart.style.display = 'none';
         } else {
-            heart.style.display = 'block'; // Mostrar el corazón si no está en la lista de deseos
+            heart.style.display = 'block';
         }
     });
 };
 
-// Llamar a la función para actualizar los íconos al cargar la página
 updateHeartIcons();
-
-

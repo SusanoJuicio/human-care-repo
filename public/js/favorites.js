@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wishlistItems = document.getElementById('wishlist-items');
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://humancare-backend.onrender.com/products'); // Cambia a tu endpoint real
+            const response = await fetch('https://humancare-backend.onrender.com/products'); //
             const data = await response.json();
             return data;
         } catch (err) {
@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     const updateWishlistDisplay = async () => {
-        wishlistItems.innerHTML = ''; // Limpiar la lista antes de mostrar los elementos
+        wishlistItems.innerHTML = '';
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        const products = await fetchProducts(); // Obtener todos los productos
+        const products = await fetchProducts();
 
         if (wishlist.length === 0) {
             wishlistItems.innerHTML = '<li>No hay productos en la lista de deseos.</li>';
         } else {
             wishlist.forEach(productId => {
-                const product = products.find(p => p.customId === parseInt(productId)); // Buscar el producto por customId
+                const product = products.find(p => p.customId === parseInt(productId));
 
                 if (product) {
                     const listItem = document.createElement('li');
@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const removeFromWishlist = (productId) => {
         let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        wishlist = wishlist.filter(id => id !== productId); // Filtrar el producto a eliminar
-        localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Actualizar el localStorage
-        updateWishlistDisplay(); // Actualizar la visualización de la wishlist
+        wishlist = wishlist.filter(id => id !== productId);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        updateWishlistDisplay();
     };
     toggleFavoritesButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita el comportamiento por defecto del enlace
-        sidebar.classList.toggle('active'); // Agrega o quita la clase 'active' para mostrar/ocultar la barra lateral
+        event.preventDefault();
+        sidebar.classList.toggle('active');
         updateWishlistDisplay();
     });
 
     closeSidebarButton.addEventListener('click', () => {
-        sidebar.classList.remove('active'); // Cierra la barra lateral
+        sidebar.classList.remove('active');
     });
 });
