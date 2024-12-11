@@ -1,28 +1,56 @@
-# human-care-repo
-IMPORTANTE 
-Al hacer git pull de la rama "desarrollo", tener instalado NodeJS, y una vez descargado y hecho el pull, van a sus respectivas ramas y hacer un git merge desarrollo. Y por ultimo ir a la terminal (Ctrl + ñ) y poner:
+# Human Care
 
-npm install --> Descarga Node_modules || 
-npm run dev --> Para levantar el proyecto en internet
+Human Care es un proyecto orientado a promover la sostenibilidad y el bienestar social a través de una plataforma en línea. Este sitio web incluye un Marketplace de productos ecológicos, un sistema de donaciones y un programa de recompensas para incentivar la participación activa de la comunidad.
 
+## Despliegue
 
+El proyecto está disponible en el siguiente enlace:
+[Human Care Fishing Foundation](https://humancarefishingfoundation.vercel.app/)
 
-Human care development 
+## Instalación
 
-Recuerden Trabajar cada uno en su rama, para actualizar sus ramas hagan:
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-git checkout desarrollo (Para moverse a la rama 'Desarrollo')
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/SusanoJuicio/human-care-repo.git
+   ```
 
-git pull (Para traer los cambios que hay en la rama 'Desarrollo') (NO USAR PUSH)
+2. Accede al directorio del proyecto:
+   ```bash
+   cd human-care-repo
+   ```
 
-git checkout desarrollo-ivan (En mi caso, para moverme a mi rama 'Desarrollo-ivan')
+3. Instala las dependencias necesarias:
+   ```bash
+   npm install
+   ```
 
-git merge desarrollo (Para traer los cambios de la rama 'Desarrollo', a mi rama 'Desarrollo-ivan')
+4. Inicia el servidor local:
+   ```bash
+   npm start
+   ```
 
-=======
+5. Abre tu navegador y accede a `http://localhost:3000` para ver el proyecto en acción.
 
+## Características principales
 
-FIGMA:
+- **Marketplace**: Compra productos ecológicos y saludables con descripciones detalladas.
+- **Sistema de Donaciones**: Participa donando alimentos y ropa para ayudar a comunidades necesitadas.
+- **HumanCare Rewards**: Gana puntos y disfruta de beneficios según tu nivel de participación como activista.
 
-https://www.figma.com/design/HbskFqIqLvJ8tDYLDHqs3T/HumanCare?node-id=0-1&node-type=canvas&t=hxS9MEhy8UnGocZx-0
+## Contribuyentes
 
+Este proyecto fue desarrollado por:
+
+- [Maxi Martinez](https://github.com/maxiluma18)
+- [Iván Acuña](https://github.com/SusanoJuicio)
+- [Talia Ojeda](https://github.com/TaliaIvonneOjeda1)
+
+## Licencia
+
+Este proyecto está bajo una licencia abierta. Siéntete libre de usar, modificar y compartirlo respetando los términos de la misma.
+
+---
+
+¡Gracias por visitar Human Care! 💚
