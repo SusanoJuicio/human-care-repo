@@ -43,7 +43,7 @@ body {
     color: #d9d9d9;
     text-align: center;
     text-shadow: -2px 2px black;
-    font-size: 3rem;
+    font-size: 35px;
     margin: 0;
     margin-left: 100px;
 }
@@ -52,7 +52,7 @@ body {
     color: #6EB7D6;
     text-align: center;
     text-shadow: -2px 2px black;
-    font-size: 3rem;
+    font-size: 36px;
     animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
@@ -72,6 +72,7 @@ body {
 .nav_logo {
     max-height: 64px;
     padding-left: 15px;
+    width: 64px;
 
 }
 
@@ -90,12 +91,13 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    padding: 0;
+    padding: 8px 0;
 }
 
 .nav_list_li {
     position: relative;
     margin-right: 20px;
+    padding: 8px 0;
 }
 
 .nav_list_li:hover {
@@ -161,6 +163,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px 0;
 }
 
 .nav_links:hover {

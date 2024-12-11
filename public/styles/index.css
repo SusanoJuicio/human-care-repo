@@ -34,23 +34,13 @@
     }
 }
 
-
 body {
     margin: 0;
     padding: 0;
     font-family: "fuente", sans-serif;
     scroll-behavior: smooth;
-    background: #D9D9D9;
-    background: linear-gradient(135deg,
-            #D9D9D9 25%,
-            #bfcdd8 25%,
-            #bfcdd8 50%,
-            #D9D9D9 50%,
-            #D9D9D9 75%,
-            #bfcdd8 75%,
-            #bfcdd8);
-    background-size: 40px 40px;
-    animation: move 4.5s linear infinite;
+    background: linear-gradient(135deg, #3E85A4, #74c6e9, #D9D9D9, #bfcdd8);
+
 }
 
 .hero-Index {
@@ -77,19 +67,19 @@ body {
 
 .text-Causes {
     font-size: 1.2rem;
-    color: #3697c0;
+    color: #d9d9d9;
     margin: 20px auto;
     max-width: 800px;
     font-size: 25px;
     text-align: center;
     padding-inline: 10rem;
-    text-shadow: -1px 3px 4px #ffffff;
+    text-shadow: -1px 3px 4px #000;
 }
 
 .causes {
     object-fit: cover;
     width: 380px;
-    height: 380px;
+    height: 350px;
     margin: 2rem;
     margin-top: 40px;
     max-width: 480px;
@@ -110,7 +100,7 @@ body {
 .text-basic {
     font-size: 36px;
     text-align: center;
-    color: #6EB7D6;
+    color: #d9d9d9;
     padding: 5px;
     text-shadow: -2px 2px black;
     letter-spacing: .5rem;
@@ -167,30 +157,9 @@ body {
     text-align: center;
     color: #d9d9d9;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-.card-title,
-.price,
-.stock {
-    text-align: center;
-    color: #d9d9d9;
-}
-
-.price {
-    font-size: 1.3em;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    color: #d9d9d9;
-    margin-bottom: 20px;
-}
-
-.stock {
-    font-size: 0.8em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    color: #c7b9b9;
-}
 
 
 .card:hover::after {
@@ -221,43 +190,6 @@ body {
     object-fit: cover;
 }
 
-.cart-icon {
-    position: absolute;
-    bottom: 10px;
-    left: -40px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    transition: transform 0.3s ease, left 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.card:hover .cart-icon {
-    left: 10px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.card-hearth {
-    position: absolute;
-    bottom: 10px;
-    right: -30px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    transition: transform 0.3s ease, right 0.3s ease;
-    z-index: 10;
-    opacity: 0;
-}
-
-
-.card:hover .card-hearth {
-    right: 10px;
-    opacity: 1;
-    transform: scale(1.1);
-}
-
 
 .text {
     max-width: 55px;
@@ -267,7 +199,7 @@ body {
     font-size: 36px;
     text-align: center;
     margin-top: 60px;
-    color: #6EB7D6;
+    color: #d9d9d9;
     padding: 20px;
     text-shadow: -2px 2px black;
     letter-spacing: 0.5rem;
@@ -319,16 +251,6 @@ body {
     margin-bottom: 0;
 }
 
-.img-causes {
-    width: 70%;
-    height: 250px;
-    margin: 0 10px;
-    object-fit: contain;
-}
-
-.img-causes img {
-    border-radius: 40px;
-}
 
 .causa-contain {
     display: flex;
@@ -336,6 +258,16 @@ body {
     align-items: center;
     height: 270px;
 }
+
+.img-causes {
+    width: 40%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 40px;
+}
+
 
 .desc-causes {
     font-size: 20px;
@@ -359,9 +291,10 @@ body {
     display: block;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 70px;
+    margin-bottom: -20px;
     border: 0;
-    background-color: #74c6e9;
+    /* color mostaza */
+    background-color: #f7dc6f;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -374,6 +307,33 @@ body {
     box-shadow: #68bee3 0px 7px 29px 0px;
 }
 
+.btn2 {
+    background-color: #3E85A4;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    background-color: #f7dc6f;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.btn2:hover {
+    background-color: #318db4;
+    color: hsl(0, 0%, 100%);
+}
+
 a {
     text-decoration: none;
 }
@@ -382,13 +342,7 @@ a {
     padding: 40px 20px;
 }
 
-.text-basic {
-    font-size: 2rem;
-    text-align: center;
-    color: #6EB7D6;
-    padding: 20px;
-    text-shadow: -2px 2px black;
-}
+
 
 .btn-confirm {
     background-color: #3E85A4;
